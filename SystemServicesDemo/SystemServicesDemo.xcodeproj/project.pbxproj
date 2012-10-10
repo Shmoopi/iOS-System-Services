@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		013A512D160F4DE500FC11BE /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A510E160F4DE500FC11BE /* SystemServices.m */; };
+		013A512E160F4DE500FC11BE /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */; };
+		013A512F160F4DE500FC11BE /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */; };
+		013A5130160F4DE500FC11BE /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5115160F4DE500FC11BE /* SSApplicationInfo.m */; };
+		013A5131160F4DE500FC11BE /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5117160F4DE500FC11BE /* SSBatteryInfo.m */; };
+		013A5132160F4DE500FC11BE /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5119160F4DE500FC11BE /* SSCarrierInfo.m */; };
+		013A5133160F4DE500FC11BE /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511B160F4DE500FC11BE /* SSDiskInfo.m */; };
+		013A5134160F4DE500FC11BE /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511D160F4DE500FC11BE /* SSHardwareInfo.m */; };
+		013A5135160F4DE500FC11BE /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */; };
+		013A5136160F4DE500FC11BE /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */; };
+		013A5137160F4DE500FC11BE /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5123160F4DE500FC11BE /* SSMemoryInfo.m */; };
+		013A5138160F4DE500FC11BE /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5125160F4DE500FC11BE /* SSNetworkInfo.m */; };
+		013A5139160F4DE500FC11BE /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5127160F4DE500FC11BE /* SSProcessInfo.m */; };
+		013A513A160F4DE500FC11BE /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5129160F4DE500FC11BE /* SSProcessorInfo.m */; };
+		013A513B160F4DE500FC11BE /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A512B160F4DE500FC11BE /* SSUUID.m */; };
+		013A5141160F4E3C00FC11BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5140160F4E3C00FC11BE /* Default-568h@2x.png */; };
+		013A5144160F525A00FC11BE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5143160F525A00FC11BE /* icon@2x.png */; };
+		013A5146160F526B00FC11BE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5145160F526B00FC11BE /* icon.png */; };
+		01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F716051BFE008B0A6B /* UIKit.framework */; };
+		01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F916051BFE008B0A6B /* Foundation.framework */; };
+		01ADF9FC16051BFE008B0A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9FB16051BFE008B0A6B /* CoreGraphics.framework */; };
+		01ADFA0216051BFE008B0A6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01ADFA0016051BFE008B0A6B /* InfoPlist.strings */; };
+		01ADFA0416051BFE008B0A6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0316051BFE008B0A6B /* main.m */; };
+		01ADFA0816051BFE008B0A6B /* SystemServicesDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0716051BFE008B0A6B /* SystemServicesDemoAppDelegate.m */; };
+		01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */; };
+		01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */; };
+		01F591711615358300D2CF76 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F591701615358300D2CF76 /* Security.framework */; };
+		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
+		4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
+		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		013A510D160F4DE500FC11BE /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
+		013A510E160F4DE500FC11BE /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
+		013A5110160F4DE500FC11BE /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
+		013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
+		013A5112160F4DE500FC11BE /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
+		013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccessoryInfo.m; sourceTree = "<group>"; };
+		013A5114160F4DE500FC11BE /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
+		013A5115160F4DE500FC11BE /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
+		013A5116160F4DE500FC11BE /* SSBatteryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBatteryInfo.h; sourceTree = "<group>"; };
+		013A5117160F4DE500FC11BE /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
+		013A5118160F4DE500FC11BE /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
+		013A5119160F4DE500FC11BE /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
+		013A511A160F4DE500FC11BE /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
+		013A511B160F4DE500FC11BE /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
+		013A511C160F4DE500FC11BE /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
+		013A511D160F4DE500FC11BE /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
+		013A511E160F4DE500FC11BE /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
+		013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJailbreakCheck.m; sourceTree = "<group>"; };
+		013A5120160F4DE500FC11BE /* SSLocalizationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocalizationInfo.h; sourceTree = "<group>"; };
+		013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocalizationInfo.m; sourceTree = "<group>"; };
+		013A5122160F4DE500FC11BE /* SSMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMemoryInfo.h; sourceTree = "<group>"; };
+		013A5123160F4DE500FC11BE /* SSMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMemoryInfo.m; sourceTree = "<group>"; };
+		013A5124160F4DE500FC11BE /* SSNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkInfo.h; sourceTree = "<group>"; };
+		013A5125160F4DE500FC11BE /* SSNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkInfo.m; sourceTree = "<group>"; };
+		013A5126160F4DE500FC11BE /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
+		013A5127160F4DE500FC11BE /* SSProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessInfo.m; sourceTree = "<group>"; };
+		013A5128160F4DE500FC11BE /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
+		013A5129160F4DE500FC11BE /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
+		013A512A160F4DE500FC11BE /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
+		013A512B160F4DE500FC11BE /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
+		013A512C160F4DE500FC11BE /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
+		013A5140160F4E3C00FC11BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		013A5143160F525A00FC11BE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		013A5145160F526B00FC11BE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		01ADF9F316051BFE008B0A6B /* SystemServicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemServicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01ADF9F716051BFE008B0A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		01ADF9F916051BFE008B0A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01ADF9FB16051BFE008B0A6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		01ADF9FF16051BFE008B0A6B /* SystemServicesDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SystemServicesDemo-Info.plist"; sourceTree = "<group>"; };
+		01ADFA0116051BFE008B0A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01ADFA0316051BFE008B0A6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01ADFA0516051BFE008B0A6B /* SystemServicesDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SystemServicesDemo-Prefix.pch"; sourceTree = "<group>"; };
+		01ADFA0616051BFE008B0A6B /* SystemServicesDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoAppDelegate.h; sourceTree = "<group>"; };
+		01ADFA0716051BFE008B0A6B /* SystemServicesDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoAppDelegate.m; sourceTree = "<group>"; };
+		01ADFA0A16051BFE008B0A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoViewController.h; sourceTree = "<group>"; };
+		01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoViewController.m; sourceTree = "<group>"; };
+		01F591701615358300D2CF76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4C640E021607AAFA00955DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4C640E091607BF9D00955DE4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01ADF9F016051BFE008B0A6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F591711615358300D2CF76 /* Security.framework in Frameworks */,
+				4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */,
+				4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */,
+				4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */,
+				01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */,
+				01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */,
+				01ADF9FC16051BFE008B0A6B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		013A510C160F4DE500FC11BE /* System Services */ = {
+			isa = PBXGroup;
+			children = (
+				013A510D160F4DE500FC11BE /* SystemServices.h */,
+				013A510E160F4DE500FC11BE /* SystemServices.m */,
+				013A510F160F4DE500FC11BE /* Utilities */,
+			);
+			path = "System Services";
+			sourceTree = "<group>";
+		};
+		013A510F160F4DE500FC11BE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				013A5110160F4DE500FC11BE /* SSAccelerometerInfo.h */,
+				013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */,
+				013A5112160F4DE500FC11BE /* SSAccessoryInfo.h */,
+				013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */,
+				013A5114160F4DE500FC11BE /* SSApplicationInfo.h */,
+				013A5115160F4DE500FC11BE /* SSApplicationInfo.m */,
+				013A5116160F4DE500FC11BE /* SSBatteryInfo.h */,
+				013A5117160F4DE500FC11BE /* SSBatteryInfo.m */,
+				013A5118160F4DE500FC11BE /* SSCarrierInfo.h */,
+				013A5119160F4DE500FC11BE /* SSCarrierInfo.m */,
+				013A511A160F4DE500FC11BE /* SSDiskInfo.h */,
+				013A511B160F4DE500FC11BE /* SSDiskInfo.m */,
+				013A511C160F4DE500FC11BE /* SSHardwareInfo.h */,
+				013A511D160F4DE500FC11BE /* SSHardwareInfo.m */,
+				013A511E160F4DE500FC11BE /* SSJailbreakCheck.h */,
+				013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */,
+				013A5120160F4DE500FC11BE /* SSLocalizationInfo.h */,
+				013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */,
+				013A5122160F4DE500FC11BE /* SSMemoryInfo.h */,
+				013A5123160F4DE500FC11BE /* SSMemoryInfo.m */,
+				013A5124160F4DE500FC11BE /* SSNetworkInfo.h */,
+				013A5125160F4DE500FC11BE /* SSNetworkInfo.m */,
+				013A5126160F4DE500FC11BE /* SSProcessInfo.h */,
+				013A5127160F4DE500FC11BE /* SSProcessInfo.m */,
+				013A5128160F4DE500FC11BE /* SSProcessorInfo.h */,
+				013A5129160F4DE500FC11BE /* SSProcessorInfo.m */,
+				013A512A160F4DE500FC11BE /* SSUUID.h */,
+				013A512B160F4DE500FC11BE /* SSUUID.m */,
+				013A512C160F4DE500FC11BE /* SystemServicesConstants.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		01ADF9E816051BFE008B0A6B = {
+			isa = PBXGroup;
+			children = (
+				01ADF9FD16051BFE008B0A6B /* SystemServicesDemo */,
+				01ADF9F616051BFE008B0A6B /* Frameworks */,
+				01ADF9F416051BFE008B0A6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01ADF9F416051BFE008B0A6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01ADF9F316051BFE008B0A6B /* SystemServicesDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01ADF9F616051BFE008B0A6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01F591701615358300D2CF76 /* Security.framework */,
+				4C640E091607BF9D00955DE4 /* CoreTelephony.framework */,
+				4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */,
+				4C640E021607AAFA00955DE4 /* AudioToolbox.framework */,
+				01ADF9F716051BFE008B0A6B /* UIKit.framework */,
+				01ADF9F916051BFE008B0A6B /* Foundation.framework */,
+				01ADF9FB16051BFE008B0A6B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01ADF9FD16051BFE008B0A6B /* SystemServicesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				013A510C160F4DE500FC11BE /* System Services */,
+				01ADFA0616051BFE008B0A6B /* SystemServicesDemoAppDelegate.h */,
+				01ADFA0716051BFE008B0A6B /* SystemServicesDemoAppDelegate.m */,
+				01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */,
+				01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */,
+				01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */,
+				01ADF9FE16051BFE008B0A6B /* Supporting Files */,
+			);
+			path = SystemServicesDemo;
+			sourceTree = "<group>";
+		};
+		01ADF9FE16051BFE008B0A6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				013A5145160F526B00FC11BE /* icon.png */,
+				013A5143160F525A00FC11BE /* icon@2x.png */,
+				013A5140160F4E3C00FC11BE /* Default-568h@2x.png */,
+				01ADF9FF16051BFE008B0A6B /* SystemServicesDemo-Info.plist */,
+				01ADFA0016051BFE008B0A6B /* InfoPlist.strings */,
+				01ADFA0316051BFE008B0A6B /* main.m */,
+				01ADFA0516051BFE008B0A6B /* SystemServicesDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01ADF9F216051BFE008B0A6B /* SystemServicesDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01ADFA1116051BFE008B0A6B /* Build configuration list for PBXNativeTarget "SystemServicesDemo" */;
+			buildPhases = (
+				01ADF9EF16051BFE008B0A6B /* Sources */,
+				01ADF9F016051BFE008B0A6B /* Frameworks */,
+				01ADF9F116051BFE008B0A6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SystemServicesDemo;
+			productName = SystemServicesDemo;
+			productReference = 01ADF9F316051BFE008B0A6B /* SystemServicesDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01ADF9EA16051BFE008B0A6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SystemServicesDemo;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Shmoopi LLC";
+			};
+			buildConfigurationList = 01ADF9ED16051BFE008B0A6B /* Build configuration list for PBXProject "SystemServicesDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 01ADF9E816051BFE008B0A6B;
+			productRefGroup = 01ADF9F416051BFE008B0A6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01ADF9F216051BFE008B0A6B /* SystemServicesDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01ADF9F116051BFE008B0A6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADFA0216051BFE008B0A6B /* InfoPlist.strings in Resources */,
+				01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */,
+				013A5141160F4E3C00FC11BE /* Default-568h@2x.png in Resources */,
+				013A5144160F525A00FC11BE /* icon@2x.png in Resources */,
+				013A5146160F526B00FC11BE /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01ADF9EF16051BFE008B0A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADFA0416051BFE008B0A6B /* main.m in Sources */,
+				01ADFA0816051BFE008B0A6B /* SystemServicesDemoAppDelegate.m in Sources */,
+				01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */,
+				013A512D160F4DE500FC11BE /* SystemServices.m in Sources */,
+				013A512E160F4DE500FC11BE /* SSAccelerometerInfo.m in Sources */,
+				013A512F160F4DE500FC11BE /* SSAccessoryInfo.m in Sources */,
+				013A5130160F4DE500FC11BE /* SSApplicationInfo.m in Sources */,
+				013A5131160F4DE500FC11BE /* SSBatteryInfo.m in Sources */,
+				013A5132160F4DE500FC11BE /* SSCarrierInfo.m in Sources */,
+				013A5133160F4DE500FC11BE /* SSDiskInfo.m in Sources */,
+				013A5134160F4DE500FC11BE /* SSHardwareInfo.m in Sources */,
+				013A5135160F4DE500FC11BE /* SSJailbreakCheck.m in Sources */,
+				013A5136160F4DE500FC11BE /* SSLocalizationInfo.m in Sources */,
+				013A5137160F4DE500FC11BE /* SSMemoryInfo.m in Sources */,
+				013A5138160F4DE500FC11BE /* SSNetworkInfo.m in Sources */,
+				013A5139160F4DE500FC11BE /* SSProcessInfo.m in Sources */,
+				013A513A160F4DE500FC11BE /* SSProcessorInfo.m in Sources */,
+				013A513B160F4DE500FC11BE /* SSUUID.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01ADFA0016051BFE008B0A6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01ADFA0116051BFE008B0A6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01ADFA0A16051BFE008B0A6B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01ADFA0F16051BFE008B0A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01ADFA1016051BFE008B0A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01ADFA1216051BFE008B0A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
+				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SystemServicesDemo\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01ADFA1316051BFE008B0A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
+				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SystemServicesDemo\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01ADF9ED16051BFE008B0A6B /* Build configuration list for PBXProject "SystemServicesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ADFA0F16051BFE008B0A6B /* Debug */,
+				01ADFA1016051BFE008B0A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01ADFA1116051BFE008B0A6B /* Build configuration list for PBXNativeTarget "SystemServicesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ADFA1216051BFE008B0A6B /* Debug */,
+				01ADFA1316051BFE008B0A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01ADF9EA16051BFE008B0A6B /* Project object */;
+}
