@@ -5,18 +5,19 @@ iOS System Services is a class to gather all available information about a devic
 
 Example Usage:
 
-   // System Information
+```
+// System Information
 
-   // Get all System Information (All Methods)
-   + (NSDictionary *)allSystemInformation;
+// Get all System Information (All Methods)
++ (NSDictionary *)allSystemInformation;
 
-   /* Hardware Information */
+/* Hardware Information */
 
-   // System Uptime (dd hh mm)
-   + (NSString *)systemUptime;
+// System Uptime (dd hh mm)
++ (NSString *)systemUptime;
 
-   // Model of Device
-   + (NSString *)deviceModel;
+// Model of Device
++ (NSString *)deviceModel;
 
 // Device Name
 + (NSString *)deviceName;
@@ -262,6 +263,7 @@ Example Usage:
 
 // CFUUID
 + (NSString *)cfuuid;
+```
 
 Copyright © 2009-2013 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
 
