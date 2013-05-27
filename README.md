@@ -3,9 +3,8 @@ iOS-System-Services
 
 iOS System Services is a singleton class to gather all available information about a device.  There are over 75 methods to determine everything about a device, including: System Uptime, Network Information, Battery Usage, Accelerometer Data, Disk Usage, Running Processes, Memory Usage, and a complete UDID replacement based on unchanging device information.
 
-![System Services 1](http://www.shmoopi.net/wp-content/uploads/2013/05/SySServices1.png)
-![System Services 2](http://www.shmoopi.net/wp-content/uploads/2013/05/SySServices2.png)
-![System Services 3](http://www.shmoopi.net/wp-content/uploads/2013/05/SySServices3.png)
+![System Services 1](http://www.shmoopi.net/wp-content/uploads/2013/05/SS1.png)
+![System Services 2](http://www.shmoopi.net/wp-content/uploads/2013/05/SS2.png)
 
 Changes
 ===================
