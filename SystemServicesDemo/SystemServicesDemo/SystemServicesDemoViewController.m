@@ -7,13 +7,19 @@
 //
 
 #import "SystemServicesDemoViewController.h"
+#import "SystemServices.h"
+#import "SSAccelerometerInfo.h"
+#import "NSObject+PerformBlockAfterDelay.h"
 
-@interface SystemServicesDemoViewController ()
+#define SystemSharedServices [SystemServices sharedServices]
+
+@interface SystemServicesDemoViewController () {
+    SSAccelerometerInfo *accel;
+}
 
 @end
 
 @implementation SystemServicesDemoViewController
-@synthesize ProgressView = _ProgressView;
 @synthesize TextView = _TextView;
 
 - (void)viewDidLoad
@@ -21,31 +27,84 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self performSelector:@selector(getAllSystemInformation) withObject:nil afterDelay:1.0];
+    // Let's find the accelerometer information ;)
+    accel = [[SSAccelerometerInfo alloc] init];
+    [accel startLoggingMotionData];
+    
+    [self performBlock:^(void){
+        // Log any accelerometer data
+        NSLog(@"Accelerometer Data: %@", [accel rawAccelerometerString]);
+        [accel stopLoggingMotionData];
+    }afterDelay:0.5];
+    
+    [self performSelector:@selector(getAllHardwareInformation) withObject:nil afterDelay:0.01];
 }
 
 // Get all the system information
-- (void)getAllSystemInformation {
-    // Get all Information
-    NSDictionary *SystemInformationDict = [SystemServices allSystemInformation];
+- (void)getAllHardwareInformation {
     
-    // Convert to Array
-    NSArray *SystemInformationArray = [SystemInformationDict allKeys];
+    // Set the textview text to nothing
+    self.TextView.text = @"";
     
-    // Run through all the information about the system
-    for (int y = 0; y <= SystemInformationArray.count - 1; y++) {
-        // Output all names and values to nslog
-        NSLog(@"Name: %@  ||  Value: %@", [SystemInformationArray objectAtIndex:y], [SystemInformationDict objectForKey:[SystemInformationArray objectAtIndex:y]]);
-        // Output all the names and values to the textview
-        self.TextView.text = [NSString stringWithFormat:@"%@\n\nName: %@\nValue: %@", self.TextView.text, [SystemInformationArray objectAtIndex:y], [SystemInformationDict objectForKey:[SystemInformationArray objectAtIndex:y]]];
-        // Set the progress of the System Services
-        self.ProgressView.progress += ((y * 100) / SystemInformationArray.count);
+    // Get an array from the system uptime (to format it)
+    NSArray *uptimeFormat = [[SystemSharedServices systemsUptime] componentsSeparatedByString:@" "];
+    // Get all Harware Information
+    NSString *SystemUptime = [NSString stringWithFormat:@"System Uptime: %@ Days %@ Hours %@ Minutes", [uptimeFormat objectAtIndex:0], [uptimeFormat objectAtIndex:1], [uptimeFormat objectAtIndex:2]];
+    NSString *DeviceModel = [NSString stringWithFormat:@"Device Model: %@", [SystemSharedServices deviceModel]];
+    NSString *DeviceName = [NSString stringWithFormat:@"Device Name: %@", [SystemSharedServices deviceName]];
+    NSString *SystemName = [NSString stringWithFormat:@"System Name: %@", [SystemSharedServices systemName]];
+    NSString *SystemVersion = [NSString stringWithFormat:@"System Version: %@", [SystemSharedServices systemsVersion]];
+    NSString *SystemDeviceTypeFormattedNO = [NSString stringWithFormat:@"System Device Type Unformatted: %@", [SystemSharedServices systemDeviceTypeNotFormatted]];
+    NSString *SystemDeviceTypeFormattedYES = [NSString stringWithFormat:@"System Device Type Formatted: %@", [SystemSharedServices systemDeviceTypeFormatted]];
+    NSString *ScreenWidth = [NSString stringWithFormat:@"Screen Width: %d Pixels", [SystemSharedServices screenWidth]];
+    NSString *ScreenHeight = [NSString stringWithFormat:@"Screen Height: %d Pixels", [SystemSharedServices screenHeight]];
+    NSString *ScreenBrightness = [NSString stringWithFormat:@"Screen Brightness: %.0f%%", [SystemSharedServices screenBrightness]];
+    NSString *MultitaskingEnabled = ([SystemSharedServices multitaskingEnabled]) ? @"Multitasking Enabled: Yes" : @"Multitasking: No";
+    NSString *ProximitySensorEnabled = ([SystemSharedServices proximitySensorEnabled]) ? @"Proximity Sensor: Yes" : @"Proximity Sensor: No";
+    NSString *DebuggerAttached = ([SystemSharedServices debuggerAttached]) ? @"Debugger Attached: Yes" : @"Debugger Attached: No";
+    NSString *PluggedIn = ([SystemSharedServices pluggedIn]) ? @"Plugged In: Yes" : @"Plugged In: No";
+    NSString *Jailbroken = ([SystemSharedServices jailbroken] != NOTJAIL) ? @"Jailbroken: Yes" : @"Jailbroken: No";
+    NSString *NumberProcessors = [NSString stringWithFormat:@"Number of Processors: %d", [SystemSharedServices numberProcessors]];
+    NSString *NumberActiveProcessors = [NSString stringWithFormat:@"Number of Active Processors: %d", [SystemSharedServices numberActiveProcessors]];
+    NSString *ProcessorSpeed = [NSString stringWithFormat:@"Processor Speed: %dMhz", [SystemSharedServices processorSpeed]];
+    NSString *ProcessorBusSpeed = [NSString stringWithFormat:@"Processor Bus Speed: %dMhz", [SystemSharedServices processorBusSpeed]];
+    NSString *AccessoriesAttached = ([SystemSharedServices accessoriesAttached]) ? @"Accessories Attached: Yes" : @"Accessories Attached: No";
+    NSString *HeadphonesAttached = ([SystemSharedServices headphonesAttached]) ? @"Headphones Attached: Yes" : @"Headphones Attached: No";
+    NSString *NumberAttachedAccessories = [NSString stringWithFormat:@"Number of Attached Accessories: %d", [SystemSharedServices numberAttachedAccessories]];
+    NSString *NameAttachedAccessories = [NSString stringWithFormat:@"Name of Attached Accessories: %@", [SystemSharedServices nameAttachedAccessories]];
+    NSString *BatteryLevel = [NSString stringWithFormat:@"Battery Level: %f%%", [SystemSharedServices batteryLevel]];
+    NSString *Charging = ([SystemSharedServices charging]) ? @"Charging: Yes" : @"Charging: No";
+    NSString *FullyCharged = ([SystemSharedServices fullyCharged]) ? @"Fully Charged: Yes" : @"Fully Charged: No";
+    NSString *DeviceOrientation = [NSString stringWithFormat:@"Device Orientation: %d", [SystemSharedServices deviceOrientation]];
+    NSString *Country = [NSString stringWithFormat:@"Country: %@", [SystemSharedServices country]];
+    NSString *Language = [NSString stringWithFormat:@"Language: %@", [SystemSharedServices language]];
+    NSString *TimeZone = [NSString stringWithFormat:@"TimeZone: %@", [SystemSharedServices timeZoneSS]];
+    NSString *Currency = [NSString stringWithFormat:@"Currency: %@", [SystemSharedServices currency]];
+    NSString *ApplicationVersion = [NSString stringWithFormat:@"Application Version: %@", [SystemSharedServices applicationVersion]];
+    NSString *ClipboardContent = [NSString stringWithFormat:@"ClipBoard Content: \"%@\"", [SystemSharedServices clipboardContent]];
+    NSString *UniqueID = [NSString stringWithFormat:@"Unique ID: %@", [SystemSharedServices uniqueID]];
+    NSString *DeviceSignature = [NSString stringWithFormat:@"Device Signature: %@", [SystemSharedServices deviceSignature]];
+    NSString *CFUUID = [NSString stringWithFormat:@"CFUUID: %@", [SystemSharedServices cfuuid]];
+    
+    // Make an array of all the hardware information
+    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorSpeed, ProcessorBusSpeed, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, UniqueID, DeviceSignature, CFUUID, nil];
+    
+    // Run through all the information
+    for (NSString *objects in arrayofHW) {
+        if (![self.TextView.text isEqualToString:@""]) {
+            // Output all the names and values to the textview
+            self.TextView.text = [NSString stringWithFormat:@"%@\n%@", self.TextView.text, objects];
+        } else {
+            // Output all the names and values to the textview
+            self.TextView.text = [NSString stringWithFormat:@"%@", objects];
+        }
     }
+    
+    // End of this
 }
 
 - (void)viewDidUnload
 {
-    [self setProgressView:nil];
     [self setTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -56,4 +115,8 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)refresh:(id)sender {
+    // Reload the hardware info
+    [self getAllHardwareInformation];
+}
 @end

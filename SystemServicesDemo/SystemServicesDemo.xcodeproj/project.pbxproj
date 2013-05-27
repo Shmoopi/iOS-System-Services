@@ -25,6 +25,8 @@
 		013A5141160F4E3C00FC11BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5140160F4E3C00FC11BE /* Default-568h@2x.png */; };
 		013A5144160F525A00FC11BE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5143160F525A00FC11BE /* icon@2x.png */; };
 		013A5146160F526B00FC11BE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5145160F526B00FC11BE /* icon.png */; };
+		0183DA3E1711D3B30085441F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0183DA3D1711D3B30085441F /* CoreMotion.framework */; };
+		0183DA411711DD830085441F /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */; };
 		01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F716051BFE008B0A6B /* UIKit.framework */; };
 		01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F916051BFE008B0A6B /* Foundation.framework */; };
 		01ADF9FC16051BFE008B0A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9FB16051BFE008B0A6B /* CoreGraphics.framework */; };
@@ -34,9 +36,18 @@
 		01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */; };
 		01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */; };
 		01F591711615358300D2CF76 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F591701615358300D2CF76 /* Security.framework */; };
+		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
+		4C3C92521729B80400D88C01 /* PercentageChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924F1729B80400D88C01 /* PercentageChart.m */; };
+		4C3C92531729B80400D88C01 /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C92511729B80400D88C01 /* PercentageChartLayer.m */; };
+		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
+		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
 		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
 		4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
+		4CCC7651170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7650170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m */; };
+		4CCC7654170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7653170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m */; };
+		4CCC7657170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7656170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m */; };
+		4CCC765A170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7659170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +85,9 @@
 		013A5140160F4E3C00FC11BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		013A5143160F525A00FC11BE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		013A5145160F526B00FC11BE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		0183DA3D1711D3B30085441F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PerformBlockAfterDelay.h"; path = "System Services/Utilities/NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
+		0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PerformBlockAfterDelay.m"; path = "System Services/Utilities/NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
 		01ADF9F316051BFE008B0A6B /* SystemServicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemServicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADF9F716051BFE008B0A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01ADF9F916051BFE008B0A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,9 +102,25 @@
 		01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoViewController.h; sourceTree = "<group>"; };
 		01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoViewController.m; sourceTree = "<group>"; };
 		01F591701615358300D2CF76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4C3C924B1729AF0A00D88C01 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
+		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
+		4C3C924E1729B80400D88C01 /* PercentageChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChart.h; sourceTree = "<group>"; };
+		4C3C924F1729B80400D88C01 /* PercentageChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChart.m; sourceTree = "<group>"; };
+		4C3C92501729B80400D88C01 /* PercentageChartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChartLayer.h; sourceTree = "<group>"; };
+		4C3C92511729B80400D88C01 /* PercentageChartLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChartLayer.m; sourceTree = "<group>"; };
+		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4C3C92571729B83200D88C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C640E021607AAFA00955DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		4C640E091607BF9D00955DE4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4CCC764F170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoNetworkViewController.h; sourceTree = "<group>"; };
+		4CCC7650170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoNetworkViewController.m; sourceTree = "<group>"; };
+		4CCC7652170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoMemoryViewController.h; sourceTree = "<group>"; };
+		4CCC7653170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoMemoryViewController.m; sourceTree = "<group>"; };
+		4CCC7655170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoDiskViewController.h; sourceTree = "<group>"; };
+		4CCC7656170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoDiskViewController.m; sourceTree = "<group>"; };
+		4CCC7658170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoProcessesViewController.h; sourceTree = "<group>"; };
+		4CCC7659170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoProcessesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */,
+				4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */,
+				0183DA3E1711D3B30085441F /* CoreMotion.framework in Frameworks */,
 				01F591711615358300D2CF76 /* Security.framework in Frameworks */,
 				4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */,
 				4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */,
@@ -177,6 +210,9 @@
 		01ADF9F616051BFE008B0A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C3C92571729B83200D88C01 /* QuartzCore.framework */,
+				4C3C92551729B82D00D88C01 /* CoreText.framework */,
+				0183DA3D1711D3B30085441F /* CoreMotion.framework */,
 				01F591701615358300D2CF76 /* Security.framework */,
 				4C640E091607BF9D00955DE4 /* CoreTelephony.framework */,
 				4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */,
@@ -197,6 +233,16 @@
 				01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */,
 				01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */,
 				01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */,
+				4CCC764F170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.h */,
+				4CCC7650170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m */,
+				4CCC7652170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.h */,
+				4CCC7653170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m */,
+				4CCC7655170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.h */,
+				4CCC7656170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m */,
+				4CCC7658170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.h */,
+				4CCC7659170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m */,
+				0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */,
+				0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */,
 				01ADF9FE16051BFE008B0A6B /* Supporting Files */,
 			);
 			path = SystemServicesDemo;
@@ -205,6 +251,8 @@
 		01ADF9FE16051BFE008B0A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C3C92541729B80A00D88C01 /* Percentage Chart */,
+				4C3C924A1729AEFD00D88C01 /* Pie Chart */,
 				013A5145160F526B00FC11BE /* icon.png */,
 				013A5143160F525A00FC11BE /* icon@2x.png */,
 				013A5140160F4E3C00FC11BE /* Default-568h@2x.png */,
@@ -214,6 +262,26 @@
 				01ADFA0516051BFE008B0A6B /* SystemServicesDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C3C924A1729AEFD00D88C01 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C924B1729AF0A00D88C01 /* PCPieChart.h */,
+				4C3C924C1729AF0A00D88C01 /* PCPieChart.m */,
+			);
+			name = "Pie Chart";
+			sourceTree = "<group>";
+		};
+		4C3C92541729B80A00D88C01 /* Percentage Chart */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C924E1729B80400D88C01 /* PercentageChart.h */,
+				4C3C924F1729B80400D88C01 /* PercentageChart.m */,
+				4C3C92501729B80400D88C01 /* PercentageChartLayer.h */,
+				4C3C92511729B80400D88C01 /* PercentageChartLayer.m */,
+			);
+			name = "Percentage Chart";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SystemServicesDemo;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Shmoopi LLC";
 			};
 			buildConfigurationList = 01ADF9ED16051BFE008B0A6B /* Build configuration list for PBXProject "SystemServicesDemo" */;
@@ -301,6 +369,14 @@
 				013A5139160F4DE500FC11BE /* SSProcessInfo.m in Sources */,
 				013A513A160F4DE500FC11BE /* SSProcessorInfo.m in Sources */,
 				013A513B160F4DE500FC11BE /* SSUUID.m in Sources */,
+				4CCC7651170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m in Sources */,
+				4CCC7654170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m in Sources */,
+				4CCC7657170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m in Sources */,
+				4CCC765A170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m in Sources */,
+				0183DA411711DD830085441F /* NSObject+PerformBlockAfterDelay.m in Sources */,
+				4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */,
+				4C3C92521729B80400D88C01 /* PercentageChart.m in Sources */,
+				4C3C92531729B80400D88C01 /* PercentageChartLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +409,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -360,6 +439,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

@@ -1,53 +1,379 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Dls-tQ-TNw">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--System Services Demo View Controller-->
-        <scene sceneID="5">
+        <!--System Services Demo Network View Controller - Network-->
+        <scene sceneID="wHu-B6-fJj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="SystemServicesDemoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController id="wiX-4C-LZY" customClass="SystemServicesDemoNetworkViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aQU-PJ-lPz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" id="ag5-Qz-htY">
-                                <rect key="frame" x="20" y="57" width="280" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="System Services:" id="NMU-a9-EEH">
-                                <rect key="frame" x="0.0" y="74" width="320" height="386"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <navigationBar contentMode="scaleToFill" id="U3G-CD-T5u">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="SSNetwork" id="48Q-JH-0O1">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="9CK-KL-lTO">
+                                            <connections>
+                                                <action selector="refresh:" destination="wiX-4C-LZY" id="d3Y-gU-WbW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Network Information Here" id="jqF-yp-Oyh">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Network" id="Unr-iY-7M6"/>
+                    <connections>
+                        <outlet property="textView" destination="jqF-yp-Oyh" id="xv4-AQ-7ha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXt-3z-T4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="616"/>
+        </scene>
+        <!--System Services Demo View Controller - Hardware-->
+        <scene sceneID="PMb-g4-Ixz">
+            <objects>
+                <viewController id="0xO-xi-MA5" customClass="SystemServicesDemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebU-Ex-LXC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hardware Information Here" id="Wnm-w9-K67">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <navigationBar contentMode="scaleToFill" id="h8o-v7-Bwt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="System Services Demo" id="bQA-Lp-kHp"/>
+                                    <navigationItem title="SSHardware" id="bQA-Lp-kHp">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="8LB-Bk-DtJ">
+                                            <connections>
+                                                <action selector="refresh:" destination="0xO-xi-MA5" id="HJ2-DD-pEY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Hardware" id="7qu-TI-SaL"/>
                     <connections>
-                        <outlet property="ProgressView" destination="ag5-Qz-htY" id="sJ5-8T-dUB"/>
-                        <outlet property="TextView" destination="NMU-a9-EEH" id="ujd-UM-2eR"/>
+                        <outlet property="TextView" destination="Wnm-w9-K67" id="cXI-aN-iRU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UyH-r8-okh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="889" y="26"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RZa-rV-w98">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Dls-tQ-TNw" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="D8P-42-1Lh">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0xO-xi-MA5" kind="relationship" relationship="viewControllers" id="5TF-ZN-lCI"/>
+                        <segue destination="wiX-4C-LZY" kind="relationship" relationship="viewControllers" id="lMU-u2-MM8"/>
+                        <segue destination="Oxy-s2-exV" kind="relationship" relationship="viewControllers" id="wez-Na-kez"/>
+                        <segue destination="tqZ-Rw-p70" kind="relationship" relationship="viewControllers" id="y4W-p2-1eT"/>
+                        <segue destination="etA-4W-pqI" kind="relationship" relationship="viewControllers" id="rrE-Ww-vpM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8YA-Qe-bEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67" y="1222"/>
+        </scene>
+        <!--System Services Demo Memory View Controller - Memory-->
+        <scene sceneID="WFY-H3-WgM">
+            <objects>
+                <viewController id="Oxy-s2-exV" customClass="SystemServicesDemoMemoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rrt-TB-EWd">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="On0-N3-4sa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="SSMemory" id="p2h-HB-I3j">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sv8-os-PAc">
+                                            <connections>
+                                                <action selector="refresh:" destination="Oxy-s2-exV" id="XSD-4q-nkb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Memory (RAM):  0 MB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XnD-E2-cLc">
+                                <rect key="frame" x="20" y="46" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Used Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2cY-Jz-4vC">
+                                <rect key="frame" x="20" y="66" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wired Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ydY-CG-0er">
+                                <rect key="frame" x="20" y="86" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Active Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eWp-NM-P9o">
+                                <rect key="frame" x="20" y="106" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inactive Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u9h-Q4-aXE">
+                                <rect key="frame" x="20" y="126" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Free Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bT9-Cz-AdX">
+                                <rect key="frame" x="20" y="146" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Purgeable Memory:  0 MB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UWs-3T-ZPs">
+                                <rect key="frame" x="20" y="166" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="jo3-kB-YMC">
+                                <rect key="frame" x="28" y="347" width="265" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Please note that the totals will not always match the hardware and that most values are just rough estimates.  Memory is not exact!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Memory" id="AWe-UT-VqJ"/>
+                    <connections>
+                        <outlet property="lblActiveMemory" destination="eWp-NM-P9o" id="X2F-u5-Xhx"/>
+                        <outlet property="lblFreeMemory" destination="bT9-Cz-AdX" id="OWj-cV-tpS"/>
+                        <outlet property="lblInactiveMemory" destination="u9h-Q4-aXE" id="aEp-Ry-cjc"/>
+                        <outlet property="lblMemoryRAM" destination="XnD-E2-cLc" id="TSw-Tz-ZQc"/>
+                        <outlet property="lblPurgeableMemory" destination="UWs-3T-ZPs" id="Sjb-N5-aPF"/>
+                        <outlet property="lblUsedMemory" destination="2cY-Jz-4vC" id="Rc3-Ff-9Gt"/>
+                        <outlet property="lblWiredMemory" destination="ydY-CG-0er" id="8Lg-iG-7os"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShL-ov-F7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="1199"/>
+        </scene>
+        <!--System Services Demo Disk View Controller - Disk-->
+        <scene sceneID="RVB-2J-tM2">
+            <objects>
+                <viewController id="tqZ-Rw-p70" customClass="SystemServicesDemoDiskViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNW-jh-PK3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="kiK-KX-LE7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="SSDisk" id="T65-dN-j2K">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QhH-xi-LHO">
+                                            <connections>
+                                                <action selector="refresh:" destination="tqZ-Rw-p70" id="bBK-lf-vj6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Disk Space:  0 GB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hFo-xb-Yop">
+                                <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Used Disk Space:  0 GB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TiJ-eI-MMk">
+                                <rect key="frame" x="20" y="112" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Free Disk Space:  0 GB 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JgY-mE-Z2D">
+                                <rect key="frame" x="20" y="141" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="ZTE-Pn-wlJ" customClass="PercentageChart">
+                                <rect key="frame" x="28" y="131" width="264" height="195"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Disk" id="3J8-VS-4g9"/>
+                    <connections>
+                        <outlet property="chart" destination="ZTE-Pn-wlJ" id="1xG-YN-uD6"/>
+                        <outlet property="lblFreeDiskSpace" destination="JgY-mE-Z2D" id="zXC-co-F1S"/>
+                        <outlet property="lblTotalDiskSpace" destination="hFo-xb-Yop" id="oCS-fK-G2E"/>
+                        <outlet property="lblUsedDiskSpace" destination="TiJ-eI-MMk" id="Dbk-VG-hUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOS-JC-kaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="1821"/>
+        </scene>
+        <!--System Services Demo Processes View Controller - SSProcesses-->
+        <scene sceneID="5Xt-5m-2Z8">
+            <objects>
+                <tableViewController id="stQ-EW-tho" customClass="SystemServicesDemoProcessesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Xz3-mv-gSr">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" textLabel="ubg-QU-CKp" detailTextLabel="Esx-L6-4pT" style="IBUITableViewCellStyleValue1" id="tvW-fn-ta4">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ubg-QU-CKp">
+                                            <rect key="frame" x="10" y="11" width="35" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Esx-L6-4pT">
+                                            <rect key="frame" x="246" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SSProcesses" id="uSo-d5-xih">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="CHt-2T-t35">
+                            <connections>
+                                <action selector="refresh:" destination="stQ-EW-tho" id="HhT-QH-ALq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jON-b3-Rts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="2441"/>
+        </scene>
+        <!--Navigation Controller - Processes-->
+        <scene sceneID="MH2-i8-Hvd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="etA-4W-pqI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Processes" id="YCb-Zc-Crv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h6E-tt-6pK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="stQ-EW-tho" kind="relationship" relationship="rootViewController" id="3nj-mV-BuS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD2-bl-f4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="2441"/>
         </scene>
     </scenes>
     <classes>
+        <class className="PercentageChart" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PercentageChart.h"/>
+        </class>
+        <class className="SystemServicesDemoDiskViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SystemServicesDemoDiskViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+                <relationship kind="outlet" name="chart" candidateClass="PercentageChart"/>
+                <relationship kind="outlet" name="lblFreeDiskSpace" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblTotalDiskSpace" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblUsedDiskSpace" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SystemServicesDemoMemoryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SystemServicesDemoMemoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+                <relationship kind="outlet" name="lblActiveMemory" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblFreeMemory" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblInactiveMemory" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblMemoryRAM" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblPurgeableMemory" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblUsedMemory" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblWiredMemory" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SystemServicesDemoNetworkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SystemServicesDemoNetworkViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SystemServicesDemoProcessesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SystemServicesDemoProcessesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+            </relationships>
+        </class>
         <class className="SystemServicesDemoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SystemServicesDemoViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="ProgressView" candidateClass="UIProgressView"/>
+                <relationship kind="action" name="refresh:"/>
                 <relationship kind="outlet" name="TextView" candidateClass="UITextView"/>
             </relationships>
         </class>

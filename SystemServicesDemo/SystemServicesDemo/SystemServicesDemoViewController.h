@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SystemServices.h"
 
 @interface SystemServicesDemoViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIProgressView *ProgressView;
+
 @property (strong, nonatomic) IBOutlet UITextView *TextView;
+
+- (IBAction)refresh:(id)sender;
 
 @end

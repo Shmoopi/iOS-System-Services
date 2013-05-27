@@ -15,9 +15,6 @@
 // Country
 + (NSString *)country;
 
-// Locale
-+ (NSString *)locale;
-
 // Language
 + (NSString *)language;
 

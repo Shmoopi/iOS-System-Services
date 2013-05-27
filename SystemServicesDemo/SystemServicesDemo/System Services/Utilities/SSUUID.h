@@ -15,7 +15,7 @@
 // Unique ID - Unique Identifier based on unchanging information about the device
 + (NSString *)uniqueID;
 
-// Device Signature - Device Signature based on assorted information about the device including: SystemVersion, ScreenHeight, ScreenWidth, PluggedIn, Jailbroken, HeadphonesAttached, BatteryLevel, FullyCharged, ConnectedtoWiFi, DeviceOrientation, AccelerometerXValue, AccelerometerYValue, AccelerometerZValue, Country, TimeZone, NumberProcessors, ProcessorSpeed, TotalDiskSpace, TotalMemory, and a Salt
+// Device Signature - Device Signature based on assorted information about the device including: SystemVersion, ScreenHeight, ScreenWidth, PluggedIn, Jailbroken, HeadphonesAttached, BatteryLevel, FullyCharged, ConnectedtoWiFi, DeviceOrientation, Country, TimeZone, NumberProcessors, ProcessorSpeed, TotalDiskSpace, TotalMemory, and a Salt
 + (NSString *)deviceSignature;
 
 // CFUUID - Random Unique Identifier that changes every time

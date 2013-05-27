@@ -21,9 +21,6 @@
 // Used Memory
 + (double)usedMemory:(BOOL)inPercent;
 
-// Available Memory
-+ (double)availableMemory:(BOOL)inPercent;
-
 // Active Memory
 + (double)activeMemory:(BOOL)inPercent;
 

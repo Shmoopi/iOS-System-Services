@@ -34,28 +34,6 @@
     }
 }
 
-// Locale
-+ (NSString *)locale {
-    // Get the user's locale/region
-    @try {
-        // Get the locale
-        NSLocale *Locale = [NSLocale currentLocale];
-        // Get the string value of the locale
-        NSString *Region = [NSString stringWithFormat:@"%@", Locale];
-        // Check for validity
-        if (Region == nil || Region.length <= 0) {
-            // Error, invalid Region
-            return nil;
-        }
-        // Completed Successfully
-        return Region;
-    }
-    @catch (NSException *exception) {
-        // Error
-        return nil;
-    }
-}
-
 // Language
 + (NSString *)language {
     // Get the user's language

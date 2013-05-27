@@ -45,27 +45,24 @@
     // Try to get the processor speed
 	@try {
         // Set the variables
-		size_t size;
-		int speed[6];
-		int final;
+        int hertz;
+        size_t size = sizeof(int);
+        int mib[2] = {CTL_HW, HW_CPU_FREQ};
         
-        // Find the speeds
-		speed[0] = CTL_HW;
-		speed[1] = HW_CPU_FREQ;
-		size = sizeof(final);
+        // Find the speed
+        sysctl(mib, 2, &hertz, &size, NULL, 0);
         
-        // Get the actual speed
-		if (sysctl(speed, 2, &final, &size, NULL, 0) < 0) {
-            // Unable to get the processor speed
+        // Make sure it's not less than 0
+        if (hertz < 1) {
+            // Invalid value
             return -1;
         }
         
         // Divide the final speed by 1 million to get the speed in mhz
-		if (final > 0)
-			final /= 1000000;
-		
+		hertz /= 1000000;
+        
         // Return the result
-        return final;
+        return hertz;
 	}
 	@catch (NSException * ex) {
         // Unable to get the speed (return -1)
@@ -91,6 +88,8 @@
 		sysctl(speed, 2, &final, &size, NULL, 0);
 		if (final > 0)
 			final /= 1000000;
+        else
+            return -1;
 		
         // Return the result
         return final;

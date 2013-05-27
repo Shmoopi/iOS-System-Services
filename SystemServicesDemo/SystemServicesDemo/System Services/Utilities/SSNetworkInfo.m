@@ -90,6 +90,67 @@
     }
 }
 
+// Get the External IP Address
++ (NSString *)externalIPAddress {
+    @try {
+        // Check if we have an internet connection then try to get the External IP Address
+        if (![self connectedToCellNetwork] && ![self connectedToWiFi]) {
+            // Not connected to anything, return nil
+            return nil;
+        }
+        
+        // Get the external IP Address based on dynsns.org
+        NSError *error = nil;
+        NSString *theIpHtml = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.dyndns.org/cgi-bin/check_ip.cgi"]
+                                                       encoding:NSUTF8StringEncoding
+                                                          error:&error];
+        if (!error) {
+            NSUInteger  an_Integer;
+            NSArray * ipItemsArray;
+            NSString *externalIP;
+            NSScanner *theScanner;
+            NSString *text = nil;
+            
+            theScanner = [NSScanner scannerWithString:theIpHtml];
+            
+            while ([theScanner isAtEnd] == NO) {
+                
+                // find start of tag
+                [theScanner scanUpToString:@"<" intoString:NULL] ;
+                
+                // find end of tag
+                [theScanner scanUpToString:@">" intoString:&text] ;
+                
+                // replace the found tag with a space
+                //(you can filter multi-spaces out later if you wish)
+                theIpHtml = [theIpHtml stringByReplacingOccurrencesOfString:
+                             [ NSString stringWithFormat:@"%@>", text]
+                                                                 withString:@" "] ;
+                ipItemsArray = [theIpHtml  componentsSeparatedByString:@" "];
+                an_Integer = [ipItemsArray indexOfObject:@"Address:"];
+                
+                externalIP =[ipItemsArray objectAtIndex:++an_Integer];
+            }
+            
+            // Check that you get something back
+            if (externalIP == nil || externalIP.length <= 0) {
+                // Error, no address found
+                return nil;
+            }
+            
+            // Return External IP
+            return externalIP;
+        } else {
+            // Error, no address found
+            return nil;
+        }
+    }
+    @catch (NSException *exception) {
+        // Error, no address found
+        return nil;
+    }
+}
+
 // Get Cell IP Address
 + (NSString *)cellIPAddress {
     // Get the Cell IP Address
@@ -99,14 +160,11 @@
         // Set up structs to hold the interfaces and the temporary address
         struct ifaddrs *Interfaces;
         struct ifaddrs *Temp;
-        // Set up int for success or fail
-        int Status = 0;
-        
-        // Get all the network interfaces
-        Status = getifaddrs(&Interfaces);
+        struct sockaddr_in *s4;
+        char buf[64];
         
         // If it's 0, then it's good
-        if (Status == 0)
+        if (!getifaddrs(&Interfaces))
         {
             // Loop through the list of interfaces
             Temp = Interfaces;
@@ -117,11 +175,18 @@
                 // If the temp interface is a valid interface
                 if(Temp->ifa_addr->sa_family == AF_INET)
                 {
-                    // Check if the interface is WiFi
-                    if([[NSString stringWithUTF8String:Temp->ifa_name] isEqualToString:@"pdp"])
+                    // Check if the interface is Cell
+                    if([[NSString stringWithUTF8String:Temp->ifa_name] isEqualToString:@"pdp_ip0"])
                     {
-                        // Get the WiFi IP Address
-                        IPAddress = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)Temp->ifa_addr)->sin_addr)];
+                        s4 = (struct sockaddr_in *)Temp->ifa_addr;
+                        
+                        if (inet_ntop(Temp->ifa_addr->sa_family, (void *)&(s4->sin_addr), buf, sizeof(buf)) == NULL) {
+                            // Failed to find it
+                            IPAddress = nil;
+                        } else {
+                            // Got the Cell IP Address
+                            IPAddress = [NSString stringWithUTF8String:buf];
+                        }
                     }
                 }
                 
@@ -168,7 +233,7 @@
         mgmtInfoBase[4] = NET_RT_IFLIST;  // Request all configured interfaces
         
         // With all configured interfaces requested, get handle index
-        if ((mgmtInfoBase[5] = if_nametoindex([@"pdp" UTF8String])) == 0)
+        if ((mgmtInfoBase[5] = if_nametoindex([@"pdp_ip0" UTF8String])) == 0)
             // Error, Name to index failure
             return nil;
         else
@@ -235,7 +300,7 @@
         // Set up the variable
         struct ifreq afr;
         // Copy the string
-        strncpy(afr.ifr_name, [@"pdp" UTF8String], IFNAMSIZ-1);
+        strncpy(afr.ifr_name, [@"pdp_ip0" UTF8String], IFNAMSIZ-1);
         // Open a socket
         int afd = socket(AF_INET, SOCK_DGRAM, 0);
         

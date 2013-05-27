@@ -177,15 +177,6 @@
     // Device Orientation
     NSString *DeviceOrientation = [NSString stringWithFormat:@"%d", [SSAccelerometerInfo deviceOrientation]];
     
-    // Accelerometer X Value
-    NSString *AccelerometerXValue = [NSString stringWithFormat:@"%d", (int)[SSAccelerometerInfo accelerometerXValue]];
-    
-    // Accelerometer Y Value
-    NSString *AccelerometerYValue = [NSString stringWithFormat:@"%d", (int)[SSAccelerometerInfo accelerometerYValue]];
-    
-    // Accelerometer Z Value
-    NSString *AccelerometerZValue = [NSString stringWithFormat:@"%d", (int)[SSAccelerometerInfo accelerometerXValue]];
-    
     // Country
     NSString *Country = [[[SSLocalizationInfo country] substringToIndex:2] uppercaseString];
     
@@ -248,18 +239,6 @@
         // Invalid String
         DeviceOrientation = @"0";
     }
-    if (AccelerometerXValue == nil || AccelerometerXValue.length <= 0 || AccelerometerXValue.length > 3) {
-        // Invalid String
-        AccelerometerXValue = @"0";
-    }
-    if (AccelerometerYValue == nil || AccelerometerYValue.length <= 0 || AccelerometerYValue.length > 3) {
-        // Invalid String
-        AccelerometerYValue = @"0";
-    }
-    if (AccelerometerZValue == nil || AccelerometerZValue.length <= 0 || AccelerometerZValue.length > 3) {
-        // Invalid String
-        AccelerometerZValue = @"0";
-    }
     if (Country == nil || Country.length <= 0 || Country.length > 2) {
         // Invalid String
         Country = @"00";
@@ -286,7 +265,7 @@
     }
     
     // Create the Device Signature based on the values
-    DeviceSignature = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", SystemVersion, ScreenHeight, ScreenWidth, PluggedIn, Jailbroken, HeadphonesAttached, BatteryLevel, FullyCharged, ConnectedtoWiFi, DeviceOrientation, AccelerometerXValue, AccelerometerYValue, AccelerometerZValue, Country, TimeZone, NumberProcessors, ProcessorSpeed, TotalDiskSpace, TotalMemory, Salt];
+    DeviceSignature = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", SystemVersion, ScreenHeight, ScreenWidth, PluggedIn, Jailbroken, HeadphonesAttached, BatteryLevel, FullyCharged, ConnectedtoWiFi, DeviceOrientation, Country, TimeZone, NumberProcessors, ProcessorSpeed, TotalDiskSpace, TotalMemory, Salt];
     
     // Check for errors
     if (DeviceSignature == nil || DeviceSignature.length <= 0) {
