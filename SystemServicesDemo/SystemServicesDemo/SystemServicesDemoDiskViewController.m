@@ -8,12 +8,18 @@
 
 #import "SystemServicesDemoDiskViewController.h"
 #import "SystemServices.h"
-#import "PercentageChart.h"
+
+// Annotated Gauge
+#import "MSAnnotatedGauge.h"
+#import "MSGradientArcLayer.h"
 
 #define SystemSharedServices [SystemServices sharedServices]
 
-@interface SystemServicesDemoDiskViewController ()
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 
+@interface SystemServicesDemoDiskViewController ()
+// Annotated Gauge
+@property (nonatomic) MSAnnotatedGauge *annotatedGauge;
 @end
 
 @implementation SystemServicesDemoDiskViewController
@@ -35,14 +41,20 @@
     // Free Disk Space
     self.lblFreeDiskSpace.text = [NSString stringWithFormat:@"Free Disk Space: %@ %@", [SystemSharedServices freeDiskSpaceinRaw], [SystemSharedServices freeDiskSpaceinPercent]];
     
-    [self.chart setText:@"Used Disk Space"];
-    [self.chart setPercentage:[[SystemSharedServices usedDiskSpaceinPercent] floatValue]];
-    [self.chart setMainColor:[UIColor lightGrayColor]];
-    [self.chart setLineColor:[UIColor redColor]];
-    [self.chart setSecondaryColor:[UIColor darkGrayColor]];
-    [self.chart setFontName:@"System"];
-    [self.chart setFontSize:16.0];
-    [self.chart setFontColor:[UIColor whiteColor]];
+    [self.annotatedGauge removeFromSuperview];
+    self.annotatedGauge = nil;
+    int yPosition = (isiPhone5) ? 350 : 300;
+    self.annotatedGauge = [[MSAnnotatedGauge alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - yPosition, 320, 210)];
+    self.annotatedGauge.minValue = 0;
+    self.annotatedGauge.maxValue = 100;
+    [self.annotatedGauge setBackgroundColor:[UIColor clearColor]];
+    self.annotatedGauge.titleLabel.text = [NSString stringWithFormat:@"Total Space: %@", [SystemSharedServices diskSpace]];
+    self.annotatedGauge.startRangeLabel.text = [NSString stringWithFormat:@"%@ Used",  [SystemSharedServices usedDiskSpaceinRaw]];
+    self.annotatedGauge.endRangeLabel.text = [NSString stringWithFormat:@"%@ Free",  [SystemSharedServices freeDiskSpaceinRaw]];
+    self.annotatedGauge.fillGradient = [MSGradientArcLayer defaultGradient];
+    self.annotatedGauge.value = [[SystemSharedServices usedDiskSpaceinPercent] floatValue];
+    [self.annotatedGauge setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin];
+    [self.view addSubview:self.annotatedGauge];
 }
 
 - (IBAction)refresh:(id)sender {
@@ -59,7 +71,6 @@
     [self setLblTotalDiskSpace:nil];
     [self setLblUsedDiskSpace:nil];
     [self setLblFreeDiskSpace:nil];
-    [self setChart:nil];
     [super viewDidUnload];
 }
 

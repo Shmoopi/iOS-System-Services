@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PercentageChart.h"
 
 @interface SystemServicesDemoDiskViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *lblTotalDiskSpace;
 @property (strong, nonatomic) IBOutlet UILabel *lblUsedDiskSpace;
 @property (strong, nonatomic) IBOutlet UILabel *lblFreeDiskSpace;
-@property (strong, nonatomic) IBOutlet PercentageChart *chart;
 
 - (IBAction)refresh:(id)sender;
 

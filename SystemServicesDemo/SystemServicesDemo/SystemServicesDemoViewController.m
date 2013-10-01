@@ -27,15 +27,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // Let's find the accelerometer information ;)
+    // Let's find the accelerometer information (if we're not in the simulator)
+#if !TARGET_IPHONE_SIMULATOR
     accel = [[SSAccelerometerInfo alloc] init];
     [accel startLoggingMotionData];
     
     [self performBlock:^(void){
         // Log any accelerometer data
-        NSLog(@"Accelerometer Data: %@", [accel rawAccelerometerString]);
+        NSLog(@"Raw Accelerometer String: %@", [accel rawAccelerometerString]);
         [accel stopLoggingMotionData];
     }afterDelay:0.5];
+#endif
     
     [self performSelector:@selector(getAllHardwareInformation) withObject:nil afterDelay:0.01];
 }

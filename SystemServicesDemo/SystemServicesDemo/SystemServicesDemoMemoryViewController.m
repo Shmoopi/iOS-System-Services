@@ -12,6 +12,8 @@
 
 #define SystemSharedServices [SystemServices sharedServices]
 
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
+
 @interface SystemServicesDemoMemoryViewController () {
     PCPieChart *pieChart;
     NSMutableArray *components;
@@ -33,9 +35,10 @@
     components = [[NSMutableArray alloc] init];
     
     // Make the piechart view
+    int yPosition = (isiPhone5) ? 250 : 220;
     int height = [self.view bounds].size.width/3*2.; // 220;
-    int width = [self.view bounds].size.width; //320;
-    pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height) - 28,width,height)];
+    int width = [self.view bounds].size.width - 7; //320;
+    pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(0,yPosition,width,height)];
     [pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
     [pieChart setDiameter:width/2];
     [pieChart setSameColorLabel:YES];
@@ -85,22 +88,28 @@
     self.lblMemoryRAM.text = [NSString stringWithFormat:@"Memory (RAM): (±)%.2f MB",[SystemSharedServices totalMemory]];
     
     // Used Memory
-    self.lblUsedMemory.text = [NSString stringWithFormat:@"Used Memory: %.2fMB %.0f%%", [SystemSharedServices usedMemoryinRaw], [SystemSharedServices usedMemoryinPercent]];
+    self.lblUsedMemory.text = [NSString stringWithFormat:@"Used Memory: %.2f MB %.0f%%", [SystemSharedServices usedMemoryinRaw], [SystemSharedServices usedMemoryinPercent]];
+    [self.lblUsedMemory setTextColor:PCColorYellow];
     
     // Wired Memory
-    self.lblWiredMemory.text = [NSString stringWithFormat:@"Wired Memory: %.2fMB %.0f%%", [SystemSharedServices wiredMemoryinRaw], [SystemSharedServices wiredMemoryinPercent]];
+    self.lblWiredMemory.text = [NSString stringWithFormat:@"Wired Memory: %.2f MB %.0f%%", [SystemSharedServices wiredMemoryinRaw], [SystemSharedServices wiredMemoryinPercent]];
+    [self.lblWiredMemory setTextColor:PCColorGreen];
     
     // Active Memory
-    self.lblActiveMemory.text = [NSString stringWithFormat:@"Active Memory: %.2fMB %.0f%%", [SystemSharedServices activeMemoryinRaw], [SystemSharedServices activeMemoryinPercent]];
+    self.lblActiveMemory.text = [NSString stringWithFormat:@"Active Memory: %.2f MB %.0f%%", [SystemSharedServices activeMemoryinRaw], [SystemSharedServices activeMemoryinPercent]];
+    [self.lblActiveMemory setTextColor:PCColorOrange];
     
     // Inactive Memory
-    self.lblInactiveMemory.text = [NSString stringWithFormat:@"Inactive Memory: %.2fMB %.0f%%", [SystemSharedServices inactiveMemoryinRaw], [SystemSharedServices inactiveMemoryinPercent]];
+    self.lblInactiveMemory.text = [NSString stringWithFormat:@"Inactive Memory: %.2f MB %.0f%%", [SystemSharedServices inactiveMemoryinRaw], [SystemSharedServices inactiveMemoryinPercent]];
+    [self.lblInactiveMemory setTextColor:PCColorRed];
     
     // Free Memory
-    self.lblFreeMemory.text = [NSString stringWithFormat:@"Free Memory: %.2fMB %.0f%%", [SystemSharedServices freeMemoryinRaw], [SystemSharedServices freeMemoryinPercent]];
+    self.lblFreeMemory.text = [NSString stringWithFormat:@"Free Memory: %.2f MB %.0f%%", [SystemSharedServices freeMemoryinRaw], [SystemSharedServices freeMemoryinPercent]];
+    [self.lblFreeMemory setTextColor:PCColorBlue];
     
     // Purgeable Memory
-    self.lblPurgeableMemory.text = [NSString stringWithFormat:@"Purgeable Memory: %.2fMB %.0f%%", [SystemSharedServices purgableMemoryinRaw], [SystemSharedServices purgableMemoryinPercent]];
+    self.lblPurgeableMemory.text = [NSString stringWithFormat:@"Purgeable Memory: %.2f MB %.0f%%", [SystemSharedServices purgableMemoryinRaw], [SystemSharedServices purgableMemoryinPercent]];
+    [self.lblPurgeableMemory setTextColor:PCColorDefault];
 }
 
 - (IBAction)refresh:(id)sender {
@@ -111,10 +120,11 @@
     // Remove the piecomponent
     [pieChart removeFromSuperview];
     
-    // Make the piechart view
+    // Make the piechart view - set the frame based on the device
+    int yPosition = (isiPhone5) ? 250 : 220;
     int height = [self.view bounds].size.width/3*2.; // 220;
-    int width = [self.view bounds].size.width; //320;
-    pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height) - 23,width,height)];
+    int width = [self.view bounds].size.width - 7; //320;
+    pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(0,yPosition,width,height)];
     [pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
     [pieChart setDiameter:width/2];
     [pieChart setSameColorLabel:YES];
@@ -156,6 +166,11 @@
     
     // Set all the componenets
     [pieChart setComponents:components];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+                                duration:(NSTimeInterval)duration{
+    NSLog(@"Frame: %f, %f, %f, %f", pieChart.frame.origin.x, pieChart.frame.origin.y, pieChart.frame.size.width, pieChart.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

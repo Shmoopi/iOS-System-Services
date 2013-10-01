@@ -43,9 +43,11 @@
         CFStringRef outValue = nil;
         UInt32 propertySize = sizeof(outValue);
         AudioSessionGetProperty(kAudioSessionProperty_AudioRouteDescription, &propertySize, &outValue);
-        
+        NSString *routeStr;
         // Get the route
-        NSString *routeStr = [NSString stringWithUTF8String:(char *)outValue];
+        if (outValue) {
+            routeStr = [NSString stringWithUTF8String:(char *)outValue];
+        }
         // Get the range
         NSRange headsetRange = [routeStr rangeOfString : @"Headset"];
         

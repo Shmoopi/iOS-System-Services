@@ -9,6 +9,8 @@
 #import "SystemServicesDemoProcessesViewController.h"
 #import "SystemServices.h"
 
+#import "DetailViewController.h"
+
 #define SystemSharedServices [SystemServices sharedServices]
 
 @interface SystemServicesDemoProcessesViewController () {
@@ -25,6 +27,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -32,6 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [self.tableView setContentInset:UIEdgeInsetsMake(26,0,19,0)];
     
     // Set up the tableArray;
     tableArray = [[NSMutableArray alloc] initWithArray:[SystemSharedServices processesInformation]];
@@ -124,19 +130,50 @@
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+ */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    // Create a dictionary from the selected cell
+    NSDictionary *processData = [tableArray objectAtIndex:indexPath.row];
+    
+    NSString *parentProcessName;
+    
+    // Determine the parent process - if it's more than 0
+    if ([[processData objectForKey:@"ParentID"] integerValue] > 0) {
+        for (NSDictionary *dicts in tableArray) {
+            if ([[dicts objectForKey:@"PID"] integerValue] == [[processData objectForKey:@"ParentID"] integerValue]) {
+                // Parent process
+                parentProcessName = [dicts objectForKey:@"Name"];
+                break;
+            }
+        }
+    } else if ([[processData objectForKey:@"ParentID"] integerValue] == -1) {
+        parentProcessName = @"Kernel";
+    } else {
+        parentProcessName = @"Unknown";
+    }
+    
+    DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail"];
+    
+    // Set up the information on the detail view controller
+    [detailViewController setTitle:[[tableArray objectAtIndex:indexPath.row] objectForKey:@"Name"]];
+    // Set the labels
+    [detailViewController setSlblName:[NSString stringWithFormat:@"Name: %@", [processData objectForKey:@"Name"]]];
+    [detailViewController setSlblPID:[NSString stringWithFormat:@"PID: %@", [processData objectForKey:@"PID"]]];
+    [detailViewController setSlblParentID:[NSString stringWithFormat:@"ParentID: %@", [processData objectForKey:@"ParentID"]]];
+    [detailViewController setSlblParentName:[NSString stringWithFormat:@"Parent Name: %@", parentProcessName]];
+    [detailViewController setSlblPriority:[NSString stringWithFormat:@"Priority: %@", [processData objectForKey:@"Priority"]]];
+    [detailViewController setSlblStartDate:[NSString stringWithFormat:@"Start Date: %@", [processData objectForKey:@"StartDate"]]];
+    [detailViewController setSlblStatus:[NSString stringWithFormat:@"Status: %@", [processData objectForKey:@"Status"]]];
+    [detailViewController setSlblFlags:[NSString stringWithFormat:@"Flags: %@", [processData objectForKey:@"Flags"]]];
+    
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (IBAction)refresh:(id)sender {

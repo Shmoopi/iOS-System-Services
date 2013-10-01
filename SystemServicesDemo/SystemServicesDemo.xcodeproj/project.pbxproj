@@ -37,13 +37,28 @@
 		01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */; };
 		01F591711615358300D2CF76 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F591701615358300D2CF76 /* Security.framework */; };
 		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
-		4C3C92521729B80400D88C01 /* PercentageChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924F1729B80400D88C01 /* PercentageChart.m */; };
-		4C3C92531729B80400D88C01 /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C92511729B80400D88C01 /* PercentageChartLayer.m */; };
 		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
 		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
 		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
 		4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
+		4C67F74817FB0BD300089C23 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67F74717FB0BD300089C23 /* DetailViewController.m */; };
+		4C9C34FF17FA04D7004113FC /* Disk.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F517FA04D7004113FC /* Disk.png */; };
+		4C9C350017FA04D7004113FC /* Disk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F617FA04D7004113FC /* Disk@2x.png */; };
+		4C9C350117FA04D7004113FC /* Hardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F717FA04D7004113FC /* Hardware.png */; };
+		4C9C350217FA04D7004113FC /* Hardware@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F817FA04D7004113FC /* Hardware@2x.png */; };
+		4C9C350317FA04D7004113FC /* Memory.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F917FA04D7004113FC /* Memory.png */; };
+		4C9C350417FA04D7004113FC /* Memory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34FA17FA04D7004113FC /* Memory@2x.png */; };
+		4C9C350517FA04D7004113FC /* Network.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34FB17FA04D7004113FC /* Network.png */; };
+		4C9C350617FA04D7004113FC /* Network@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34FC17FA04D7004113FC /* Network@2x.png */; };
+		4C9C350717FA04D7004113FC /* Processes.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34FD17FA04D7004113FC /* Processes.png */; };
+		4C9C350817FA04D7004113FC /* Processes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34FE17FA04D7004113FC /* Processes@2x.png */; };
+		4CB898F3178B1003005FE9CF /* MSAnnotatedGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898E6178B1003005FE9CF /* MSAnnotatedGauge.m */; };
+		4CB898F4178B1003005FE9CF /* MSArcLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898E8178B1003005FE9CF /* MSArcLayer.m */; };
+		4CB898F5178B1003005FE9CF /* MSGradientArcLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898EB178B1003005FE9CF /* MSGradientArcLayer.m */; };
+		4CB898F6178B1003005FE9CF /* MSNeedleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898ED178B1003005FE9CF /* MSNeedleView.m */; };
+		4CB898F7178B1003005FE9CF /* MSRangeGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898EF178B1003005FE9CF /* MSRangeGauge.m */; };
+		4CB898F8178B1003005FE9CF /* MSSimpleGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB898F1178B1003005FE9CF /* MSSimpleGauge.m */; };
 		4CCC7651170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7650170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m */; };
 		4CCC7654170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7653170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m */; };
 		4CCC7657170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC7656170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m */; };
@@ -104,15 +119,37 @@
 		01F591701615358300D2CF76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4C3C924B1729AF0A00D88C01 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
 		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
-		4C3C924E1729B80400D88C01 /* PercentageChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChart.h; sourceTree = "<group>"; };
-		4C3C924F1729B80400D88C01 /* PercentageChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChart.m; sourceTree = "<group>"; };
-		4C3C92501729B80400D88C01 /* PercentageChartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChartLayer.h; sourceTree = "<group>"; };
-		4C3C92511729B80400D88C01 /* PercentageChartLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChartLayer.m; sourceTree = "<group>"; };
 		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4C3C92571729B83200D88C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C640E021607AAFA00955DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		4C640E091607BF9D00955DE4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4C67F74617FB0BD300089C23 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4C67F74717FB0BD300089C23 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4C9C34F517FA04D7004113FC /* Disk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Disk.png; sourceTree = "<group>"; };
+		4C9C34F617FA04D7004113FC /* Disk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Disk@2x.png"; sourceTree = "<group>"; };
+		4C9C34F717FA04D7004113FC /* Hardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hardware.png; sourceTree = "<group>"; };
+		4C9C34F817FA04D7004113FC /* Hardware@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hardware@2x.png"; sourceTree = "<group>"; };
+		4C9C34F917FA04D7004113FC /* Memory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Memory.png; sourceTree = "<group>"; };
+		4C9C34FA17FA04D7004113FC /* Memory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Memory@2x.png"; sourceTree = "<group>"; };
+		4C9C34FB17FA04D7004113FC /* Network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Network.png; sourceTree = "<group>"; };
+		4C9C34FC17FA04D7004113FC /* Network@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Network@2x.png"; sourceTree = "<group>"; };
+		4C9C34FD17FA04D7004113FC /* Processes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Processes.png; sourceTree = "<group>"; };
+		4C9C34FE17FA04D7004113FC /* Processes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Processes@2x.png"; sourceTree = "<group>"; };
+		4CB898E5178B1003005FE9CF /* MSAnnotatedGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAnnotatedGauge.h; sourceTree = "<group>"; };
+		4CB898E6178B1003005FE9CF /* MSAnnotatedGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAnnotatedGauge.m; sourceTree = "<group>"; };
+		4CB898E7178B1003005FE9CF /* MSArcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSArcLayer.h; sourceTree = "<group>"; };
+		4CB898E8178B1003005FE9CF /* MSArcLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSArcLayer.m; sourceTree = "<group>"; };
+		4CB898E9178B1003005FE9CF /* MSArcLayerSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSArcLayerSubclass.h; sourceTree = "<group>"; };
+		4CB898EA178B1003005FE9CF /* MSGradientArcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGradientArcLayer.h; sourceTree = "<group>"; };
+		4CB898EB178B1003005FE9CF /* MSGradientArcLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGradientArcLayer.m; sourceTree = "<group>"; };
+		4CB898EC178B1003005FE9CF /* MSNeedleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNeedleView.h; sourceTree = "<group>"; };
+		4CB898ED178B1003005FE9CF /* MSNeedleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNeedleView.m; sourceTree = "<group>"; };
+		4CB898EE178B1003005FE9CF /* MSRangeGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRangeGauge.h; sourceTree = "<group>"; };
+		4CB898EF178B1003005FE9CF /* MSRangeGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRangeGauge.m; sourceTree = "<group>"; };
+		4CB898F0178B1003005FE9CF /* MSSimpleGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleGauge.h; sourceTree = "<group>"; };
+		4CB898F1178B1003005FE9CF /* MSSimpleGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSimpleGauge.m; sourceTree = "<group>"; };
+		4CB898F2178B1003005FE9CF /* MSSimpleGaugeSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleGaugeSubclass.h; sourceTree = "<group>"; };
 		4CCC764F170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoNetworkViewController.h; sourceTree = "<group>"; };
 		4CCC7650170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoNetworkViewController.m; sourceTree = "<group>"; };
 		4CCC7652170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoMemoryViewController.h; sourceTree = "<group>"; };
@@ -241,8 +278,8 @@
 				4CCC7656170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m */,
 				4CCC7658170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.h */,
 				4CCC7659170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m */,
-				0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */,
-				0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */,
+				4C67F74617FB0BD300089C23 /* DetailViewController.h */,
+				4C67F74717FB0BD300089C23 /* DetailViewController.m */,
 				01ADF9FE16051BFE008B0A6B /* Supporting Files */,
 			);
 			path = SystemServicesDemo;
@@ -251,7 +288,9 @@
 		01ADF9FE16051BFE008B0A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C3C92541729B80A00D88C01 /* Percentage Chart */,
+				4C9C350917FA0AA1004113FC /* NSObject + Perform Block After Delay */,
+				4C9C34F417FA04D7004113FC /* Images */,
+				4CB898E4178B1003005FE9CF /* Gauges */,
 				4C3C924A1729AEFD00D88C01 /* Pie Chart */,
 				013A5145160F526B00FC11BE /* icon.png */,
 				013A5143160F525A00FC11BE /* icon@2x.png */,
@@ -273,15 +312,51 @@
 			name = "Pie Chart";
 			sourceTree = "<group>";
 		};
-		4C3C92541729B80A00D88C01 /* Percentage Chart */ = {
+		4C9C34F417FA04D7004113FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4C3C924E1729B80400D88C01 /* PercentageChart.h */,
-				4C3C924F1729B80400D88C01 /* PercentageChart.m */,
-				4C3C92501729B80400D88C01 /* PercentageChartLayer.h */,
-				4C3C92511729B80400D88C01 /* PercentageChartLayer.m */,
+				4C9C34F517FA04D7004113FC /* Disk.png */,
+				4C9C34F617FA04D7004113FC /* Disk@2x.png */,
+				4C9C34F717FA04D7004113FC /* Hardware.png */,
+				4C9C34F817FA04D7004113FC /* Hardware@2x.png */,
+				4C9C34F917FA04D7004113FC /* Memory.png */,
+				4C9C34FA17FA04D7004113FC /* Memory@2x.png */,
+				4C9C34FB17FA04D7004113FC /* Network.png */,
+				4C9C34FC17FA04D7004113FC /* Network@2x.png */,
+				4C9C34FD17FA04D7004113FC /* Processes.png */,
+				4C9C34FE17FA04D7004113FC /* Processes@2x.png */,
 			);
-			name = "Percentage Chart";
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4C9C350917FA0AA1004113FC /* NSObject + Perform Block After Delay */ = {
+			isa = PBXGroup;
+			children = (
+				0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */,
+				0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */,
+			);
+			name = "NSObject + Perform Block After Delay";
+			sourceTree = "<group>";
+		};
+		4CB898E4178B1003005FE9CF /* Gauges */ = {
+			isa = PBXGroup;
+			children = (
+				4CB898E5178B1003005FE9CF /* MSAnnotatedGauge.h */,
+				4CB898E6178B1003005FE9CF /* MSAnnotatedGauge.m */,
+				4CB898E7178B1003005FE9CF /* MSArcLayer.h */,
+				4CB898E8178B1003005FE9CF /* MSArcLayer.m */,
+				4CB898E9178B1003005FE9CF /* MSArcLayerSubclass.h */,
+				4CB898EA178B1003005FE9CF /* MSGradientArcLayer.h */,
+				4CB898EB178B1003005FE9CF /* MSGradientArcLayer.m */,
+				4CB898EC178B1003005FE9CF /* MSNeedleView.h */,
+				4CB898ED178B1003005FE9CF /* MSNeedleView.m */,
+				4CB898EE178B1003005FE9CF /* MSRangeGauge.h */,
+				4CB898EF178B1003005FE9CF /* MSRangeGauge.m */,
+				4CB898F0178B1003005FE9CF /* MSSimpleGauge.h */,
+				4CB898F1178B1003005FE9CF /* MSSimpleGauge.m */,
+				4CB898F2178B1003005FE9CF /* MSSimpleGaugeSubclass.h */,
+			);
+			path = Gauges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +386,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SystemServicesDemo;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Shmoopi LLC";
 			};
 			buildConfigurationList = 01ADF9ED16051BFE008B0A6B /* Build configuration list for PBXProject "SystemServicesDemo" */;
@@ -336,11 +411,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9C350617FA04D7004113FC /* Network@2x.png in Resources */,
+				4C9C350417FA04D7004113FC /* Memory@2x.png in Resources */,
+				4C9C34FF17FA04D7004113FC /* Disk.png in Resources */,
 				01ADFA0216051BFE008B0A6B /* InfoPlist.strings in Resources */,
 				01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */,
+				4C9C350517FA04D7004113FC /* Network.png in Resources */,
 				013A5141160F4E3C00FC11BE /* Default-568h@2x.png in Resources */,
+				4C9C350717FA04D7004113FC /* Processes.png in Resources */,
+				4C9C350817FA04D7004113FC /* Processes@2x.png in Resources */,
+				4C9C350317FA04D7004113FC /* Memory.png in Resources */,
+				4C9C350017FA04D7004113FC /* Disk@2x.png in Resources */,
+				4C9C350117FA04D7004113FC /* Hardware.png in Resources */,
 				013A5144160F525A00FC11BE /* icon@2x.png in Resources */,
 				013A5146160F526B00FC11BE /* icon.png in Resources */,
+				4C9C350217FA04D7004113FC /* Hardware@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +445,7 @@
 				013A5130160F4DE500FC11BE /* SSApplicationInfo.m in Sources */,
 				013A5131160F4DE500FC11BE /* SSBatteryInfo.m in Sources */,
 				013A5132160F4DE500FC11BE /* SSCarrierInfo.m in Sources */,
+				4C67F74817FB0BD300089C23 /* DetailViewController.m in Sources */,
 				013A5133160F4DE500FC11BE /* SSDiskInfo.m in Sources */,
 				013A5134160F4DE500FC11BE /* SSHardwareInfo.m in Sources */,
 				013A5135160F4DE500FC11BE /* SSJailbreakCheck.m in Sources */,
@@ -375,8 +461,12 @@
 				4CCC765A170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m in Sources */,
 				0183DA411711DD830085441F /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */,
-				4C3C92521729B80400D88C01 /* PercentageChart.m in Sources */,
-				4C3C92531729B80400D88C01 /* PercentageChartLayer.m in Sources */,
+				4CB898F3178B1003005FE9CF /* MSAnnotatedGauge.m in Sources */,
+				4CB898F4178B1003005FE9CF /* MSArcLayer.m in Sources */,
+				4CB898F5178B1003005FE9CF /* MSGradientArcLayer.m in Sources */,
+				4CB898F6178B1003005FE9CF /* MSNeedleView.m in Sources */,
+				4CB898F7178B1003005FE9CF /* MSRangeGauge.m in Sources */,
+				4CB898F8178B1003005FE9CF /* MSSimpleGauge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +496,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -424,10 +515,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -436,10 +531,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -447,8 +543,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -463,7 +562,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",
@@ -479,7 +578,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",

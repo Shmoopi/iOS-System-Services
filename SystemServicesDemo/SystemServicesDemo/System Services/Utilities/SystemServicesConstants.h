@@ -103,17 +103,6 @@ enum {
 #define CYDIALOC        @"/Applications/Cydia.app"
 #define HIDDENFILES     [NSArray arrayWithObjects:@"/Applications/RockApp.app",@"/Applications/Icy.app",@"/usr/sbin/sshd",@"/usr/bin/sshd",@"/usr/libexec/sftp-server",@"/Applications/WinterBoard.app",@"/Applications/SBSettings.app",@"/Applications/MxTube.app",@"/Applications/IntelliScreen.app",@"/Library/MobileSubstrate/DynamicLibraries/Veency.plist",@"/Library/MobileSubstrate/DynamicLibraries/LiveClock.plist",@"/private/var/lib/apt",@"/private/var/stash",@"/System/Library/LaunchDaemons/com.ikey.bbot.plist",@"/System/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist",@"/private/var/tmp/cydia.log",@"/private/var/lib/cydia", @"/etc/clutch.conf", @"/var/cache/clutch.plist", @"/etc/clutch_cracked.plist", @"/var/cache/clutch_cracked.plist", @"/var/lib/clutch/overdrive.dylib", @"/var/root/Documents/Cracked/", nil]
 
-// Create static functions
-static int urlCheck() __attribute__((always_inline));
-static int cydiaCheck() __attribute__((always_inline));
-static int inaccessibleFilesCheck() __attribute__((always_inline));
-static int plistCheck() __attribute__((always_inline));
-static int processesCheck() __attribute__((always_inline));
-static int fstabCheck() __attribute__((always_inline));
-static int systemCheck() __attribute__((always_inline));
-static int symbolicLinkCheck() __attribute__((always_inline));
-static int filesExistCheck() __attribute__((always_inline));
-
 /* End Jailbreak Definitions */
 
 #endif

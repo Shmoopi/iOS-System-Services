@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>95A0454E-E3D5-45D0-A74A-AB9ECA40076D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SystemServicesDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>281F3834-BEA3-4A01-B504-DF01CE4DE09F</key>
+		<string>https://github.com/Shmoopi/iOS-System-Services</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SystemServicesDemo/SystemServicesDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>281F3834-BEA3-4A01-B504-DF01CE4DE09F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Shmoopi/iOS-System-Services</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>281F3834-BEA3-4A01-B504-DF01CE4DE09F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>281F3834-BEA3-4A01-B504-DF01CE4DE09F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-System-Services</string>
+		</dict>
+	</array>
+</dict>
+</plist>
