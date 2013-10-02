@@ -1,21 +1,27 @@
 iOS-System-Services
 ===================
 
-iOS System Services is a singleton class to gather all available information about a device.  There are over 75 methods to determine everything about a device, including: System Uptime, Network Information, Battery Usage, Accelerometer Data, Disk Usage, Running Processes, Memory Usage, and a complete UDID replacement based on unchanging device information.
+![System Services Memory Screenshot](Sample Images/Screenshot.png "Memory and Disk Information")
 
-![System Services 1](http://www.shmoopi.net/wp-content/uploads/2013/05/SS1.png)
-![System Services 2](http://www.shmoopi.net/wp-content/uploads/2013/05/SS2.png)
+This is a singleton class to gather all available information about a device.  It gives you over 75 methods to determine everything about a device, including: 
+  * Hardware & Network Information
+  * Battery Usage
+  * Accelerometer Data
+  * Disk Usage 
+  * Running Processes
+  * Memory Usage
+  * And a complete UDID replacement based on unchanging device information.
 
 Changes
 ===================
 
-1.  Turned the class into a singleton, now accessible like this:  [systemServices sharedServices]
-2.  Revamped the accelerometer information class - not a singleton, must alloc init
-3.  Fixed most network information bugs, with the exception of Cellular MAC address - it's incorrect most of the time for some reason (feel free to help out!)
+1.  Turned the class into a singleton, now accessible using this:  [systemServices sharedServices]
+2.  Revamped the accelerometer information class - not a singleton, must alloc/init and start/stop
+3.  Fixed network information bugs, with the exception of Cellular MAC address - it's incorrect most of the time for some reason (feel free to help out!)
 4.  Fixed memory information bugs but memory methods are more of an estimate than fact.  We round to determine the most likely amount of memory on the device (feel free to change if you know a better way!)
 5.  Upgraded speed!
 
-Example Usage
+Available Device Information
 ===================
 
 ```
@@ -294,13 +300,20 @@ Example Usage
     // CFUUID
     NSString *cfuuid;
 ```
+Third-Pary Plugins
+===================
+
+A big thank you to the makers of:
+  * Annotated Gauge iOS Class here: https://github.com/sabymike/MSSimpleGauge
+  * Pie Chart iOS Class here: https://github.com/honcheng/iOSPlot
+  * NSObject+PerformBlockAfterDelay iOS Class here: http://www.mikeash.com/pyblog/friday-qa-2009-08-14-practical-blocks.html
+
 License
 ===================
 
 Copyright © 2009-2013 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
 
 This class and its usage are very intuitive and provide as simple an interface as possible for developers to plug into.  Please feel free to customize the class as much as you'd like, or use any of the code within your projects.  If you do add to the project, make sure to let me know so we can merge any changes.
-A big thank you to the makers of Percentage Chart iOS Class here: https://github.com/honcheng/iOSPlot and the Pie Chart iOS Class here: https://github.com/xgil78/PercentageChart
 
 If you like what you see here, or on our website, please feel free to drop us a line or purchase one of our applications!
 
