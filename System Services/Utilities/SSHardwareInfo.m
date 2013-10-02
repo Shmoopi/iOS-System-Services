@@ -228,6 +228,27 @@
     }
 }
 
+// Get the Screen Brightness
++ (float)screenBrightness {
+    // Get the screen brightness
+    @try {
+        // Brightness
+        float brightness = [UIScreen mainScreen].brightness;
+        // Verify validity
+        if (brightness < 0.0 || brightness > 1.0) {
+            // Invalid brightness
+            return -1;
+        }
+        
+        // Successful
+        return (brightness * 100);
+    }
+    @catch (NSException *exception) {
+        // Error
+        return -1;
+    }
+}
+
 // Multitasking enabled?
 + (BOOL)multitaskingEnabled {
     // Is multitasking enabled?

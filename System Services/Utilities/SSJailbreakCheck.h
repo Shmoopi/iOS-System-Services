@@ -13,6 +13,6 @@
 // Jailbreak Check
 
 // Jailbroken?
-+ (BOOL)jailbroken;
++ (int)jailbroken;
 
 @end

@@ -18,6 +18,9 @@
 // Get Current MAC Address
 + (NSString *)currentMACAddress;
 
+// Get the External IP Address
++ (NSString *)externalIPAddress;
+
 // Get Cell IP Address
 + (NSString *)cellIPAddress;
 

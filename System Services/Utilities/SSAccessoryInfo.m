@@ -40,12 +40,14 @@
     // Check if the headphones are connected
     @try {
         // Set up the variables
-        UInt32 routeSize = sizeof (CFStringRef);
-        CFStringRef route;
-        AudioSessionGetProperty (kAudioSessionProperty_AudioRouteDescription, &routeSize, &route);
-        
+        CFStringRef outValue = nil;
+        UInt32 propertySize = sizeof(outValue);
+        AudioSessionGetProperty(kAudioSessionProperty_AudioRouteDescription, &propertySize, &outValue);
+        NSString *routeStr;
         // Get the route
-        NSString *routeStr = [NSString stringWithUTF8String:(char *)route];
+        if (outValue) {
+            routeStr = [NSString stringWithUTF8String:(char *)outValue];
+        }
         // Get the range
         NSRange headsetRange = [routeStr rangeOfString : @"Headset"];
         

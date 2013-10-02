@@ -36,6 +36,9 @@
 // Get the Screen Height (Y)
 + (NSInteger)screenHeight;
 
+// Get the Screen Brightness
++ (float)screenBrightness;
+
 // Multitasking enabled?
 + (BOOL)multitaskingEnabled;
 
