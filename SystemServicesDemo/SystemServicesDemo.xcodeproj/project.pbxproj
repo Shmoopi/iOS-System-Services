@@ -7,26 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		013A512D160F4DE500FC11BE /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A510E160F4DE500FC11BE /* SystemServices.m */; };
-		013A512E160F4DE500FC11BE /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */; };
-		013A512F160F4DE500FC11BE /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */; };
-		013A5130160F4DE500FC11BE /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5115160F4DE500FC11BE /* SSApplicationInfo.m */; };
-		013A5131160F4DE500FC11BE /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5117160F4DE500FC11BE /* SSBatteryInfo.m */; };
-		013A5132160F4DE500FC11BE /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5119160F4DE500FC11BE /* SSCarrierInfo.m */; };
-		013A5133160F4DE500FC11BE /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511B160F4DE500FC11BE /* SSDiskInfo.m */; };
-		013A5134160F4DE500FC11BE /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511D160F4DE500FC11BE /* SSHardwareInfo.m */; };
-		013A5135160F4DE500FC11BE /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */; };
-		013A5136160F4DE500FC11BE /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */; };
-		013A5137160F4DE500FC11BE /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5123160F4DE500FC11BE /* SSMemoryInfo.m */; };
-		013A5138160F4DE500FC11BE /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5125160F4DE500FC11BE /* SSNetworkInfo.m */; };
-		013A5139160F4DE500FC11BE /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5127160F4DE500FC11BE /* SSProcessInfo.m */; };
-		013A513A160F4DE500FC11BE /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A5129160F4DE500FC11BE /* SSProcessorInfo.m */; };
-		013A513B160F4DE500FC11BE /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 013A512B160F4DE500FC11BE /* SSUUID.m */; };
 		013A5141160F4E3C00FC11BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5140160F4E3C00FC11BE /* Default-568h@2x.png */; };
 		013A5144160F525A00FC11BE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5143160F525A00FC11BE /* icon@2x.png */; };
 		013A5146160F526B00FC11BE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 013A5145160F526B00FC11BE /* icon.png */; };
 		0183DA3E1711D3B30085441F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0183DA3D1711D3B30085441F /* CoreMotion.framework */; };
-		0183DA411711DD830085441F /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */; };
 		01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F716051BFE008B0A6B /* UIKit.framework */; };
 		01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9F916051BFE008B0A6B /* Foundation.framework */; };
 		01ADF9FC16051BFE008B0A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ADF9FB16051BFE008B0A6B /* CoreGraphics.framework */; };
@@ -39,6 +23,23 @@
 		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
 		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
 		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
+		4C44C5C717FC5491001E84DF /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5A617FC5491001E84DF /* SystemServices.m */; };
+		4C44C5C817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */; };
+		4C44C5C917FC5491001E84DF /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */; };
+		4C44C5CA17FC5491001E84DF /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AD17FC5491001E84DF /* SSAccessoryInfo.m */; };
+		4C44C5CB17FC5491001E84DF /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AF17FC5491001E84DF /* SSApplicationInfo.m */; };
+		4C44C5CC17FC5491001E84DF /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */; };
+		4C44C5CD17FC5491001E84DF /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */; };
+		4C44C5CE17FC5491001E84DF /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B517FC5491001E84DF /* SSDiskInfo.m */; };
+		4C44C5CF17FC5491001E84DF /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */; };
+		4C44C5D017FC5491001E84DF /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B917FC5491001E84DF /* SSJailbreakCheck.m */; };
+		4C44C5D117FC5491001E84DF /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5BB17FC5491001E84DF /* SSLocalizationInfo.m */; };
+		4C44C5D217FC5491001E84DF /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5BD17FC5491001E84DF /* SSMemoryInfo.m */; };
+		4C44C5D317FC5491001E84DF /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5BF17FC5491001E84DF /* SSNetworkInfo.m */; };
+		4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C117FC5491001E84DF /* SSProcessInfo.m */; };
+		4C44C5D517FC5491001E84DF /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */; };
+		4C44C5D617FC5491001E84DF /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C517FC5491001E84DF /* SSUUID.m */; };
+		4C44C5D917FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */; };
 		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
 		4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
@@ -66,43 +67,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		013A510D160F4DE500FC11BE /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
-		013A510E160F4DE500FC11BE /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
-		013A5110160F4DE500FC11BE /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
-		013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
-		013A5112160F4DE500FC11BE /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
-		013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccessoryInfo.m; sourceTree = "<group>"; };
-		013A5114160F4DE500FC11BE /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
-		013A5115160F4DE500FC11BE /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
-		013A5116160F4DE500FC11BE /* SSBatteryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBatteryInfo.h; sourceTree = "<group>"; };
-		013A5117160F4DE500FC11BE /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
-		013A5118160F4DE500FC11BE /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
-		013A5119160F4DE500FC11BE /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
-		013A511A160F4DE500FC11BE /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
-		013A511B160F4DE500FC11BE /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
-		013A511C160F4DE500FC11BE /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
-		013A511D160F4DE500FC11BE /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
-		013A511E160F4DE500FC11BE /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
-		013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJailbreakCheck.m; sourceTree = "<group>"; };
-		013A5120160F4DE500FC11BE /* SSLocalizationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocalizationInfo.h; sourceTree = "<group>"; };
-		013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocalizationInfo.m; sourceTree = "<group>"; };
-		013A5122160F4DE500FC11BE /* SSMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMemoryInfo.h; sourceTree = "<group>"; };
-		013A5123160F4DE500FC11BE /* SSMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMemoryInfo.m; sourceTree = "<group>"; };
-		013A5124160F4DE500FC11BE /* SSNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkInfo.h; sourceTree = "<group>"; };
-		013A5125160F4DE500FC11BE /* SSNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkInfo.m; sourceTree = "<group>"; };
-		013A5126160F4DE500FC11BE /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
-		013A5127160F4DE500FC11BE /* SSProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessInfo.m; sourceTree = "<group>"; };
-		013A5128160F4DE500FC11BE /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
-		013A5129160F4DE500FC11BE /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
-		013A512A160F4DE500FC11BE /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
-		013A512B160F4DE500FC11BE /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
-		013A512C160F4DE500FC11BE /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
 		013A5140160F4E3C00FC11BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		013A5143160F525A00FC11BE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		013A5145160F526B00FC11BE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		0183DA3D1711D3B30085441F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PerformBlockAfterDelay.h"; path = "System Services/Utilities/NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
-		0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PerformBlockAfterDelay.m"; path = "System Services/Utilities/NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
 		01ADF9F316051BFE008B0A6B /* SystemServicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemServicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADF9F716051BFE008B0A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01ADF9F916051BFE008B0A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +89,41 @@
 		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4C3C92571729B83200D88C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C44C5A517FC5491001E84DF /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
+		4C44C5A617FC5491001E84DF /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
+		4C44C5A817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
+		4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
+		4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
+		4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
+		4C44C5AC17FC5491001E84DF /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
+		4C44C5AD17FC5491001E84DF /* SSAccessoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccessoryInfo.m; sourceTree = "<group>"; };
+		4C44C5AE17FC5491001E84DF /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
+		4C44C5AF17FC5491001E84DF /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
+		4C44C5B017FC5491001E84DF /* SSBatteryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBatteryInfo.h; sourceTree = "<group>"; };
+		4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
+		4C44C5B217FC5491001E84DF /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
+		4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
+		4C44C5B417FC5491001E84DF /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
+		4C44C5B517FC5491001E84DF /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
+		4C44C5B617FC5491001E84DF /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
+		4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
+		4C44C5B817FC5491001E84DF /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
+		4C44C5B917FC5491001E84DF /* SSJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJailbreakCheck.m; sourceTree = "<group>"; };
+		4C44C5BA17FC5491001E84DF /* SSLocalizationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocalizationInfo.h; sourceTree = "<group>"; };
+		4C44C5BB17FC5491001E84DF /* SSLocalizationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocalizationInfo.m; sourceTree = "<group>"; };
+		4C44C5BC17FC5491001E84DF /* SSMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMemoryInfo.h; sourceTree = "<group>"; };
+		4C44C5BD17FC5491001E84DF /* SSMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMemoryInfo.m; sourceTree = "<group>"; };
+		4C44C5BE17FC5491001E84DF /* SSNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkInfo.h; sourceTree = "<group>"; };
+		4C44C5BF17FC5491001E84DF /* SSNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkInfo.m; sourceTree = "<group>"; };
+		4C44C5C017FC5491001E84DF /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
+		4C44C5C117FC5491001E84DF /* SSProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessInfo.m; sourceTree = "<group>"; };
+		4C44C5C217FC5491001E84DF /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
+		4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
+		4C44C5C417FC5491001E84DF /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
+		4C44C5C517FC5491001E84DF /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
+		4C44C5C617FC5491001E84DF /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
+		4C44C5D717FC554A001E84DF /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
+		4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
 		4C640E021607AAFA00955DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		4C640E091607BF9D00955DE4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -181,52 +184,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		013A510C160F4DE500FC11BE /* System Services */ = {
-			isa = PBXGroup;
-			children = (
-				013A510D160F4DE500FC11BE /* SystemServices.h */,
-				013A510E160F4DE500FC11BE /* SystemServices.m */,
-				013A510F160F4DE500FC11BE /* Utilities */,
-			);
-			path = "System Services";
-			sourceTree = "<group>";
-		};
-		013A510F160F4DE500FC11BE /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				013A5110160F4DE500FC11BE /* SSAccelerometerInfo.h */,
-				013A5111160F4DE500FC11BE /* SSAccelerometerInfo.m */,
-				013A5112160F4DE500FC11BE /* SSAccessoryInfo.h */,
-				013A5113160F4DE500FC11BE /* SSAccessoryInfo.m */,
-				013A5114160F4DE500FC11BE /* SSApplicationInfo.h */,
-				013A5115160F4DE500FC11BE /* SSApplicationInfo.m */,
-				013A5116160F4DE500FC11BE /* SSBatteryInfo.h */,
-				013A5117160F4DE500FC11BE /* SSBatteryInfo.m */,
-				013A5118160F4DE500FC11BE /* SSCarrierInfo.h */,
-				013A5119160F4DE500FC11BE /* SSCarrierInfo.m */,
-				013A511A160F4DE500FC11BE /* SSDiskInfo.h */,
-				013A511B160F4DE500FC11BE /* SSDiskInfo.m */,
-				013A511C160F4DE500FC11BE /* SSHardwareInfo.h */,
-				013A511D160F4DE500FC11BE /* SSHardwareInfo.m */,
-				013A511E160F4DE500FC11BE /* SSJailbreakCheck.h */,
-				013A511F160F4DE500FC11BE /* SSJailbreakCheck.m */,
-				013A5120160F4DE500FC11BE /* SSLocalizationInfo.h */,
-				013A5121160F4DE500FC11BE /* SSLocalizationInfo.m */,
-				013A5122160F4DE500FC11BE /* SSMemoryInfo.h */,
-				013A5123160F4DE500FC11BE /* SSMemoryInfo.m */,
-				013A5124160F4DE500FC11BE /* SSNetworkInfo.h */,
-				013A5125160F4DE500FC11BE /* SSNetworkInfo.m */,
-				013A5126160F4DE500FC11BE /* SSProcessInfo.h */,
-				013A5127160F4DE500FC11BE /* SSProcessInfo.m */,
-				013A5128160F4DE500FC11BE /* SSProcessorInfo.h */,
-				013A5129160F4DE500FC11BE /* SSProcessorInfo.m */,
-				013A512A160F4DE500FC11BE /* SSUUID.h */,
-				013A512B160F4DE500FC11BE /* SSUUID.m */,
-				013A512C160F4DE500FC11BE /* SystemServicesConstants.h */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		01ADF9E816051BFE008B0A6B = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +221,7 @@
 		01ADF9FD16051BFE008B0A6B /* SystemServicesDemo */ = {
 			isa = PBXGroup;
 			children = (
-				013A510C160F4DE500FC11BE /* System Services */,
+				4C44C5A417FC5491001E84DF /* System Services */,
 				01ADFA0616051BFE008B0A6B /* SystemServicesDemoAppDelegate.h */,
 				01ADFA0716051BFE008B0A6B /* SystemServicesDemoAppDelegate.m */,
 				01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */,
@@ -312,6 +269,55 @@
 			name = "Pie Chart";
 			sourceTree = "<group>";
 		};
+		4C44C5A417FC5491001E84DF /* System Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C44C5A517FC5491001E84DF /* SystemServices.h */,
+				4C44C5A617FC5491001E84DF /* SystemServices.m */,
+				4C44C5A717FC5491001E84DF /* Utilities */,
+			);
+			name = "System Services";
+			path = "../../System Services";
+			sourceTree = "<group>";
+		};
+		4C44C5A717FC5491001E84DF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4C44C5A817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.h */,
+				4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */,
+				4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */,
+				4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */,
+				4C44C5AC17FC5491001E84DF /* SSAccessoryInfo.h */,
+				4C44C5AD17FC5491001E84DF /* SSAccessoryInfo.m */,
+				4C44C5AE17FC5491001E84DF /* SSApplicationInfo.h */,
+				4C44C5AF17FC5491001E84DF /* SSApplicationInfo.m */,
+				4C44C5B017FC5491001E84DF /* SSBatteryInfo.h */,
+				4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */,
+				4C44C5B217FC5491001E84DF /* SSCarrierInfo.h */,
+				4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */,
+				4C44C5B417FC5491001E84DF /* SSDiskInfo.h */,
+				4C44C5B517FC5491001E84DF /* SSDiskInfo.m */,
+				4C44C5B617FC5491001E84DF /* SSHardwareInfo.h */,
+				4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */,
+				4C44C5B817FC5491001E84DF /* SSJailbreakCheck.h */,
+				4C44C5B917FC5491001E84DF /* SSJailbreakCheck.m */,
+				4C44C5BA17FC5491001E84DF /* SSLocalizationInfo.h */,
+				4C44C5BB17FC5491001E84DF /* SSLocalizationInfo.m */,
+				4C44C5BC17FC5491001E84DF /* SSMemoryInfo.h */,
+				4C44C5BD17FC5491001E84DF /* SSMemoryInfo.m */,
+				4C44C5BE17FC5491001E84DF /* SSNetworkInfo.h */,
+				4C44C5BF17FC5491001E84DF /* SSNetworkInfo.m */,
+				4C44C5C017FC5491001E84DF /* SSProcessInfo.h */,
+				4C44C5C117FC5491001E84DF /* SSProcessInfo.m */,
+				4C44C5C217FC5491001E84DF /* SSProcessorInfo.h */,
+				4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */,
+				4C44C5C417FC5491001E84DF /* SSUUID.h */,
+				4C44C5C517FC5491001E84DF /* SSUUID.m */,
+				4C44C5C617FC5491001E84DF /* SystemServicesConstants.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4C9C34F417FA04D7004113FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,8 +338,8 @@
 		4C9C350917FA0AA1004113FC /* NSObject + Perform Block After Delay */ = {
 			isa = PBXGroup;
 			children = (
-				0183DA3F1711DD820085441F /* NSObject+PerformBlockAfterDelay.h */,
-				0183DA401711DD830085441F /* NSObject+PerformBlockAfterDelay.m */,
+				4C44C5D717FC554A001E84DF /* NSObject+PerformBlockAfterDelay.h */,
+				4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */,
 			);
 			name = "NSObject + Perform Block After Delay";
 			sourceTree = "<group>";
@@ -436,37 +442,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C44C5D617FC5491001E84DF /* SSUUID.m in Sources */,
 				01ADFA0416051BFE008B0A6B /* main.m in Sources */,
+				4C44C5D517FC5491001E84DF /* SSProcessorInfo.m in Sources */,
 				01ADFA0816051BFE008B0A6B /* SystemServicesDemoAppDelegate.m in Sources */,
 				01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */,
-				013A512D160F4DE500FC11BE /* SystemServices.m in Sources */,
-				013A512E160F4DE500FC11BE /* SSAccelerometerInfo.m in Sources */,
-				013A512F160F4DE500FC11BE /* SSAccessoryInfo.m in Sources */,
-				013A5130160F4DE500FC11BE /* SSApplicationInfo.m in Sources */,
-				013A5131160F4DE500FC11BE /* SSBatteryInfo.m in Sources */,
-				013A5132160F4DE500FC11BE /* SSCarrierInfo.m in Sources */,
+				4C44C5C717FC5491001E84DF /* SystemServices.m in Sources */,
+				4C44C5CE17FC5491001E84DF /* SSDiskInfo.m in Sources */,
+				4C44C5CF17FC5491001E84DF /* SSHardwareInfo.m in Sources */,
 				4C67F74817FB0BD300089C23 /* DetailViewController.m in Sources */,
-				013A5133160F4DE500FC11BE /* SSDiskInfo.m in Sources */,
-				013A5134160F4DE500FC11BE /* SSHardwareInfo.m in Sources */,
-				013A5135160F4DE500FC11BE /* SSJailbreakCheck.m in Sources */,
-				013A5136160F4DE500FC11BE /* SSLocalizationInfo.m in Sources */,
-				013A5137160F4DE500FC11BE /* SSMemoryInfo.m in Sources */,
-				013A5138160F4DE500FC11BE /* SSNetworkInfo.m in Sources */,
-				013A5139160F4DE500FC11BE /* SSProcessInfo.m in Sources */,
-				013A513A160F4DE500FC11BE /* SSProcessorInfo.m in Sources */,
-				013A513B160F4DE500FC11BE /* SSUUID.m in Sources */,
 				4CCC7651170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m in Sources */,
+				4C44C5CA17FC5491001E84DF /* SSAccessoryInfo.m in Sources */,
 				4CCC7654170E09C20057A8A3 /* SystemServicesDemoMemoryViewController.m in Sources */,
 				4CCC7657170E09CB0057A8A3 /* SystemServicesDemoDiskViewController.m in Sources */,
 				4CCC765A170E09E10057A8A3 /* SystemServicesDemoProcessesViewController.m in Sources */,
-				0183DA411711DD830085441F /* NSObject+PerformBlockAfterDelay.m in Sources */,
+				4C44C5D217FC5491001E84DF /* SSMemoryInfo.m in Sources */,
 				4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */,
+				4C44C5D117FC5491001E84DF /* SSLocalizationInfo.m in Sources */,
 				4CB898F3178B1003005FE9CF /* MSAnnotatedGauge.m in Sources */,
+				4C44C5D917FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */,
+				4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */,
+				4C44C5CD17FC5491001E84DF /* SSCarrierInfo.m in Sources */,
+				4C44C5CC17FC5491001E84DF /* SSBatteryInfo.m in Sources */,
+				4C44C5C917FC5491001E84DF /* SSAccelerometerInfo.m in Sources */,
+				4C44C5D017FC5491001E84DF /* SSJailbreakCheck.m in Sources */,
+				4C44C5D317FC5491001E84DF /* SSNetworkInfo.m in Sources */,
+				4C44C5C817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				4CB898F4178B1003005FE9CF /* MSArcLayer.m in Sources */,
 				4CB898F5178B1003005FE9CF /* MSGradientArcLayer.m in Sources */,
 				4CB898F6178B1003005FE9CF /* MSNeedleView.m in Sources */,
 				4CB898F7178B1003005FE9CF /* MSRangeGauge.m in Sources */,
 				4CB898F8178B1003005FE9CF /* MSSimpleGauge.m in Sources */,
+				4C44C5CB17FC5491001E84DF /* SSApplicationInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
