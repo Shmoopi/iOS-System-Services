@@ -300,7 +300,7 @@ Available Device Information
     // CFUUID
     NSString *cfuuid;
 ```
-Third-Pary Plugins
+Third-Party Plugins
 ===================
 
 A big thank you to the makers of:
