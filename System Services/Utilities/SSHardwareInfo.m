@@ -137,23 +137,65 @@
             else if ([DeviceType isEqualToString:@"iPhone4,1"])
                 NewDeviceType = @"iPhone 4S";
             else if ([DeviceType isEqualToString:@"iPhone5,1"])
-                NewDeviceType = @"iPhone 5";
+                NewDeviceType = @"iPhone 5(GSM)";
             else if ([DeviceType isEqualToString:@"iPhone5,2"])
-                NewDeviceType = @"iPhone 5";
+                NewDeviceType = @"iPhone 5(GSM+CDMA)";
+            else if ([DeviceType isEqualToString:@"iPhone5,3"])
+                NewDeviceType = @"iPhone 5c(GSM)";
+            else if ([DeviceType isEqualToString:@"iPhone5,4"])
+                NewDeviceType = @"iPhone 5c(GSM+CDMA)";
+            else if ([DeviceType isEqualToString:@"iPhone6,1"])
+                NewDeviceType = @"iPhone 5s(GSM)";
+            else if ([DeviceType isEqualToString:@"iPhone6,2"])
+                NewDeviceType = @"iPhone 5s(GSM+CDMA)";
             else if ([DeviceType isEqualToString:@"iPod1,1"])
-                NewDeviceType = @"1st Gen iPod";
+                NewDeviceType = @"iPod Touch 1G";
             else if ([DeviceType isEqualToString:@"iPod2,1"])
-                NewDeviceType = @"2nd Gen iPod";
+                NewDeviceType = @"iPod Touch 2G";
             else if ([DeviceType isEqualToString:@"iPod3,1"])
-                NewDeviceType = @"3rd Gen iPod";
+                NewDeviceType = @"iPod Touch 3G";
+            else if ([DeviceType isEqualToString:@"iPod4,1"])
+                NewDeviceType = @"iPod Touch 4G";
+            else if ([DeviceType isEqualToString:@"iPod5,1"])
+                NewDeviceType = @"iPod Touch 5G";
             else if ([DeviceType isEqualToString:@"iPad1,1"])
                 NewDeviceType = @"iPad";
+            else if ([DeviceType isEqualToString:@"iPad2,1"])
+                NewDeviceType = @"iPad 2(WiFi)";
             else if ([DeviceType isEqualToString:@"iPad2,2"])
-                NewDeviceType = @"iPad 2";
+                NewDeviceType = @"iPad 2(GSM)";
+            else if ([DeviceType isEqualToString:@"iPad2,3"])
+                NewDeviceType = @"iPad 2(CDMA)";
+            else if ([DeviceType isEqualToString:@"iPad2,4"])
+                NewDeviceType = @"iPad 2(WiFi + New Chip)";
+            else if ([DeviceType isEqualToString:@"iPad2,5"])
+                NewDeviceType = @"iPad mini(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad2,6"])
+                NewDeviceType = @"iPad mini(GSM)";
+            else if ([DeviceType isEqualToString:@"iPad2,7"])
+                NewDeviceType = @"iPad mini(GSM+CDMA)";
+            else if ([DeviceType isEqualToString:@"iPad3,1"])
+                NewDeviceType = @"iPad 3(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad3,2"])
+                NewDeviceType = @"iPad 3(GSM+CDMA)";
+            else if ([DeviceType isEqualToString:@"iPad3,3"])
+                NewDeviceType = @"iPad 3(GSM)";
+            else if ([DeviceType isEqualToString:@"iPad3,4"])
+                NewDeviceType = @"iPad 4(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad3,5"])
+                NewDeviceType = @"iPad 4(GSM)";
+            else if ([DeviceType isEqualToString:@"iPad3,6"])
+                NewDeviceType = @"iPad 4(GSM+CDMA)";
             else if ([DeviceType isEqualToString:@"iPad3,3"])
                 NewDeviceType = @"New iPad";
+            else if ([DeviceType isEqualToString:@"iPad4,1"])
+                NewDeviceType = @"iPad Air(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad4,2"])
+                NewDeviceType = @"iPad Air(Cellular)";
             else if ([DeviceType isEqualToString:@"iPad4,4"])
-                NewDeviceType = @"iPad 4";
+                NewDeviceType = @"iPad mini 2(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad4,5"])
+                NewDeviceType = @"iPad mini 2(Cellular)";
             else if ([DeviceType hasPrefix:@"iPad"])
                 NewDeviceType = @"iPad";
             
