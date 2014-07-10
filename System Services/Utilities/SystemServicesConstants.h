@@ -17,6 +17,7 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreMotion/CoreMotion.h>
+#import <UIKit/UIKit.h>
 
 // Headers
 #import <arpa/inet.h>

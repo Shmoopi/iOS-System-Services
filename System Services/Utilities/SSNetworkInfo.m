@@ -386,7 +386,7 @@
         NSUInteger BA = ~NM | IP;
         
         // Make a string for the address
-        NSString *BroadcastAddress = [NSString stringWithFormat:@"%d.%d.%d.%d", (BA & 0xFF000000) >> 24,
+        NSString *BroadcastAddress = [NSString stringWithFormat:@"%lu.%lu.%lu.%lu", (BA & 0xFF000000) >> 24,
                                       (BA & 0x00FF0000) >> 16, (BA & 0x0000FF00) >> 8, BA & 0x000000FF];
         
         // Check to make sure the string is valid
@@ -635,7 +635,7 @@
         NSUInteger BA = ~NM | IP;
         
         // Make a string for the address
-        NSString *BroadcastAddress = [NSString stringWithFormat:@"%d.%d.%d.%d", (BA & 0xFF000000) >> 24,
+        NSString *BroadcastAddress = [NSString stringWithFormat:@"%lu.%lu.%lu.%lu", (BA & 0xFF000000) >> 24,
                                       (BA & 0x00FF0000) >> 16, (BA & 0x0000FF00) >> 8, BA & 0x000000FF];
         
         // Check to make sure the string is valid
