@@ -280,7 +280,7 @@
     
     // Make a new size and int of the sysctl calls
     size_t size;
-    int st = sysctl(mib, miblen, NULL, &size, NULL, 0);
+    int st = sysctl(mib, (int)miblen, NULL, &size, NULL, 0);
     
     // Make new structs for the processes
     struct kinfo_proc * process = NULL;
@@ -307,7 +307,7 @@
         process = newprocess;
         
         // Set the st to the next process
-        st = sysctl(mib, miblen, process, &size, NULL, 0);
+        st = sysctl(mib, (int)miblen, process, &size, NULL, 0);
         
     } while (st == -1 && errno == ENOMEM);
     
@@ -317,7 +317,7 @@
         // And the size of the processes is 0
         if (size % sizeof(struct kinfo_proc) == 0){
             // Define the new process
-            int nprocess = size / sizeof(struct kinfo_proc);
+            int nprocess = (int)(size / sizeof(struct kinfo_proc));
             // If the process exists
             if (nprocess){
                 // Create a new array

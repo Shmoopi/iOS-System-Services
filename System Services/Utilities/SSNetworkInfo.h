@@ -45,6 +45,9 @@
 // Get WiFi Broadcast Address
 + (NSString *)wiFiBroadcastAddress;
 
+// Get WiFi Router Address
++ (NSString *)wiFiRouterAddress;
+
 // Connected to WiFi?
 + (BOOL)connectedToWiFi;
 

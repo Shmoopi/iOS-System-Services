@@ -31,10 +31,10 @@
     DeviceType = [DeviceType substringWithRange:NSMakeRange([DeviceType length] - 1, 1)];
     
     // Get the Screen Width
-    NSString *ScreenWidth = [[[NSString stringWithFormat:@"%d", [SSHardwareInfo screenWidth]] substringToIndex:1] capitalizedString];
+    NSString *ScreenWidth = [[[NSString stringWithFormat:@"%ld", (long)[SSHardwareInfo screenWidth]] substringToIndex:1] capitalizedString];
     
     // Get the Screen Height
-    NSString *ScreenHeight = [[[NSString stringWithFormat:@"%d", [SSHardwareInfo screenHeight]] substringToIndex:1] capitalizedString];
+    NSString *ScreenHeight = [[[NSString stringWithFormat:@"%ld", (long)[SSHardwareInfo screenHeight]] substringToIndex:1] capitalizedString];
     
     // Check if Multitasking is Enabled
     NSString *MultitaskingEnabled = [[[NSString stringWithFormat:@"%d", [SSHardwareInfo multitaskingEnabled]] substringToIndex:1] capitalizedString];
@@ -43,10 +43,10 @@
     NSString *ProximitySensorEnabled = [[[NSString stringWithFormat:@"%d", [SSHardwareInfo proximitySensorEnabled]] substringToIndex:1] capitalizedString];
     
     // Get the number of processors
-    NSString *NumberProcessors = [[[NSString stringWithFormat:@"%d", [SSProcessorInfo numberProcessors]] substringToIndex:1] capitalizedString];
+    NSString *NumberProcessors = [[[NSString stringWithFormat:@"%ld", (long)[SSProcessorInfo numberProcessors]] substringToIndex:1] capitalizedString];
     
     // Get the processor Speed
-    NSString *ProcessorSpeed = [[[NSString stringWithFormat:@"%d", [SSProcessorInfo processorSpeed]] substringToIndex:1] capitalizedString];
+    NSString *ProcessorSpeed = [[[NSString stringWithFormat:@"%ld", (long)[SSProcessorInfo processorSpeed]] substringToIndex:1] capitalizedString];
     
     // Get the Cell MAC Address
     NSString *CellMACAddress = [[[SSNetworkInfo cellMACAddress] substringToIndex:1] capitalizedString];
@@ -151,10 +151,10 @@
     NSString *SystemVersion = [NSString stringWithFormat:@"%d", [[SSHardwareInfo systemVersion] intValue]];
     
     // Get the Screen Height
-    NSString *ScreenHeight = [NSString stringWithFormat:@"%d", [SSHardwareInfo screenHeight]];
+    NSString *ScreenHeight = [NSString stringWithFormat:@"%ld", (long)[SSHardwareInfo screenHeight]];
     
     // Get the Screen Width
-    NSString *ScreenWidth = [NSString stringWithFormat:@"%d", [SSHardwareInfo screenWidth]];
+    NSString *ScreenWidth = [NSString stringWithFormat:@"%ld", (long)[SSHardwareInfo screenWidth]];
     
     // Plugged In
     NSString *PluggedIn = [NSString stringWithFormat:@"%d", [SSHardwareInfo pluggedIn]];
@@ -175,7 +175,7 @@
     NSString *ConnectedtoWiFi = [NSString stringWithFormat:@"%d", [SSNetworkInfo connectedToWiFi]];
     
     // Device Orientation
-    NSString *DeviceOrientation = [NSString stringWithFormat:@"%d", [SSAccelerometerInfo deviceOrientation]];
+    NSString *DeviceOrientation = [NSString stringWithFormat:@"%ld", [SSAccelerometerInfo deviceOrientation]];
     
     // Country
     NSString *Country = [[[SSLocalizationInfo country] substringToIndex:2] uppercaseString];
@@ -184,10 +184,10 @@
     NSString *TimeZone = [[[SSLocalizationInfo timeZone] substringToIndex:2] uppercaseString];
     
     // Number Processors
-    NSString *NumberProcessors = [NSString stringWithFormat:@"%d", [SSProcessorInfo numberProcessors]];
+    NSString *NumberProcessors = [NSString stringWithFormat:@"%ld", (long)[SSProcessorInfo numberProcessors]];
     
     // Processor Speed
-    NSString *ProcessorSpeed = [NSString stringWithFormat:@"%d", [SSProcessorInfo processorSpeed]];
+    NSString *ProcessorSpeed = [NSString stringWithFormat:@"%ld", (long)[SSProcessorInfo processorSpeed]];
     
     // Total Disk Space
     NSString *TotalDiskSpace = [NSString stringWithFormat:@"%d", [[SSDiskInfo diskSpace] intValue] ];

@@ -49,11 +49,12 @@
     NSString *WiFiMACAddress = [NSString stringWithFormat:@"WiFi MAC Address: %@",[SystemSharedServices wiFiMACAddress]];
     NSString *WiFiNetmaskAddress = [NSString stringWithFormat:@"WiFi Netmask Address: %@",[SystemSharedServices wiFiNetmaskAddress]];
     NSString *WiFiBroadcastAddress = [NSString stringWithFormat:@"WiFi Broadcast Address: %@",[SystemSharedServices wiFiBroadcastAddress]];
+    NSString *WiFiRouterAddress = [NSString stringWithFormat:@"WiFi Router Address: %@",[SystemSharedServices wiFiRouterAddress]];
     NSString *ConnectedToWiFi = ([SystemSharedServices connectedToWiFi]) ? @"Connected to WiFi: Yes" : @"Connected to WiFi: No";
     NSString *ConnectedToCellNetwork = ([SystemSharedServices connectedToCellNetwork]) ? @"Connected to Cell Network: Yes" : @"Connected to Cell Network: No";
     
     // Make an array to hold all the objects
-    NSArray *array = [[NSArray alloc] initWithObjects:CarrierName, CarrierCountry, CarrierMobileCountryCode, CarrierISOCountryCode, CarrierMobileNetworkCode, CarrierAllowsVOIP, CurrentIPAddress, CurrentMACAddress, ExternalIPAddress, CellIPAddress, CellMACAddress, CellNetmaskAddress, CellBroadcastAddress, WiFiIPAddress, WiFiMACAddress, WiFiNetmaskAddress, WiFiBroadcastAddress, ConnectedToWiFi, ConnectedToCellNetwork, nil];
+    NSArray *array = [[NSArray alloc] initWithObjects:CarrierName, CarrierCountry, CarrierMobileCountryCode, CarrierISOCountryCode, CarrierMobileNetworkCode, CarrierAllowsVOIP, CurrentIPAddress, CurrentMACAddress, ExternalIPAddress, CellIPAddress, CellMACAddress, CellNetmaskAddress, CellBroadcastAddress, WiFiIPAddress, WiFiMACAddress, WiFiNetmaskAddress, WiFiBroadcastAddress, WiFiRouterAddress, ConnectedToWiFi, ConnectedToCellNetwork, nil];
     
     // Run through all the information
     for (NSString *objects in array) {

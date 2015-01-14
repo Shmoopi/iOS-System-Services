@@ -19,7 +19,7 @@
         // Set up the accessory manger
         EAAccessoryManager *AccessoryManager = [EAAccessoryManager sharedAccessoryManager];
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = [AccessoryManager.connectedAccessories count];
+        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
         // Check if there are any connected
         if (NumberOfAccessoriesConnected > 0) {
             // There are accessories connected
@@ -73,7 +73,7 @@
         // Set up the accessory manger
         EAAccessoryManager *AccessoryManager = [EAAccessoryManager sharedAccessoryManager];
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = [AccessoryManager.connectedAccessories count];
+        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
         // Return how many accessories are attached
         return NumberOfAccessoriesConnected;
     }
@@ -92,7 +92,7 @@
         // Set up an accessory (for later use)
         EAAccessory *Accessory;
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = [AccessoryManager.connectedAccessories count];
+        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
         
         // Check to make sure there are accessories connected
         if (NumberOfAccessoriesConnected > 0) {

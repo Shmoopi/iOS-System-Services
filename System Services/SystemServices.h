@@ -172,6 +172,9 @@
     // Get WiFi Broadcast Address
     NSString *wiFiBroadcastAddress;
     
+    // Get WiFi Router Address
+    NSString *wiFiRouterAddress;
+    
     // Connected to WiFi?
     BOOL connectedToWiFi;
     
@@ -445,6 +448,9 @@
 
 // Get WiFi Broadcast Address
 @property (nonatomic, readonly) NSString *wiFiBroadcastAddress;
+
+// Get WiFi Router Address
+@property (nonatomic, readonly) NSString *wiFiRouterAddress;
 
 // Connected to WiFi?
 @property (nonatomic, readonly) BOOL connectedToWiFi;

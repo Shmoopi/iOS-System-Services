@@ -170,7 +170,7 @@
         size_t miblen = 4;
         
         size_t size = 0;
-        int st = sysctl(mib, miblen, NULL, &size, NULL, 0);
+        int st = sysctl(mib, (int)miblen, NULL, &size, NULL, 0);
         
         // Set up the processes and new process struct
         struct kinfo_proc *process = NULL;
@@ -188,13 +188,13 @@
             }
             
             process = newprocess;
-            st = sysctl(mib, miblen, process, &size, NULL, 0);
+            st = sysctl(mib, (int)miblen, process, &size, NULL, 0);
             
         } while (st == -1 && errno == ENOMEM);
         
         if (st == 0) {
             if (size % sizeof(struct kinfo_proc) == 0) {
-                int nprocess = size / sizeof(struct kinfo_proc);
+                int nprocess = (int)(size / sizeof(struct kinfo_proc));
                 
                 if (nprocess) {
                     NSMutableArray *array = [[NSMutableArray alloc] init];

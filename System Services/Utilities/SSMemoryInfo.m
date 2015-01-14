@@ -115,9 +115,9 @@
 		}
 		
 		// Memory statistics in bytes
-		natural_t UsedMemory = (vm_stat.active_count +
+		natural_t UsedMemory = (natural_t)((vm_stat.active_count +
                                 vm_stat.inactive_count +
-                                vm_stat.wire_count) * pagesize;
+                                vm_stat.wire_count) * pagesize);
 		natural_t AllMemory = [self totalMemory];
         
         // Check if the user wants it in percent

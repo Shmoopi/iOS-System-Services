@@ -37,6 +37,12 @@
 #import <mach/mach_host.h>
 #include <stdio.h>
 #import <TargetConditionals.h>
+#import <netinet/in.h>
+#if TARGET_IPHONE_SIMULATOR
+#include <net/route.h>
+#else
+#include "route.h"
+#endif
 
 #import "SSHardwareInfo.h"
 #import "SSJailbreakCheck.h"

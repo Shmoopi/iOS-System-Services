@@ -29,9 +29,9 @@
     NSDateComponents *Components = [Calendar components:unitFlags fromDate:Date toDate:[NSDate date]  options:0];
 	
     // Get the day, hour and minutes
-    Days = [NSNumber numberWithInt:[Components day]];
-    Hours = [NSNumber numberWithInt:[Components hour]];
-    Minutes = [NSNumber numberWithInt:[Components minute]];
+    Days = [NSNumber numberWithLong:[Components day]];
+    Hours = [NSNumber numberWithLong:[Components hour]];
+    Minutes = [NSNumber numberWithLong:[Components minute]];
 	
     // Format the dates
 	NSString *Uptime = [NSString stringWithFormat:@"%@ %@ %@",

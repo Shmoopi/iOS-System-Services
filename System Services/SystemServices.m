@@ -19,7 +19,7 @@
 
 @implementation SystemServices
 
-@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorSpeed, processorBusSpeed, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, currentMACAddress, externalIPAddress, cellIPAddress, cellMACAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiMACAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, connectedToWiFi, connectedToCellNetwork, processID, processName, processStatus, parentPID, processesInformation, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, uniqueID, deviceSignature, cfuuid;
+@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorSpeed, processorBusSpeed, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, currentMACAddress, externalIPAddress, cellIPAddress, cellMACAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiMACAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, processName, processStatus, parentPID, processesInformation, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, uniqueID, deviceSignature, cfuuid;
 
 // Singleton
 + (id)sharedServices {
@@ -215,6 +215,10 @@
     return [SSNetworkInfo wiFiBroadcastAddress];
 }
 
+- (NSString *)wiFiRouterAddress {
+    return [SSNetworkInfo wiFiRouterAddress];
+}
+
 - (BOOL)connectedToWiFi {
     return [SSNetworkInfo connectedToWiFi];
 }
@@ -380,21 +384,21 @@
     NSString *SystemVersion = [self systemsVersion];
     NSString *SystemDeviceTypeFormattedNO = [self systemDeviceTypeNotFormatted];
     NSString *SystemDeviceTypeFormattedYES = [self systemDeviceTypeFormatted];
-    NSString *ScreenWidth = [NSString stringWithFormat:@"%d", [self screenWidth]];
-    NSString *ScreenHeight = [NSString stringWithFormat:@"%d", [self screenHeight]];
+    NSString *ScreenWidth = [NSString stringWithFormat:@"%ld", (long)[self screenWidth]];
+    NSString *ScreenHeight = [NSString stringWithFormat:@"%ld", (long)[self screenHeight]];
     NSString *ScreenBrightness = [NSString stringWithFormat:@"%f", [self screenBrightness]];
     NSString *MultitaskingEnabled = ([self multitaskingEnabled]) ? @"Yes" : @"No";
     NSString *ProximitySensorEnabled = ([self proximitySensorEnabled]) ? @"Yes" : @"No";
     NSString *DebuggerAttached = ([self debuggerAttached]) ? @"Yes" : @"No";
     NSString *PluggedIn = ([self pluggedIn]) ? @"Yes" : @"No";
     NSString *Jailbroken = [NSString stringWithFormat:@"%d", [self jailbroken]];
-    NSString *NumberProcessors = [NSString stringWithFormat:@"%d", [self numberProcessors]];
-    NSString *NumberActiveProcessors = [NSString stringWithFormat:@"%d", [self numberActiveProcessors]];
-    NSString *ProcessorSpeed = [NSString stringWithFormat:@"%d", [self processorSpeed]];
-    NSString *ProcessorBusSpeed = [NSString stringWithFormat:@"%d", [self processorBusSpeed]];
+    NSString *NumberProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberProcessors]];
+    NSString *NumberActiveProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberActiveProcessors]];
+    NSString *ProcessorSpeed = [NSString stringWithFormat:@"%ld", (long)[self processorSpeed]];
+    NSString *ProcessorBusSpeed = [NSString stringWithFormat:@"%ld", (long)[self processorBusSpeed]];
     NSString *AccessoriesAttached = ([self accessoriesAttached]) ? @"Yes" : @"No";
     NSString *HeadphonesAttached = ([self headphonesAttached]) ? @"Yes" : @"No";
-    NSString *NumberAttachedAccessories = [NSString stringWithFormat:@"%d", [self numberAttachedAccessories]];
+    NSString *NumberAttachedAccessories = [NSString stringWithFormat:@"%ld", (long)[self numberAttachedAccessories]];
     NSString *NameAttachedAccessories = [self nameAttachedAccessories];
     NSString *CarrierName = [self carrierName];
     NSString *CarrierCountry = [self carrierCountry];
@@ -416,6 +420,7 @@
     NSString *WiFiMACAddress = [self wiFiMACAddress];
     NSString *WiFiNetmaskAddress = [self wiFiNetmaskAddress];
     NSString *WiFiBroadcastAddress = [self wiFiBroadcastAddress];
+    NSString *WiFiRouterAddress = [self wiFiRouterAddress];
     NSString *ConnectedToWiFi = ([self connectedToWiFi]) ? @"Yes" : @"No";
     NSString *ConnectedToCellNetwork = ([self connectedToCellNetwork]) ? @"Yes" : @"No";
     NSString *ProcessID = [NSString stringWithFormat:@"%d", [self processID]];
@@ -443,7 +448,7 @@
     NSString *WiredMemoryYES = [NSString stringWithFormat:@"%f", [self wiredMemoryinPercent]];
     NSString *PurgableMemoryNO = [NSString stringWithFormat:@"%f", [self purgableMemoryinRaw]];
     NSString *PurgableMemoryYES = [NSString stringWithFormat:@"%f", [self purgableMemoryinPercent]];
-    NSString *DeviceOrientation = [NSString stringWithFormat:@"%d", [self deviceOrientation]];
+    NSString *DeviceOrientation = [NSString stringWithFormat:@"%ld", [self deviceOrientation]];
     NSString *Country = [self country];
     NSString *Language = [self language];
     NSString *TimeZone = [self timeZoneSS];
@@ -626,6 +631,10 @@
     if (WiFiBroadcastAddress == nil || WiFiBroadcastAddress.length <= 0) {
         // Invalid value
         WiFiBroadcastAddress = @"Unknown";
+    }
+    if (WiFiRouterAddress == nil || WiFiRouterAddress.length <= 0) {
+        // Invalid value
+        WiFiRouterAddress = @"Unknown";
     }
     if (ConnectedToWiFi == nil || ConnectedToWiFi.length <= 0) {
         // Invalid value
@@ -821,6 +830,7 @@
                                                                  WiFiMACAddress,
                                                                  WiFiNetmaskAddress,
                                                                  WiFiBroadcastAddress,
+                                                                 WiFiRouterAddress,
                                                                  ConnectedToWiFi,
                                                                  ConnectedToCellNetwork,
                                                                  ProcessID,
@@ -902,6 +912,7 @@
                                                                  @"WiFiMACAddress",
                                                                  @"WiFiNetmaskAddress",
                                                                  @"WiFiBroadcastAddress",
+                                                                 @"WiFiRouterAddress",
                                                                  @"ConnectedToWiFi",
                                                                  @"ConnectedToCellNetwork",
                                                                  @"ProcessID",
