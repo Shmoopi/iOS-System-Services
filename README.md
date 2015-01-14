@@ -174,6 +174,9 @@ Available Device Information
     
     // Get WiFi Broadcast Address
     NSString *wiFiBroadcastAddress;
+
+    // Get WiFi Router Address
+    NSString *wiFiRouterAddress;
     
     // Connected to WiFi?
     BOOL connectedToWiFi;
@@ -311,7 +314,7 @@ A big thank you to the makers of:
 License
 ===================
 
-Copyright © 2009-2013 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
+Copyright © 2009-2015 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
 
 This class and its usage are very intuitive and provide as simple an interface as possible for developers to plug into.  Please feel free to customize the class as much as you'd like, or use any of the code within your projects.  If you do add to the project, make sure to let me know so we can merge any changes.
 
