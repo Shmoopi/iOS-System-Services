@@ -371,6 +371,10 @@
     return [self getAllSystemInformation];
 }
 
+-(float)usageOfCPU {
+
+    return [AppCPUUsage cpu_usage];
+}
 // Get all System Information (All Methods)
 - (NSDictionary *)getAllSystemInformation {
     // Create an array

@@ -58,6 +58,7 @@
 #import "SSLocalizationInfo.h"
 #import "SSApplicationInfo.h"
 #import "SSUUID.h"
+#import "AppCPUUsage.h"
 
 // Defines
 #define MB (1024*1024)

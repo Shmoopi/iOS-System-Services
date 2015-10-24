@@ -299,6 +299,9 @@
     
     // CFUUID
     NSString *cfuuid;
+    
+    //CPU Usage
+    float usageOfCPU;
 }
 
 // Properties
@@ -577,6 +580,8 @@
 // CFUUID
 @property (nonatomic, readonly) NSString *cfuuid;
 
+// CFUUID
+@property (nonatomic, readonly) float usageOfCPU;
 // Outlets
 
 // Parent ID for a certain PID
