@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>61970E288A198DF838C0CF33FD39CD74C0B09B92</key>
-		<string>https://github.com/Shmoopi/iOS-System-Services.git</string>
+		<string>https://github.com/dimohamdy/iOS-System-Services.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SystemServicesDemo/SystemServicesDemo.xcodeproj/project.xcworkspace</string>
+	<string>SystemServicesDemo/SystemServicesDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>61970E288A198DF838C0CF33FD39CD74C0B09B92</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Shmoopi/iOS-System-Services.git</string>
+	<string>https://github.com/dimohamdy/iOS-System-Services.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

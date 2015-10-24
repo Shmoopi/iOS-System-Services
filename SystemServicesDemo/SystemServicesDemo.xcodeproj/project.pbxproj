@@ -20,6 +20,7 @@
 		01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */; };
 		01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */; };
 		01F591711615358300D2CF76 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F591701615358300D2CF76 /* Security.framework */; };
+		3DC70B781BDBCFD800A2D883 /* AppCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */; };
 		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
 		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
 		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
@@ -85,6 +86,8 @@
 		01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoViewController.h; sourceTree = "<group>"; };
 		01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoViewController.m; sourceTree = "<group>"; };
 		01F591701615358300D2CF76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3DC70B761BDBCFD800A2D883 /* AppCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppCPUUsage.h; path = ../../SystemServicesDemo/SystemServicesDemo/AppCPUUsage.h; sourceTree = "<group>"; };
+		3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppCPUUsage.m; path = ../../SystemServicesDemo/SystemServicesDemo/AppCPUUsage.m; sourceTree = "<group>"; };
 		4C3C924B1729AF0A00D88C01 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
 		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -283,6 +286,8 @@
 		4C44C5A717FC5491001E84DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3DC70B761BDBCFD800A2D883 /* AppCPUUsage.h */,
+				3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */,
 				4C44C5A817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.h */,
 				4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */,
 				4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */,
@@ -459,6 +464,7 @@
 				4C44C5D217FC5491001E84DF /* SSMemoryInfo.m in Sources */,
 				4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */,
 				4C44C5D117FC5491001E84DF /* SSLocalizationInfo.m in Sources */,
+				3DC70B781BDBCFD800A2D883 /* AppCPUUsage.m in Sources */,
 				4CB898F3178B1003005FE9CF /* MSAnnotatedGauge.m in Sources */,
 				4C44C5D917FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */,
