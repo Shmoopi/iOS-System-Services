@@ -3,6 +3,11 @@ iOS-System-Services
 
 ![System Services Memory Screenshot](Sample Images/Screenshot.png "Memory and Disk Information")
 
+[![CI Status](http://img.shields.io/travis/Kramer/SystemServices.svg?style=flat)](https://travis-ci.org/Kramer/SystemServices)
+[![Version](https://img.shields.io/cocoapods/v/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+[![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+[![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+
 This is a singleton class to gather all available information about a device.  It gives you over 75 methods to determine everything about a device, including: 
   * Hardware & Network Information
   * Battery Usage
@@ -11,6 +16,16 @@ This is a singleton class to gather all available information about a device.  I
   * Running Processes
   * Memory Usage
   * And a complete UDID replacement based on unchanging device information.
+
+Installation
+===================
+
+iOS System Services is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "SystemServices"
+```
 
 Changes
 ===================

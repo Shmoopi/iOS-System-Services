@@ -19,7 +19,7 @@
 
 @implementation SystemServices
 
-@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorSpeed, processorBusSpeed, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, currentMACAddress, externalIPAddress, cellIPAddress, cellMACAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiMACAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, processName, processStatus, parentPID, processesInformation, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, uniqueID, deviceSignature, cfuuid;
+@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorSpeed, processorBusSpeed, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, currentMACAddress, externalIPAddress, cellIPAddress, cellMACAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiMACAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, processName, processStatus, parentPID, processesInformation, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, uniqueID, deviceSignature, cfuuid, cpuUsage;
 
 // Singleton
 + (id)sharedServices {
@@ -367,14 +367,14 @@
     return [SSUUID cfuuid];
 }
 
+- (float)cpuUsage {
+    return [SSApplicationInfo cpuUsage];
+}
+
 - (NSDictionary *)allSystemInformation {
     return [self getAllSystemInformation];
 }
 
--(float)usageOfCPU {
-
-    return [AppCPUUsage cpu_usage];
-}
 // Get all System Information (All Methods)
 - (NSDictionary *)getAllSystemInformation {
     // Create an array
@@ -462,6 +462,7 @@
     NSString *UniqueID = [self uniqueID];
     NSString *DeviceSignature = [self deviceSignature];
     NSString *CFUUID = [self cfuuid];
+    NSString *CPUUsage = [NSString stringWithFormat:@"%f", [self cpuUsage]];
     
     // Check to make sure all values are valid (if not, make them)
     if (SystemUptime == nil || SystemUptime.length <= 0) {
@@ -788,6 +789,10 @@
         // Invalid value
         CFUUID = @"Unknown";
     }
+    if (CPUUsage == nil || CPUUsage.length <= 0) {
+        // Invalid value
+        CPUUsage = @"Unknown";
+    }
     
     // Get all Information in a dictionary
     SystemInformationDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
@@ -824,7 +829,6 @@
                                                                  FullyCharged,
                                                                  CurrentIPAddress,
                                                                  CurrentMACAddress,
-                                                                 
                                                                  ExternalIPAddress,
                                                                  CellIPAddress,
                                                                  CellMACAddress,
@@ -872,6 +876,7 @@
                                                                  UniqueID,
                                                                  DeviceSignature,
                                                                  CFUUID,
+                                                                 CPUUsage,
                                                                  nil]
                                                         forKeys:[NSArray arrayWithObjects:
                                                                  @"Uptime (dd hh mm)",
@@ -954,6 +959,7 @@
                                                                  @"UniqueID",
                                                                  @"DeviceSignature",
                                                                  @"CFUUID",
+                                                                 @"CPUUsage",
                                                                  nil]];
     
     // Check if Dictionary is populated

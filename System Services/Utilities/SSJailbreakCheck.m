@@ -10,6 +10,43 @@
 
 #import "SSJailbreakCheck.h"
 
+// stat
+#import <sys/stat.h>
+
+// sysctl
+#import <sys/sysctl.h>
+
+// System Version Less Than
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+// Failed jailbroken checks
+enum {
+    // Failed the Jailbreak Check
+    KFJailbroken = 3429542,
+    // Failed the OpenURL Check
+    KFOpenURL = 321,
+    // Failed the Cydia Check
+    KFCydia = 432,
+    // Failed the Inaccessible Files Check
+    KFIFC = 47293,
+    // Failed the plist check
+    KFPlist = 9412,
+    // Failed the Processes Check with Cydia
+    KFProcessesCydia = 10012,
+    // Failed the Processes Check with other Cydia
+    KFProcessesOtherCydia = 42932,
+    // Failed the Processes Check with other other Cydia
+    KFProcessesOtherOCydia = 10013,
+    // Failed the FSTab Check
+    KFFSTab = 9620,
+    // Failed the System() Check
+    KFSystem = 47475,
+    // Failed the Symbolic Link Check
+    KFSymbolic = 34859,
+    // Failed the File Exists Check
+    KFFileExists = 6625,
+} JailbrokenChecks;
+
 @implementation SSJailbreakCheck
 
 // Is the application running on a jailbroken device?
@@ -19,10 +56,13 @@
     // Make an int to monitor how many checks are failed
     int motzart = 0;
     
-    // URL Check
-    if ([self urlCheck] != NOTJAIL) {
-        // Jailbroken
-        motzart += 3;
+    // Check if iOS 8 or lower
+    if (SYSTEM_VERSION_LESS_THAN(@"9.0")) {
+        // URL Check
+        if ([self urlCheck] != NOTJAIL) {
+            // Jailbroken
+            motzart += 3;
+        }
     }
     
     // Cydia Check
@@ -43,22 +83,25 @@
         motzart += 2;
     }
     
-    // Processes Check
-    if ([self processesCheck] != NOTJAIL) {
-        // Jailbroken
-        motzart += 2;
-    }
-    
-    // FSTab Check
-    if ([self fstabCheck] != NOTJAIL) {
-        // Jailbroken
-        motzart += 1;
-    }
-    
-    // Shell Check
-    if ([self systemCheck] != NOTJAIL) {
-        // Jailbroken
-        motzart += 2;
+    // Check if iOS 8 or lower
+    if (SYSTEM_VERSION_LESS_THAN(@"9.0")) {
+        // Processes Check
+        if ([self processesCheck] != NOTJAIL) {
+            // Jailbroken
+            motzart += 2;
+        }
+        
+        // FSTab Check
+        if ([self fstabCheck] != NOTJAIL) {
+            // Jailbroken
+            motzart += 1;
+        }
+        
+        // Shell Check
+        if ([self systemCheck] != NOTJAIL) {
+            // Jailbroken
+            motzart += 2;
+        }
     }
     
     // Symbolic Link Check

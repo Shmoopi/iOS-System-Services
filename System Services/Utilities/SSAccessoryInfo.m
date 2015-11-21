@@ -8,6 +8,12 @@
 
 #import "SSAccessoryInfo.h"
 
+// Accessory Manager
+#import <ExternalAccessory/ExternalAccessory.h>
+
+// Audio Toolbox
+#import <AudioToolbox/AudioToolbox.h>
+
 @implementation SSAccessoryInfo
 
 // Accessory Information

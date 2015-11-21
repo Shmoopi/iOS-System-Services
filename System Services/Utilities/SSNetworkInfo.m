@@ -8,6 +8,26 @@
 
 #import "SSNetworkInfo.h"
 
+// ifaddrs
+#import <ifaddrs.h>
+
+// inet
+#import <arpa/inet.h>
+
+// route
+#if TARGET_IPHONE_SIMULATOR
+#include <net/route.h>
+#else
+#include "route.h"
+#endif
+
+// sysctl
+#import <sys/sysctl.h>
+
+#include <net/if.h>
+#include <net/if_dl.h>
+#include <sys/ioctl.h>
+
 # pragma mark - Router Info
 
 #define RTF_PRCLONING	0x10000		/* protocol requires cloning */

@@ -8,6 +8,10 @@
 
 #import "SSCarrierInfo.h"
 
+// Core Telephony
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+
 @implementation SSCarrierInfo
 
 // Carrier Information

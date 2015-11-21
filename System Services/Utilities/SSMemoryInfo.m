@@ -8,6 +8,12 @@
 
 #import "SSMemoryInfo.h"
 
+// stat
+#import <sys/stat.h>
+
+// mach
+#import <mach/mach.h>
+
 @implementation SSMemoryInfo
 
 // Total Memory

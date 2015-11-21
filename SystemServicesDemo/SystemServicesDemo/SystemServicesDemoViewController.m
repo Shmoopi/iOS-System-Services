@@ -9,7 +9,6 @@
 #import "SystemServicesDemoViewController.h"
 #import "SystemServices.h"
 #import "SSAccelerometerInfo.h"
-#import "NSObject+PerformBlockAfterDelay.h"
 
 #define SystemSharedServices [SystemServices sharedServices]
 
@@ -32,11 +31,11 @@
     accel = [[SSAccelerometerInfo alloc] init];
     [accel startLoggingMotionData];
     
-    [self performBlock:^(void){
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         // Log any accelerometer data
         NSLog(@"Raw Accelerometer String: %@", [accel rawAccelerometerString]);
         [accel stopLoggingMotionData];
-    }afterDelay:0.5];
+    }
 #endif
     
     [self performSelector:@selector(getAllHardwareInformation) withObject:nil afterDelay:0.01];

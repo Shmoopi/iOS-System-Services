@@ -6,7 +6,10 @@
 //  Copyright (c) 2012 Shmoopi LLC. All rights reserved.
 //
 
-#import "SystemServicesConstants.h"
+#import <Foundation/Foundation.h>
+
+// Core Motion
+#import <CoreMotion/CoreMotion.h>
 
 @interface SSAccelerometerInfo : NSObject {
     CMMotionManager *motionManager;

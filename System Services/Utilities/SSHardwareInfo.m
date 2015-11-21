@@ -8,6 +8,11 @@
 
 #import "SSHardwareInfo.h"
 
+// sysctl
+#import <sys/sysctl.h>
+// utsname
+#import <sys/utsname.h>
+
 @implementation SSHardwareInfo
 
 // System Hardware Information

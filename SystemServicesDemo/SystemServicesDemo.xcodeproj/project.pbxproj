@@ -20,12 +20,11 @@
 		01ADFA0B16051BFE008B0A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADFA0916051BFE008B0A6B /* MainStoryboard.storyboard */; };
 		01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */; };
 		01F591711615358300D2CF76 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F591701615358300D2CF76 /* Security.framework */; };
-		3DC70B781BDBCFD800A2D883 /* AppCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */; };
+		4C16BD481C00C95700D2D56B /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
 		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
 		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
 		4C44C5C717FC5491001E84DF /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5A617FC5491001E84DF /* SystemServices.m */; };
-		4C44C5C817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */; };
 		4C44C5C917FC5491001E84DF /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */; };
 		4C44C5CA17FC5491001E84DF /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AD17FC5491001E84DF /* SSAccessoryInfo.m */; };
 		4C44C5CB17FC5491001E84DF /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AF17FC5491001E84DF /* SSApplicationInfo.m */; };
@@ -40,9 +39,7 @@
 		4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C117FC5491001E84DF /* SSProcessInfo.m */; };
 		4C44C5D517FC5491001E84DF /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */; };
 		4C44C5D617FC5491001E84DF /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C517FC5491001E84DF /* SSUUID.m */; };
-		4C44C5D917FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */; };
 		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
-		4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
 		4C67F74817FB0BD300089C23 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67F74717FB0BD300089C23 /* DetailViewController.m */; };
 		4C9C34FF17FA04D7004113FC /* Disk.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F517FA04D7004113FC /* Disk.png */; };
@@ -86,16 +83,12 @@
 		01ADFA0C16051BFE008B0A6B /* SystemServicesDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemServicesDemoViewController.h; sourceTree = "<group>"; };
 		01ADFA0D16051BFE008B0A6B /* SystemServicesDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemServicesDemoViewController.m; sourceTree = "<group>"; };
 		01F591701615358300D2CF76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3DC70B761BDBCFD800A2D883 /* AppCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppCPUUsage.h; path = ../../SystemServicesDemo/SystemServicesDemo/AppCPUUsage.h; sourceTree = "<group>"; };
-		3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppCPUUsage.m; path = ../../SystemServicesDemo/SystemServicesDemo/AppCPUUsage.m; sourceTree = "<group>"; };
 		4C3C924B1729AF0A00D88C01 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
 		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4C3C92571729B83200D88C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C44C5A517FC5491001E84DF /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
 		4C44C5A617FC5491001E84DF /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
-		4C44C5A817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
-		4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
 		4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
 		4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
 		4C44C5AC17FC5491001E84DF /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
@@ -124,9 +117,6 @@
 		4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
 		4C44C5C417FC5491001E84DF /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
 		4C44C5C517FC5491001E84DF /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
-		4C44C5C617FC5491001E84DF /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
-		4C44C5D717FC554A001E84DF /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
-		4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
 		4C640E021607AAFA00955DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		4C640E091607BF9D00955DE4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -171,12 +161,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C16BD481C00C95700D2D56B /* ExternalAccessory.framework in Frameworks */,
 				4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */,
 				4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */,
 				0183DA3E1711D3B30085441F /* CoreMotion.framework in Frameworks */,
 				01F591711615358300D2CF76 /* Security.framework in Frameworks */,
 				4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */,
-				4C640E051607BB4C00955DE4 /* ExternalAccessory.framework in Frameworks */,
 				4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */,
 				01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */,
 				01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */,
@@ -248,7 +238,6 @@
 		01ADF9FE16051BFE008B0A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C9C350917FA0AA1004113FC /* NSObject + Perform Block After Delay */,
 				4C9C34F417FA04D7004113FC /* Images */,
 				4CB898E4178B1003005FE9CF /* Gauges */,
 				4C3C924A1729AEFD00D88C01 /* Pie Chart */,
@@ -286,10 +275,6 @@
 		4C44C5A717FC5491001E84DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3DC70B761BDBCFD800A2D883 /* AppCPUUsage.h */,
-				3DC70B771BDBCFD800A2D883 /* AppCPUUsage.m */,
-				4C44C5A817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.h */,
-				4C44C5A917FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m */,
 				4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */,
 				4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */,
 				4C44C5AC17FC5491001E84DF /* SSAccessoryInfo.h */,
@@ -318,7 +303,6 @@
 				4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */,
 				4C44C5C417FC5491001E84DF /* SSUUID.h */,
 				4C44C5C517FC5491001E84DF /* SSUUID.m */,
-				4C44C5C617FC5491001E84DF /* SystemServicesConstants.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -338,15 +322,6 @@
 				4C9C34FE17FA04D7004113FC /* Processes@2x.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		4C9C350917FA0AA1004113FC /* NSObject + Perform Block After Delay */ = {
-			isa = PBXGroup;
-			children = (
-				4C44C5D717FC554A001E84DF /* NSObject+PerformBlockAfterDelay.h */,
-				4C44C5D817FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m */,
-			);
-			name = "NSObject + Perform Block After Delay";
 			sourceTree = "<group>";
 		};
 		4CB898E4178B1003005FE9CF /* Gauges */ = {
@@ -397,7 +372,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SystemServicesDemo;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Shmoopi LLC";
 			};
 			buildConfigurationList = 01ADF9ED16051BFE008B0A6B /* Build configuration list for PBXProject "SystemServicesDemo" */;
@@ -464,16 +439,13 @@
 				4C44C5D217FC5491001E84DF /* SSMemoryInfo.m in Sources */,
 				4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */,
 				4C44C5D117FC5491001E84DF /* SSLocalizationInfo.m in Sources */,
-				3DC70B781BDBCFD800A2D883 /* AppCPUUsage.m in Sources */,
 				4CB898F3178B1003005FE9CF /* MSAnnotatedGauge.m in Sources */,
-				4C44C5D917FC554A001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */,
 				4C44C5CD17FC5491001E84DF /* SSCarrierInfo.m in Sources */,
 				4C44C5CC17FC5491001E84DF /* SSBatteryInfo.m in Sources */,
 				4C44C5C917FC5491001E84DF /* SSAccelerometerInfo.m in Sources */,
 				4C44C5D017FC5491001E84DF /* SSJailbreakCheck.m in Sources */,
 				4C44C5D317FC5491001E84DF /* SSNetworkInfo.m in Sources */,
-				4C44C5C817FC5491001E84DF /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				4CB898F4178B1003005FE9CF /* MSArcLayer.m in Sources */,
 				4CB898F5178B1003005FE9CF /* MSGradientArcLayer.m in Sources */,
 				4CB898F6178B1003005FE9CF /* MSNeedleView.m in Sources */,
@@ -521,8 +493,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -559,6 +533,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -584,6 +559,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShmoopiLLC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -600,6 +576,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShmoopiLLC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,6 +8,9 @@
 
 #import "SSProcessInfo.h"
 
+// sysctl
+#import <sys/sysctl.h>
+
 @implementation SSProcessInfo
 
 // Process Information

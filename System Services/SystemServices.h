@@ -6,19 +6,19 @@
 //  Copyright (c) 2012 Shmoopi LLC. All rights reserved.
 //
 
+#import "SSAccelerometerInfo.h"
+#import "SSAccessoryInfo.h"
+#import "SSApplicationInfo.h"
+#import "SSBatteryInfo.h"
+#import "SSCarrierInfo.h"
+#import "SSDiskInfo.h"
 #import "SSHardwareInfo.h"
 #import "SSJailbreakCheck.h"
-#import "SSProcessorInfo.h"
-#import "SSAccessoryInfo.h"
-#import "SSCarrierInfo.h"
-#import "SSBatteryInfo.h"
+#import "SSLocalizationInfo.h"
+#import "SSMemoryInfo.h"
 #import "SSNetworkInfo.h"
 #import "SSProcessInfo.h"
-#import "SSDiskInfo.h"
-#import "SSMemoryInfo.h"
-#import "SSAccelerometerInfo.h"
-#import "SSLocalizationInfo.h"
-#import "SSApplicationInfo.h"
+#import "SSProcessorInfo.h"
 #import "SSUUID.h"
 
 /* New Hardware Stuff, new accelerometer stuff, localization stuff, and application info */
@@ -300,8 +300,8 @@
     // CFUUID
     NSString *cfuuid;
     
-    //CPU Usage
-    float usageOfCPU;
+    // CPU Usage
+    float cpuUsage;
 }
 
 // Properties
@@ -580,8 +580,9 @@
 // CFUUID
 @property (nonatomic, readonly) NSString *cfuuid;
 
-// CFUUID
-@property (nonatomic, readonly) float usageOfCPU;
+// CPU Usage
+@property (nonatomic, readonly) float cpuUsage;
+
 // Outlets
 
 // Parent ID for a certain PID

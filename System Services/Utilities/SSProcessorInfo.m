@@ -8,6 +8,9 @@
 
 #import "SSProcessorInfo.h"
 
+// Sysctl
+#import <sys/sysctl.h>
+
 @implementation SSProcessorInfo
 
 // Processor Information
