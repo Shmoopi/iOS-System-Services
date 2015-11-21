@@ -1,12 +1,11 @@
 iOS-System-Services
 ===================
 
-![System Services Memory Screenshot](Sample Images/Screenshot.png "Memory and Disk Information")
+<p align="center" >
 
-[![CI Status](http://img.shields.io/travis/Kramer/SystemServices.svg?style=flat)](https://travis-ci.org/Kramer/SystemServices)
-[![Version](https://img.shields.io/cocoapods/v/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
-[![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
-[![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+<img src="./Sample Images/Screenshot1.png" alt="System Services Memory Screenshot" title="Memory Information">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./Sample Images/Screenshot2.png" alt="System Services Disk Screenshot" title="Disk Information">
+
+</p>
 
 This is a singleton class to gather all available information about a device.  It gives you over 75 methods to determine everything about a device, including: 
   * Hardware & Network Information
@@ -20,21 +19,25 @@ This is a singleton class to gather all available information about a device.  I
 Installation
 ===================
 
+[![Version](https://img.shields.io/cocoapods/v/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+[![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+[![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+
 iOS System Services is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SystemServices"
+pod 'SystemServices', '~> 1.0.0'
 ```
 
 Changes
 ===================
 
-1.  Turned the class into a singleton, now accessible using this:  [systemServices sharedServices]
-2.  Revamped the accelerometer information class - not a singleton, must alloc/init and start/stop
-3.  Fixed network information bugs, with the exception of Cellular MAC address - it's incorrect most of the time for some reason (feel free to help out!)
-4.  Fixed memory information bugs but memory methods are more of an estimate than fact.  We round to determine the most likely amount of memory on the device (feel free to change if you know a better way!)
-5.  Upgraded speed!
+1. Added CocoaPods Support
+2. Fixed Bugs and Addressed Naming Issues
+3. Deprecated Older/Unavailable Methods
+4. Fixed Duplicate Implementations
+5. Removed Constants File and Unnecessary Dependencies
 
 Available Device Information
 ===================
@@ -307,6 +310,9 @@ Available Device Information
     // Clipboard Content
     NSString *clipboardContent;
     
+    // Application CPU Usage
+    float cpuUsage;
+    
     /* Universal Unique Identifiers */
     
     // Unique ID
@@ -329,7 +335,7 @@ A big thank you to the makers of:
 License
 ===================
 
-Copyright © 2009-2015 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
+Copyright © 2009-2016 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
 
 This class and its usage are very intuitive and provide as simple an interface as possible for developers to plug into.  Please feel free to customize the class as much as you'd like, or use any of the code within your projects.  If you do add to the project, make sure to let me know so we can merge any changes.
 
