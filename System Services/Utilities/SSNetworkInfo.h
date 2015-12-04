@@ -24,6 +24,9 @@
 // Get Cell IP Address
 + (NSString *)cellIPAddress;
 
+// Get Cell IPv6 Address
++ (NSString *)cellIPv6Address;
+
 // Get Cell MAC Address
 + (NSString *)cellMACAddress;
 
@@ -35,6 +38,9 @@
 
 // Get WiFi IP Address
 + (NSString *)wiFiIPAddress;
+
+// Get WiFi IPv6 Address
++ (NSString *)wiFiIPv6Address;
 
 // Get WiFi MAC Address
 + (NSString *)wiFiMACAddress;
