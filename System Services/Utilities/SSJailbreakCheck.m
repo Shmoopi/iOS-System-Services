@@ -326,7 +326,7 @@ enum {
     
     // Make a new size and int of the sysctl calls
     size_t size;
-    int st = sysctl(mib, (int)miblen, NULL, &size, NULL, 0);
+    int st;
     
     // Make new structs for the processes
     struct kinfo_proc * process = NULL;
@@ -335,7 +335,7 @@ enum {
     // Do get all the processes while there are no errors
     do {
         // Add to the size
-        size += size / 10;
+        size += (size / 10);
         // Get the new process
         newprocess = realloc(process, size);
         // If the process selected doesn't exist
@@ -394,6 +394,10 @@ enum {
             }
         }
     }
+    
+    // Free the process array
+    free(process);
+    
     // If no processes are found, return nothing
     return nil;
 }

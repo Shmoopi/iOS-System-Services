@@ -119,9 +119,9 @@
                 break;
             }
         }
-        
-        free(buf);
     }
+    
+    free(buf);
     
     return routeArray;
 }
