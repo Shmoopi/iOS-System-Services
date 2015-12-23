@@ -27,7 +27,7 @@ iOS System Services is available through [CocoaPods](http://cocoapods.org). To i
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SystemServices', '~> 1.0.0'
+pod 'SystemServices', '~> 1.0.2'
 ```
 
 Changes
