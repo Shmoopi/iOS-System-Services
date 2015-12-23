@@ -26,7 +26,8 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/Shmoopi/iOS-System-Services"
-  s.screenshots  = "https://raw.githubusercontent.com/Shmoopi/iOS-System-Services/master/Sample%20Images/Screenshot.png"
+  s.screenshots  = [ "https://raw.githubusercontent.com/Shmoopi/iOS-System-Services/master/Sample%20Images/Screenshot1.png",
+                     "https://raw.githubusercontent.com/Shmoopi/iOS-System-Services/master/Sample%20Images/Screenshot2.png" ]
   s.license      = "MIT"
   s.author             = { "Shmoopi" => "shmoopillc@gmail.com" }
   s.social_media_url   = "http://twitter.com/shmoopillc"
