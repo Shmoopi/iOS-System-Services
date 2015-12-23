@@ -8,6 +8,9 @@
 
 #import "SSHardwareInfo.h"
 
+// UIKit
+#import <UIKit/UIKit.h>
+
 // sysctl
 #import <sys/sysctl.h>
 // utsname
@@ -30,7 +33,7 @@
     NSCalendar *Calendar = [NSCalendar currentCalendar];
 	// Create the Dates
     NSDate *Date = [[NSDate alloc] initWithTimeIntervalSinceNow:(0-UptimeInterval)];
-    unsigned int unitFlags = NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit;
+    unsigned int unitFlags = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
     NSDateComponents *Components = [Calendar components:unitFlags fromDate:Date toDate:[NSDate date]  options:0];
 	
     // Get the day, hour and minutes

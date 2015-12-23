@@ -8,6 +8,9 @@
 
 #import "SSApplicationInfo.h"
 
+// UIKit
+#import <UIKit/UIKit.h>
+
 // mach
 #import <mach/mach.h>
 

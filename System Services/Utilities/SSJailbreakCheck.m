@@ -10,6 +10,9 @@
 
 #import "SSJailbreakCheck.h"
 
+// UIKit
+#import <UIKit/UIKit.h>
+
 // stat
 #import <sys/stat.h>
 

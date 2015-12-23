@@ -23,7 +23,7 @@
 		4C16BD481C00C95700D2D56B /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E041607BB4C00955DE4 /* ExternalAccessory.framework */; };
 		4C3C924D1729AF0A00D88C01 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C924C1729AF0A00D88C01 /* PCPieChart.m */; };
 		4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92551729B82D00D88C01 /* CoreText.framework */; };
-		4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
+		4C3FA13A1C2B3B62008E6E78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3FA1391C2B3B62008E6E78 /* AVFoundation.framework */; };
 		4C44C5C717FC5491001E84DF /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5A617FC5491001E84DF /* SystemServices.m */; };
 		4C44C5C917FC5491001E84DF /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AB17FC5491001E84DF /* SSAccelerometerInfo.m */; };
 		4C44C5CA17FC5491001E84DF /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AD17FC5491001E84DF /* SSAccessoryInfo.m */; };
@@ -39,9 +39,9 @@
 		4C44C5D417FC5491001E84DF /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C117FC5491001E84DF /* SSProcessInfo.m */; };
 		4C44C5D517FC5491001E84DF /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C317FC5491001E84DF /* SSProcessorInfo.m */; };
 		4C44C5D617FC5491001E84DF /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5C517FC5491001E84DF /* SSUUID.m */; };
-		4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E021607AAFA00955DE4 /* AudioToolbox.framework */; };
 		4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C640E091607BF9D00955DE4 /* CoreTelephony.framework */; };
 		4C67F74817FB0BD300089C23 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67F74717FB0BD300089C23 /* DetailViewController.m */; };
+		4C7D7D0F1C2B3CE200388E49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C92571729B83200D88C01 /* QuartzCore.framework */; };
 		4C9C34FF17FA04D7004113FC /* Disk.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F517FA04D7004113FC /* Disk.png */; };
 		4C9C350017FA04D7004113FC /* Disk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F617FA04D7004113FC /* Disk@2x.png */; };
 		4C9C350117FA04D7004113FC /* Hardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C34F717FA04D7004113FC /* Hardware.png */; };
@@ -87,6 +87,7 @@
 		4C3C924C1729AF0A00D88C01 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		4C3C92551729B82D00D88C01 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4C3C92571729B83200D88C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C3FA1391C2B3B62008E6E78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4C44C5A517FC5491001E84DF /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
 		4C44C5A617FC5491001E84DF /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
 		4C44C5AA17FC5491001E84DF /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
@@ -161,13 +162,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7D7D0F1C2B3CE200388E49 /* QuartzCore.framework in Frameworks */,
+				4C3FA13A1C2B3B62008E6E78 /* AVFoundation.framework in Frameworks */,
 				4C16BD481C00C95700D2D56B /* ExternalAccessory.framework in Frameworks */,
-				4C3C92581729B83200D88C01 /* QuartzCore.framework in Frameworks */,
 				4C3C92561729B82D00D88C01 /* CoreText.framework in Frameworks */,
 				0183DA3E1711D3B30085441F /* CoreMotion.framework in Frameworks */,
 				01F591711615358300D2CF76 /* Security.framework in Frameworks */,
 				4C640E0A1607BF9D00955DE4 /* CoreTelephony.framework in Frameworks */,
-				4C640E031607AAFA00955DE4 /* AudioToolbox.framework in Frameworks */,
 				01ADF9F816051BFE008B0A6B /* UIKit.framework in Frameworks */,
 				01ADF9FA16051BFE008B0A6B /* Foundation.framework in Frameworks */,
 				01ADF9FC16051BFE008B0A6B /* CoreGraphics.framework in Frameworks */,
@@ -197,6 +198,7 @@
 		01ADF9F616051BFE008B0A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C3FA1391C2B3B62008E6E78 /* AVFoundation.framework */,
 				4C3C92571729B83200D88C01 /* QuartzCore.framework */,
 				4C3C92551729B82D00D88C01 /* CoreText.framework */,
 				0183DA3D1711D3B30085441F /* CoreMotion.framework */,
@@ -554,7 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",
@@ -571,7 +573,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SystemServicesDemo\"",

@@ -8,6 +8,9 @@
 
 #import "SSBatteryInfo.h"
 
+// UIKit
+#import <UIKit/UIKit.h>
+
 @implementation SSBatteryInfo
 
 // Battery Information
