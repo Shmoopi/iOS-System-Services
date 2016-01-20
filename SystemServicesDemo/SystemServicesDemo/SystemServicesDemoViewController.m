@@ -35,7 +35,7 @@
         // Log any accelerometer data
         NSLog(@"Raw Accelerometer String: %@", [accel rawAccelerometerString]);
         [accel stopLoggingMotionData];
-    }
+    });
 #endif
     
     [self performSelector:@selector(getAllHardwareInformation) withObject:nil afterDelay:0.01];
