@@ -62,12 +62,12 @@
 - initWithRtm: (struct rt_msghdr2*) rtm;
 
 + (NSMutableArray*) getRoutes;
-+ (Route_Info*) getRoute:(struct rt_msghdr2 *)rtm;
++ (nullable Route_Info*) getRoute:(struct rt_msghdr2 *)rtm;
 
-- (NSString*) getDestination;
-- (NSString*) getNetmask;
-- (NSString*) getGateway;
-- (NSString*) getAddrStringByIndex: (int)rtax_index;
+- (nullable NSString*) getDestination;
+- (nullable NSString*) getNetmask;
+- (nullable NSString*) getGateway;
+- (nullable NSString*) getAddrStringByIndex: (int)rtax_index;
 
 - (void) setAddr:(struct sockaddr*)sa index:(int)rtax_index;
 @end
@@ -127,7 +127,7 @@
 }
 
 
-+ (Route_Info*) getRoute:(struct rt_msghdr2 *)rtm
++ (nullable Route_Info*) getRoute:(struct rt_msghdr2 *)rtm
 {
     struct sockaddr* dst_sa = (struct sockaddr *)(rtm + 1);
     Route_Info* route = nil;
@@ -151,23 +151,23 @@
     }
 }
 
--(NSString*) getDestination
+-(nullable NSString*) getDestination
 {
     return [self getAddrStringByIndex:RTAX_DST];
 }
 
--(NSString*) getNetmask
+-(nullable NSString*) getNetmask
 {
     return [self getAddrStringByIndex:RTAX_NETMASK];
 }
 
--(NSString*) getGateway
+-(nullable NSString*) getGateway
 {
     return [self getAddrStringByIndex:RTAX_GATEWAY];
 }
 
 
--(NSString*) getAddrStringByIndex: (int)rtax_index
+-(nullable NSString*) getAddrStringByIndex: (int)rtax_index
 {
     NSString * routeString = nil;
     struct sockaddr* sa = &(m_addrs[rtax_index]);
@@ -239,7 +239,7 @@
 // Network Information
 
 // Get Current IP Address
-+ (NSString *)currentIPAddress {
++ (nullable NSString *)currentIPAddress {
     // Get the current IP Address
     
     // Check which interface is currently in use
@@ -278,7 +278,7 @@
 }
 
 // Get Current MAC Address
-+ (NSString *)currentMACAddress {
++ (nullable NSString *)currentMACAddress {
     // Get the current interface MAC Address
     
     // Check which interface is currently in use
@@ -317,7 +317,7 @@
 }
 
 // Get the External IP Address
-+ (NSString *)externalIPAddress {
++ (nullable NSString *)externalIPAddress {
     @try {
         // Check if we have an internet connection then try to get the External IP Address
         if (![self connectedToCellNetwork] && ![self connectedToWiFi]) {
@@ -378,7 +378,7 @@
 }
 
 // Get Cell IP Address
-+ (NSString *)cellIPAddress {
++ (nullable NSString *)cellIPAddress {
     // Get the Cell IP Address
     @try {
         // Set a string for the address
@@ -440,7 +440,7 @@
 }
 
 // Get Cell IPv6 Address
-+ (NSString *)cellIPv6Address {
++ (nullable NSString *)cellIPv6Address {
     // Get the Cell IP Address
     @try {
         // Set a string for the address
@@ -502,7 +502,7 @@
 }
 
 // Get Cell MAC Address
-+ (NSString *)cellMACAddress {
++ (nullable NSString *)cellMACAddress {
     // Get the Cell MAC Address
     @try {
         // Start by setting the variables to get the Cell Mac Address
@@ -582,7 +582,7 @@
 }
 
 // Get Cell Netmask Address
-+ (NSString *)cellNetmaskAddress {
++ (nullable NSString *)cellNetmaskAddress {
     // Get the Cell Netmask Address
     @try {
         // Set up the variable
@@ -632,7 +632,7 @@
 }
 
 // Get Cell Broadcast Address
-+ (NSString *)cellBroadcastAddress {
++ (nullable NSString *)cellBroadcastAddress {
     // Get the Cell Broadcast Address
     @try {
         // Set up strings for the IP and Netmask
@@ -693,7 +693,7 @@
 }
 
 // Get WiFi IP Address
-+ (NSString *)wiFiIPAddress {
++ (nullable NSString *)wiFiIPAddress {
     // Get the WiFi IP Address
     @try {
         // Set a string for the address
@@ -751,7 +751,7 @@
 }
 
 // Get WiFi IPv6 Address
-+ (NSString *)wiFiIPv6Address {
++ (nullable NSString *)wiFiIPv6Address {
     // Get the WiFi IP Address
     @try {
         // Set a string for the address
@@ -817,7 +817,7 @@
 }
 
 // Get WiFi MAC Address
-+ (NSString *)wiFiMACAddress {
++ (nullable NSString *)wiFiMACAddress {
     // Get the WiFi MAC Address
     @try {
         // Start by setting the variables to get the WiFi Mac Address
@@ -897,7 +897,7 @@
 }
 
 // Get WiFi Netmask Address
-+ (NSString *)wiFiNetmaskAddress {
++ (nullable NSString *)wiFiNetmaskAddress {
     // Get the WiFi Netmask Address
     @try {
         // Set up the variable
@@ -947,7 +947,7 @@
 }
 
 // Get WiFi Broadcast Address
-+ (NSString *)wiFiBroadcastAddress {
++ (nullable NSString *)wiFiBroadcastAddress {
     // Get the WiFi Broadcast Address
     @try {
         // Set up strings for the IP and Netmask
@@ -1035,7 +1035,7 @@
     }
 }
 
-+ (NSString *)wiFiRouterAddress {
++ (nullable NSString *)wiFiRouterAddress {
     // Get the WiFi Router Address
     @try {
         // Set the ip address variable

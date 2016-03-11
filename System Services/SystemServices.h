@@ -147,40 +147,40 @@
 /* Network Information */
 
 // Get Current IP Address
-@property (nonatomic, readonly) NSString *currentIPAddress;
+@property (nonatomic, readonly, nullable) NSString *currentIPAddress;
 
 // Get Current MAC Address
-@property (nonatomic, readonly) NSString *currentMACAddress;
+@property (nonatomic, readonly, nullable) NSString *currentMACAddress;
 
 // Get External IP Address
-@property (nonatomic, readonly) NSString *externalIPAddress;
+@property (nonatomic, readonly, nullable) NSString *externalIPAddress;
 
 // Get Cell IP Address
-@property (nonatomic, readonly) NSString *cellIPAddress;
+@property (nonatomic, readonly, nullable) NSString *cellIPAddress;
 
 // Get Cell MAC Address
-@property (nonatomic, readonly) NSString *cellMACAddress;
+@property (nonatomic, readonly, nullable) NSString *cellMACAddress;
 
 // Get Cell Netmask Address
-@property (nonatomic, readonly) NSString *cellNetmaskAddress;
+@property (nonatomic, readonly, nullable) NSString *cellNetmaskAddress;
 
 // Get Cell Broadcast Address
-@property (nonatomic, readonly) NSString *cellBroadcastAddress;
+@property (nonatomic, readonly, nullable) NSString *cellBroadcastAddress;
 
 // Get WiFi IP Address
-@property (nonatomic, readonly) NSString *wiFiIPAddress;
+@property (nonatomic, readonly, nullable) NSString *wiFiIPAddress;
 
 // Get WiFi MAC Address
-@property (nonatomic, readonly) NSString *wiFiMACAddress;
+@property (nonatomic, readonly, nullable) NSString *wiFiMACAddress;
 
 // Get WiFi Netmask Address
-@property (nonatomic, readonly) NSString *wiFiNetmaskAddress;
+@property (nonatomic, readonly, nullable) NSString *wiFiNetmaskAddress;
 
 // Get WiFi Broadcast Address
-@property (nonatomic, readonly) NSString *wiFiBroadcastAddress;
+@property (nonatomic, readonly, nullable) NSString *wiFiBroadcastAddress;
 
 // Get WiFi Router Address
-@property (nonatomic, readonly) NSString *wiFiRouterAddress;
+@property (nonatomic, readonly, nullable) NSString *wiFiRouterAddress;
 
 // Connected to WiFi?
 @property (nonatomic, readonly) BOOL connectedToWiFi;
