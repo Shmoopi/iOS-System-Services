@@ -448,51 +448,51 @@
     return [SSBatteryInfo fullyCharged];
 }
 
-- (NSString *)currentIPAddress {
+- (nullable NSString *)currentIPAddress {
     return [SSNetworkInfo currentIPAddress];
 }
 
-- (NSString *)currentMACAddress{
+- (nullable NSString *)currentMACAddress{
     return [SSNetworkInfo currentMACAddress];
 }
 
-- (NSString *)externalIPAddress {
+- (nullable NSString *)externalIPAddress {
     return [SSNetworkInfo externalIPAddress];
 }
 
-- (NSString *)cellIPAddress {
+- (nullable NSString *)cellIPAddress {
     return [SSNetworkInfo cellIPAddress];
 }
 
-- (NSString *)cellMACAddress {
+- (nullable NSString *)cellMACAddress {
     return [SSNetworkInfo cellMACAddress];
 }
 
-- (NSString *)cellNetmaskAddress {
+- (nullable NSString *)cellNetmaskAddress {
     return [SSNetworkInfo cellNetmaskAddress];
 }
 
-- (NSString *)cellBroadcastAddress {
+- (nullable NSString *)cellBroadcastAddress {
     return [SSNetworkInfo cellBroadcastAddress];
 }
 
-- (NSString *)wiFiIPAddress {
+- (nullable NSString *)wiFiIPAddress {
     return [SSNetworkInfo wiFiIPAddress];
 }
 
-- (NSString *)wiFiMACAddress {
+- (nullable NSString *)wiFiMACAddress {
     return [SSNetworkInfo wiFiMACAddress];
 }
 
-- (NSString *)wiFiNetmaskAddress {
+- (nullable NSString *)wiFiNetmaskAddress {
     return [SSNetworkInfo wiFiNetmaskAddress];
 }
 
-- (NSString *)wiFiBroadcastAddress {
+- (nullable NSString *)wiFiBroadcastAddress {
     return [SSNetworkInfo wiFiBroadcastAddress];
 }
 
-- (NSString *)wiFiRouterAddress {
+- (nullable NSString *)wiFiRouterAddress {
     return [SSNetworkInfo wiFiRouterAddress];
 }
 

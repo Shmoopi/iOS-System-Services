@@ -13,46 +13,46 @@
 // Network Information
 
 // Get Current IP Address
-+ (NSString *)currentIPAddress;
++ (nullable NSString *)currentIPAddress;
 
 // Get Current MAC Address
-+ (NSString *)currentMACAddress;
++ (nullable NSString *)currentMACAddress;
 
 // Get the External IP Address
-+ (NSString *)externalIPAddress;
++ (nullable NSString *)externalIPAddress;
 
 // Get Cell IP Address
-+ (NSString *)cellIPAddress;
++ (nullable NSString *)cellIPAddress;
 
 // Get Cell IPv6 Address
-+ (NSString *)cellIPv6Address;
++ (nullable NSString *)cellIPv6Address;
 
 // Get Cell MAC Address
-+ (NSString *)cellMACAddress;
++ (nullable NSString *)cellMACAddress;
 
 // Get Cell Netmask Address
-+ (NSString *)cellNetmaskAddress;
++ (nullable NSString *)cellNetmaskAddress;
 
 // Get Cell Broadcast Address
-+ (NSString *)cellBroadcastAddress;
++ (nullable NSString *)cellBroadcastAddress;
 
 // Get WiFi IP Address
-+ (NSString *)wiFiIPAddress;
++ (nullable NSString *)wiFiIPAddress;
 
 // Get WiFi IPv6 Address
-+ (NSString *)wiFiIPv6Address;
++ (nullable NSString *)wiFiIPv6Address;
 
 // Get WiFi MAC Address
-+ (NSString *)wiFiMACAddress;
++ (nullable NSString *)wiFiMACAddress;
 
 // Get WiFi Netmask Address
-+ (NSString *)wiFiNetmaskAddress;
++ (nullable NSString *)wiFiNetmaskAddress;
 
 // Get WiFi Broadcast Address
-+ (NSString *)wiFiBroadcastAddress;
++ (nullable NSString *)wiFiBroadcastAddress;
 
 // Get WiFi Router Address
-+ (NSString *)wiFiRouterAddress;
++ (nullable NSString *)wiFiRouterAddress;
 
 // Connected to WiFi?
 + (BOOL)connectedToWiFi;
