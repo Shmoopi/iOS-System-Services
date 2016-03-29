@@ -325,7 +325,7 @@ enum {
     size_t miblen = 4;
     
     // Make a new size and int of the sysctl calls
-    size_t size;
+    size_t size = 0;
     int st;
     
     // Make new structs for the processes
