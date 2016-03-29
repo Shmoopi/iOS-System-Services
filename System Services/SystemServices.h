@@ -26,7 +26,7 @@
 @interface SystemServices : NSObject
 
 // Shared Manager
-+ (id)sharedServices;
++ (_Nonnull id)sharedServices;
 
 // Parent ID for a certain PID
 - (int)parentPIDForProcess:(int)pid;
@@ -34,30 +34,30 @@
 // Properties
 
 /* All System Information in Dictionary Format */
-@property (nonatomic, readonly) NSDictionary *allSystemInformation;
+@property (nonatomic, readonly, nullable) NSDictionary *allSystemInformation;
 
 /* Hardware Information */
 
 // System Uptime (dd hh mm)
-@property (nonatomic, readonly) NSString *systemsUptime;
+@property (nonatomic, readonly, nullable) NSString *systemsUptime;
 
 // Model of Device
-@property (nonatomic, readonly) NSString *deviceModel;
+@property (nonatomic, readonly, nullable) NSString *deviceModel;
 
 // Device Name
-@property (nonatomic, readonly) NSString *deviceName;
+@property (nonatomic, readonly, nullable) NSString *deviceName;
 
 // System Name
-@property (nonatomic, readonly) NSString *systemName;
+@property (nonatomic, readonly, nullable) NSString *systemName;
 
 // System Version
-@property (nonatomic, readonly) NSString *systemsVersion;
+@property (nonatomic, readonly, nullable) NSString *systemsVersion;
 
 // System Device Type (Not Formatted = iPhone1,0)
-@property (nonatomic, readonly) NSString *systemDeviceTypeNotFormatted;
+@property (nonatomic, readonly, nullable) NSString *systemDeviceTypeNotFormatted;
 
 // System Device Type (Formatted = iPhone 1)
-@property (nonatomic, readonly) NSString *systemDeviceTypeFormatted;
+@property (nonatomic, readonly, nullable) NSString *systemDeviceTypeFormatted;
 
 // Get the Screen Width (X)
 @property (nonatomic, readonly) NSInteger screenWidth;
@@ -111,24 +111,24 @@
 @property (nonatomic, readonly) NSInteger numberAttachedAccessories;
 
 // Name of attached accessory/accessories (seperated by , comma's)
-@property (nonatomic, readonly) NSString *nameAttachedAccessories;
+@property (nonatomic, readonly, nullable) NSString *nameAttachedAccessories;
 
 /* Carrier Information */
 
 // Carrier Name
-@property (nonatomic, readonly) NSString *carrierName;
+@property (nonatomic, readonly, nullable) NSString *carrierName;
 
 // Carrier Country
-@property (nonatomic, readonly) NSString *carrierCountry;
+@property (nonatomic, readonly, nullable) NSString *carrierCountry;
 
 // Carrier Mobile Country Code
-@property (nonatomic, readonly) NSString *carrierMobileCountryCode;
+@property (nonatomic, readonly, nullable) NSString *carrierMobileCountryCode;
 
 // Carrier ISO Country Code
-@property (nonatomic, readonly) NSString *carrierISOCountryCode;
+@property (nonatomic, readonly, nullable) NSString *carrierISOCountryCode;
 
 // Carrier Mobile Network Code
-@property (nonatomic, readonly) NSString *carrierMobileNetworkCode;
+@property (nonatomic, readonly, nullable) NSString *carrierMobileNetworkCode;
 
 // Carrier Allows VOIP
 @property (nonatomic, readonly) BOOL carrierAllowsVOIP;
@@ -194,7 +194,7 @@
 @property (nonatomic, readonly) int processID;
 
 // Process Name
-@property (nonatomic, readonly) NSString *processName;
+@property (nonatomic, readonly, nullable) NSString *processName;
 
 // Process Status
 @property (nonatomic, readonly) int processStatus;
@@ -203,24 +203,24 @@
 @property (nonatomic, readonly) int parentPID;
 
 // List of process information including PID's, Names, PPID's, and Status'
-@property (nonatomic, readonly) NSMutableArray *processesInformation;
+@property (nonatomic, readonly, nullable) NSMutableArray *processesInformation;
 
 /* Disk Information */
 
 // Total Disk Space
-@property (nonatomic, readonly) NSString *diskSpace;
+@property (nonatomic, readonly, nullable) NSString *diskSpace;
 
 // Total Free Disk Space (Raw)
-@property (nonatomic, readonly) NSString *freeDiskSpaceinRaw;
+@property (nonatomic, readonly, nullable) NSString *freeDiskSpaceinRaw;
 
 // Total Free Disk Space (Percentage)
-@property (nonatomic, readonly) NSString *freeDiskSpaceinPercent;
+@property (nonatomic, readonly, nullable) NSString *freeDiskSpaceinPercent;
 
 // Total Used Disk Space (Raw)
-@property (nonatomic, readonly) NSString *usedDiskSpaceinRaw;
+@property (nonatomic, readonly, nullable) NSString *usedDiskSpaceinRaw;
 
 // Total Used Disk Space (Percentage)
-@property (nonatomic, readonly) NSString *usedDiskSpaceinPercent;
+@property (nonatomic, readonly, nullable) NSString *usedDiskSpaceinPercent;
 
 // Get the total disk space in long format
 @property (nonatomic, readonly) long long longDiskSpace;
@@ -277,35 +277,35 @@
 /* Localization Information */
 
 // Country
-@property (nonatomic, readonly) NSString *country;
+@property (nonatomic, readonly, nullable) NSString *country;
 
 // Language
-@property (nonatomic, readonly) NSString *language;
+@property (nonatomic, readonly, nullable) NSString *language;
 
 // TimeZone
-@property (nonatomic, readonly) NSString *timeZoneSS;
+@property (nonatomic, readonly, nullable) NSString *timeZoneSS;
 
 // Currency Symbol
-@property (nonatomic, readonly) NSString *currency;
+@property (nonatomic, readonly, nullable) NSString *currency;
 
 /* Application Information */
 
 // Application Version
-@property (nonatomic, readonly) NSString *applicationVersion;
+@property (nonatomic, readonly, nullable) NSString *applicationVersion;
 
 // Clipboard Content
-@property (nonatomic, readonly) NSString *clipboardContent;
+@property (nonatomic, readonly, nullable) NSString *clipboardContent;
 
 /* Universal Unique Identifiers */
 
 // Unique ID
-@property (nonatomic, readonly) NSString *uniqueID;
+@property (nonatomic, readonly, nullable) NSString *uniqueID;
 
 // Device Signature
-@property (nonatomic, readonly) NSString *deviceSignature;
+@property (nonatomic, readonly, nullable) NSString *deviceSignature;
 
 // CFUUID
-@property (nonatomic, readonly) NSString *cfuuid;
+@property (nonatomic, readonly, nullable) NSString *cfuuid;
 
 // CPU Usage
 @property (nonatomic, readonly) float cpuUsage;

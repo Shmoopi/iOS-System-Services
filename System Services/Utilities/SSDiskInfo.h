@@ -13,13 +13,13 @@
 // Disk Information
 
 // Total Disk Space
-+ (NSString *)diskSpace;
++ (nullable NSString *)diskSpace;
 
 // Total Free Disk Space
-+ (NSString *)freeDiskSpace:(BOOL)inPercent;
++ (nullable NSString *)freeDiskSpace:(BOOL)inPercent;
 
 // Total Used Disk Space
-+ (NSString *)usedDiskSpace:(BOOL)inPercent;
++ (nullable NSString *)usedDiskSpace:(BOOL)inPercent;
 
 // Get the total disk space in long format
 + (long long)longDiskSpace;

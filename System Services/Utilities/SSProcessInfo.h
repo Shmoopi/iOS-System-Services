@@ -17,7 +17,7 @@ NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "SSProcessInfo is deprecated. Process informat
 + (int)processID;
 
 // Process Name
-+ (NSString *)processName;
++ (nullable NSString *)processName;
 
 // Process Status
 + (int)processStatus;
@@ -29,6 +29,6 @@ NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "SSProcessInfo is deprecated. Process informat
 + (int)parentPIDForProcess:(int)pid;
 
 // List of process information including PID's, Names, PPID's, and Status'
-+ (NSMutableArray *)processesInformation;
++ (nullable NSMutableArray *)processesInformation;
 
 @end

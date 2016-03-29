@@ -22,6 +22,6 @@
 + (NSInteger)numberAttachedAccessories;
 
 // Name of attached accessory/accessories (seperated by , comma's)
-+ (NSString *)nameAttachedAccessories;
++ (nullable NSString *)nameAttachedAccessories;
 
 @end

@@ -13,12 +13,12 @@
 // Universal Unique Identifiers
 
 // Unique ID - Unique Identifier based on unchanging information about the device
-+ (NSString *)uniqueID NS_DEPRECATED_IOS(2_0, 8_0);
++ (nullable NSString *)uniqueID NS_DEPRECATED_IOS(2_0, 8_0);
 
 // Device Signature - Device Signature based on assorted information about the device including: SystemVersion, ScreenHeight, ScreenWidth, PluggedIn, Jailbroken, HeadphonesAttached, BatteryLevel, FullyCharged, ConnectedtoWiFi, DeviceOrientation, Country, TimeZone, NumberProcessors, ProcessorSpeed, TotalDiskSpace, TotalMemory, and a Salt
-+ (NSString *)deviceSignature NS_DEPRECATED_IOS(2_0, 8_0);
++ (nullable NSString *)deviceSignature NS_DEPRECATED_IOS(2_0, 8_0);
 
 // CFUUID - Random Unique Identifier that changes every time
-+ (NSString *)cfuuid;
++ (nullable NSString *)cfuuid;
 
 @end

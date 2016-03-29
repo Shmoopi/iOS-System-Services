@@ -14,10 +14,10 @@
 // Application Information
 
 // Application Version
-+ (NSString *)applicationVersion;
++ (nullable NSString *)applicationVersion;
 
 // Clipboard Content
-+ (NSString *)clipboardContent;
++ (nullable NSString *)clipboardContent;
 
 // Application CPU Usage
 + (float)cpuUsage;

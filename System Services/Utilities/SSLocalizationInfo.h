@@ -13,15 +13,15 @@
 // Localization Information
 
 // Country
-+ (NSString *)country;
++ (nullable NSString *)country;
 
 // Language
-+ (NSString *)language;
++ (nullable NSString *)language;
 
 // TimeZone
-+ (NSString *)timeZone;
++ (nullable NSString *)timeZone;
 
 // Currency Symbol
-+ (NSString *)currency;
++ (nullable NSString *)currency;
 
 @end

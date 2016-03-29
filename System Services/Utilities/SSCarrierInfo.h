@@ -13,19 +13,19 @@
 // Carrier Information
 
 // Carrier Name
-+ (NSString *)carrierName;
++ (nullable NSString *)carrierName;
 
 // Carrier Country
-+ (NSString *)carrierCountry;
++ (nullable NSString *)carrierCountry;
 
 // Carrier Mobile Country Code
-+ (NSString *)carrierMobileCountryCode;
++ (nullable NSString *)carrierMobileCountryCode;
 
 // Carrier ISO Country Code
-+ (NSString *)carrierISOCountryCode;
++ (nullable NSString *)carrierISOCountryCode;
 
 // Carrier Mobile Network Code
-+ (NSString *)carrierMobileNetworkCode;
++ (nullable NSString *)carrierMobileNetworkCode;
 
 // Carrier Allows VOIP
 + (BOOL)carrierAllowsVOIP;
