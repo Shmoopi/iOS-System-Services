@@ -86,9 +86,13 @@
         
     }
     
-    cell.textLabel.text = [[tableArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    if ([[tableArray objectAtIndex:indexPath.row] isKindOfClass:[NSDictionary class]]) {
+        cell.textLabel.text = [[tableArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    }
     
-    cell.detailTextLabel.text = [[tableArray objectAtIndex:indexPath.row] objectForKey:@"PID"];
+    if ([[tableArray objectAtIndex:indexPath.row] isKindOfClass:[NSDictionary class]]) {
+        cell.detailTextLabel.text = [[tableArray objectAtIndex:indexPath.row] objectForKey:@"PID"];
+    }
 
     return cell;
 }

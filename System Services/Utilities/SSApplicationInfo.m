@@ -22,8 +22,10 @@
 + (NSString *)applicationVersion {
     // Get the Application Version Number
     @try {
+        
         // Query the plist for the version
-        NSString *Version = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+        NSString *Version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        
         // Validate the Version
         if (Version == nil || Version.length <= 0) {
             // Invalid Version number
