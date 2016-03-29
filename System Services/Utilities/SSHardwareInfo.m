@@ -162,6 +162,12 @@
                 NewDeviceType = @"iPhone 6 Plus";
             else if ([DeviceType isEqualToString:@"iPhone7,2"])
                 NewDeviceType = @"iPhone 6";
+            else if ([DeviceType isEqualToString:@"iPhone8,1"])
+                NewDeviceType = @"iPhone 6s Plus";
+            else if ([DeviceType isEqualToString:@"iPhone8,2"])
+                NewDeviceType = @"iPhone 6s";
+            else if ([DeviceType isEqualToString:@"iPhone8,4"])
+                NewDeviceType = @"iPhone SE";
             else if ([DeviceType isEqualToString:@"iPod1,1"])
                 NewDeviceType = @"iPod Touch 1G";
             else if ([DeviceType isEqualToString:@"iPod2,1"])
@@ -172,6 +178,8 @@
                 NewDeviceType = @"iPod Touch 4G";
             else if ([DeviceType isEqualToString:@"iPod5,1"])
                 NewDeviceType = @"iPod Touch 5G";
+            else if ([DeviceType isEqualToString:@"iPod7,1"])
+                NewDeviceType = @"iPod Touch 6G";
             else if ([DeviceType isEqualToString:@"iPad1,1"])
                 NewDeviceType = @"iPad";
             else if ([DeviceType isEqualToString:@"iPad2,1"])
@@ -210,6 +218,22 @@
                 NewDeviceType = @"iPad mini 2(WiFi)";
             else if ([DeviceType isEqualToString:@"iPad4,5"])
                 NewDeviceType = @"iPad mini 2(Cellular)";
+            else if ([DeviceType isEqualToString:@"iPad5,1"])
+                NewDeviceType = @"iPad mini 4(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad5,2"])
+                NewDeviceType = @"iPad mini 4(Cellular)";
+            else if ([DeviceType isEqualToString:@"iPad5,4"])
+                NewDeviceType = @"iPad Air 2(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad5,5"])
+                NewDeviceType = @"iPad Air 2(Cellular)";
+            else if ([DeviceType isEqualToString:@"iPad6,3"])
+                NewDeviceType = @"9.7-inch iPad Pro(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad6,4"])
+                NewDeviceType = @"9.7-inch iPad Pro(Cellular)";
+	    else if ([DeviceType isEqualToString:@"iPad6,7"])
+                NewDeviceType = @"12.9-inch iPad Pro(WiFi)";
+            else if ([DeviceType isEqualToString:@"iPad6,8"])
+                NewDeviceType = @"12.9-inch iPad Pro(Cellular)";
             else if ([DeviceType hasPrefix:@"iPad"])
                 NewDeviceType = @"iPad";
             
