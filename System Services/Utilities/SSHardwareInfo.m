@@ -163,9 +163,9 @@
             else if ([DeviceType isEqualToString:@"iPhone7,2"])
                 NewDeviceType = @"iPhone 6";
             else if ([DeviceType isEqualToString:@"iPhone8,1"])
-                NewDeviceType = @"iPhone 6s Plus";
-            else if ([DeviceType isEqualToString:@"iPhone8,2"])
                 NewDeviceType = @"iPhone 6s";
+            else if ([DeviceType isEqualToString:@"iPhone8,2"])
+                NewDeviceType = @"iPhone 6s Plus";
             else if ([DeviceType isEqualToString:@"iPhone8,4"])
                 NewDeviceType = @"iPhone SE";
             else if ([DeviceType isEqualToString:@"iPod1,1"])
