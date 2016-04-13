@@ -61,6 +61,7 @@
  * $FreeBSD: src/sys/net/route.h,v 1.36.2.1 2000/08/16 06:14:23 jayanth Exp $
  */
 
+#if !(TARGET_IPHONE_SIMULATOR)
 #ifndef _NET_ROUTE_H_
 #define	_NET_ROUTE_H_
 #include <sys/appleapiopts.h>
@@ -247,3 +248,4 @@ struct rt_addrinfo {
 
 
 #endif /* _NET_ROUTE_H_ */
+#endif /* TARGET_IPHONE_SIMULATOR */
