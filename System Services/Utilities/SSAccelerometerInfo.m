@@ -51,7 +51,7 @@
         
             // Successful
             return Orientation;
-        #end
+        #endif
     }
     @catch (NSException *exception) {
     }

@@ -140,7 +140,7 @@ enum {
             // Return whether or not cydia's openurl item exists
             if ([[UIApplication sharedApplication] canOpenURL:FakeURL])
                return KFOpenURL;
-        #end
+        #endif
     }
     @catch (NSException *exception) {
         // Error, return false
