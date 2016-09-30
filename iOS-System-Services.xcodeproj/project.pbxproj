@@ -8,36 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		4826E8711D9F0B5B009DB564 /* iOSSystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E86A1D9F0986009DB564 /* iOSSystemServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4826E8741D9F0C06009DB564 /* SystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8721D9F0C06009DB564 /* SystemServices.h */; };
+		4826E8741D9F0C06009DB564 /* SystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8721D9F0C06009DB564 /* SystemServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8751D9F0C06009DB564 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8731D9F0C06009DB564 /* SystemServices.m */; };
 		4826E8941D9F0C1B009DB564 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8771D9F0C1B009DB564 /* route.h */; };
-		4826E8951D9F0C1B009DB564 /* SSAccelerometerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8781D9F0C1B009DB564 /* SSAccelerometerInfo.h */; };
+		4826E8951D9F0C1B009DB564 /* SSAccelerometerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8781D9F0C1B009DB564 /* SSAccelerometerInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8961D9F0C1B009DB564 /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8791D9F0C1B009DB564 /* SSAccelerometerInfo.m */; };
-		4826E8971D9F0C1B009DB564 /* SSAccessoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87A1D9F0C1B009DB564 /* SSAccessoryInfo.h */; };
+		4826E8971D9F0C1B009DB564 /* SSAccessoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87A1D9F0C1B009DB564 /* SSAccessoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8981D9F0C1B009DB564 /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87B1D9F0C1B009DB564 /* SSAccessoryInfo.m */; };
-		4826E8991D9F0C1B009DB564 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87C1D9F0C1B009DB564 /* SSApplicationInfo.h */; };
+		4826E8991D9F0C1B009DB564 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87C1D9F0C1B009DB564 /* SSApplicationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E89A1D9F0C1B009DB564 /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87D1D9F0C1B009DB564 /* SSApplicationInfo.m */; };
-		4826E89B1D9F0C1B009DB564 /* SSBatteryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87E1D9F0C1B009DB564 /* SSBatteryInfo.h */; };
+		4826E89B1D9F0C1B009DB564 /* SSBatteryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87E1D9F0C1B009DB564 /* SSBatteryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E89C1D9F0C1B009DB564 /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87F1D9F0C1B009DB564 /* SSBatteryInfo.m */; };
-		4826E89D1D9F0C1B009DB564 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8801D9F0C1B009DB564 /* SSCarrierInfo.h */; };
+		4826E89D1D9F0C1B009DB564 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8801D9F0C1B009DB564 /* SSCarrierInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E89E1D9F0C1B009DB564 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8811D9F0C1B009DB564 /* SSCarrierInfo.m */; };
-		4826E89F1D9F0C1B009DB564 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8821D9F0C1B009DB564 /* SSDiskInfo.h */; };
+		4826E89F1D9F0C1B009DB564 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8821D9F0C1B009DB564 /* SSDiskInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8A01D9F0C1B009DB564 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8831D9F0C1B009DB564 /* SSDiskInfo.m */; };
-		4826E8A11D9F0C1B009DB564 /* SSHardwareInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8841D9F0C1B009DB564 /* SSHardwareInfo.h */; };
+		4826E8A11D9F0C1B009DB564 /* SSHardwareInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8841D9F0C1B009DB564 /* SSHardwareInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8A21D9F0C1B009DB564 /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8851D9F0C1B009DB564 /* SSHardwareInfo.m */; };
-		4826E8A31D9F0C1B009DB564 /* SSJailbreakCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8861D9F0C1B009DB564 /* SSJailbreakCheck.h */; };
+		4826E8A31D9F0C1B009DB564 /* SSJailbreakCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8861D9F0C1B009DB564 /* SSJailbreakCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8A41D9F0C1B009DB564 /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8871D9F0C1B009DB564 /* SSJailbreakCheck.m */; };
-		4826E8A51D9F0C1B009DB564 /* SSLocalizationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8881D9F0C1B009DB564 /* SSLocalizationInfo.h */; };
+		4826E8A51D9F0C1B009DB564 /* SSLocalizationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8881D9F0C1B009DB564 /* SSLocalizationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8A61D9F0C1B009DB564 /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8891D9F0C1B009DB564 /* SSLocalizationInfo.m */; };
-		4826E8A71D9F0C1B009DB564 /* SSMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88A1D9F0C1B009DB564 /* SSMemoryInfo.h */; };
+		4826E8A71D9F0C1B009DB564 /* SSMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88A1D9F0C1B009DB564 /* SSMemoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8A81D9F0C1B009DB564 /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88B1D9F0C1B009DB564 /* SSMemoryInfo.m */; };
-		4826E8A91D9F0C1B009DB564 /* SSNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88C1D9F0C1B009DB564 /* SSNetworkInfo.h */; };
+		4826E8A91D9F0C1B009DB564 /* SSNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88C1D9F0C1B009DB564 /* SSNetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8AA1D9F0C1B009DB564 /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88D1D9F0C1B009DB564 /* SSNetworkInfo.m */; };
-		4826E8AB1D9F0C1B009DB564 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88E1D9F0C1B009DB564 /* SSProcessInfo.h */; };
+		4826E8AB1D9F0C1B009DB564 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88E1D9F0C1B009DB564 /* SSProcessInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8AC1D9F0C1B009DB564 /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88F1D9F0C1B009DB564 /* SSProcessInfo.m */; };
-		4826E8AD1D9F0C1B009DB564 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8901D9F0C1B009DB564 /* SSProcessorInfo.h */; };
+		4826E8AD1D9F0C1B009DB564 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8901D9F0C1B009DB564 /* SSProcessorInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8AE1D9F0C1B009DB564 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8911D9F0C1B009DB564 /* SSProcessorInfo.m */; };
-		4826E8AF1D9F0C1B009DB564 /* SSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8921D9F0C1B009DB564 /* SSUUID.h */; };
+		4826E8AF1D9F0C1B009DB564 /* SSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8921D9F0C1B009DB564 /* SSUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4826E8B01D9F0C1B009DB564 /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8931D9F0C1B009DB564 /* SSUUID.m */; };
 /* End PBXBuildFile section */
 
