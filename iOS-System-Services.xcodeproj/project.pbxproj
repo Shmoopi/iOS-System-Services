@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4826E8711D9F0B5B009DB564 /* iOSSystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E86A1D9F0986009DB564 /* iOSSystemServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4826E8741D9F0C06009DB564 /* SystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8721D9F0C06009DB564 /* SystemServices.h */; };
+		4826E8751D9F0C06009DB564 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8731D9F0C06009DB564 /* SystemServices.m */; };
+		4826E8941D9F0C1B009DB564 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8771D9F0C1B009DB564 /* route.h */; };
+		4826E8951D9F0C1B009DB564 /* SSAccelerometerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8781D9F0C1B009DB564 /* SSAccelerometerInfo.h */; };
+		4826E8961D9F0C1B009DB564 /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8791D9F0C1B009DB564 /* SSAccelerometerInfo.m */; };
+		4826E8971D9F0C1B009DB564 /* SSAccessoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87A1D9F0C1B009DB564 /* SSAccessoryInfo.h */; };
+		4826E8981D9F0C1B009DB564 /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87B1D9F0C1B009DB564 /* SSAccessoryInfo.m */; };
+		4826E8991D9F0C1B009DB564 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87C1D9F0C1B009DB564 /* SSApplicationInfo.h */; };
+		4826E89A1D9F0C1B009DB564 /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87D1D9F0C1B009DB564 /* SSApplicationInfo.m */; };
+		4826E89B1D9F0C1B009DB564 /* SSBatteryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E87E1D9F0C1B009DB564 /* SSBatteryInfo.h */; };
+		4826E89C1D9F0C1B009DB564 /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E87F1D9F0C1B009DB564 /* SSBatteryInfo.m */; };
+		4826E89D1D9F0C1B009DB564 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8801D9F0C1B009DB564 /* SSCarrierInfo.h */; };
+		4826E89E1D9F0C1B009DB564 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8811D9F0C1B009DB564 /* SSCarrierInfo.m */; };
+		4826E89F1D9F0C1B009DB564 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8821D9F0C1B009DB564 /* SSDiskInfo.h */; };
+		4826E8A01D9F0C1B009DB564 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8831D9F0C1B009DB564 /* SSDiskInfo.m */; };
+		4826E8A11D9F0C1B009DB564 /* SSHardwareInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8841D9F0C1B009DB564 /* SSHardwareInfo.h */; };
+		4826E8A21D9F0C1B009DB564 /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8851D9F0C1B009DB564 /* SSHardwareInfo.m */; };
+		4826E8A31D9F0C1B009DB564 /* SSJailbreakCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8861D9F0C1B009DB564 /* SSJailbreakCheck.h */; };
+		4826E8A41D9F0C1B009DB564 /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8871D9F0C1B009DB564 /* SSJailbreakCheck.m */; };
+		4826E8A51D9F0C1B009DB564 /* SSLocalizationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8881D9F0C1B009DB564 /* SSLocalizationInfo.h */; };
+		4826E8A61D9F0C1B009DB564 /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8891D9F0C1B009DB564 /* SSLocalizationInfo.m */; };
+		4826E8A71D9F0C1B009DB564 /* SSMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88A1D9F0C1B009DB564 /* SSMemoryInfo.h */; };
+		4826E8A81D9F0C1B009DB564 /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88B1D9F0C1B009DB564 /* SSMemoryInfo.m */; };
+		4826E8A91D9F0C1B009DB564 /* SSNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88C1D9F0C1B009DB564 /* SSNetworkInfo.h */; };
+		4826E8AA1D9F0C1B009DB564 /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88D1D9F0C1B009DB564 /* SSNetworkInfo.m */; };
+		4826E8AB1D9F0C1B009DB564 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E88E1D9F0C1B009DB564 /* SSProcessInfo.h */; };
+		4826E8AC1D9F0C1B009DB564 /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E88F1D9F0C1B009DB564 /* SSProcessInfo.m */; };
+		4826E8AD1D9F0C1B009DB564 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8901D9F0C1B009DB564 /* SSProcessorInfo.h */; };
+		4826E8AE1D9F0C1B009DB564 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8911D9F0C1B009DB564 /* SSProcessorInfo.m */; };
+		4826E8AF1D9F0C1B009DB564 /* SSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4826E8921D9F0C1B009DB564 /* SSUUID.h */; };
+		4826E8B01D9F0C1B009DB564 /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826E8931D9F0C1B009DB564 /* SSUUID.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4826E8671D9F0986009DB564 /* iOSSystemServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSSystemServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4826E86A1D9F0986009DB564 /* iOSSystemServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSSystemServices.h; sourceTree = "<group>"; };
+		4826E86B1D9F0986009DB564 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		4826E8721D9F0C06009DB564 /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServices.h; sourceTree = "<group>"; };
+		4826E8731D9F0C06009DB564 /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
+		4826E8771D9F0C1B009DB564 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		4826E8781D9F0C1B009DB564 /* SSAccelerometerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccelerometerInfo.h; sourceTree = "<group>"; };
+		4826E8791D9F0C1B009DB564 /* SSAccelerometerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccelerometerInfo.m; sourceTree = "<group>"; };
+		4826E87A1D9F0C1B009DB564 /* SSAccessoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAccessoryInfo.h; sourceTree = "<group>"; };
+		4826E87B1D9F0C1B009DB564 /* SSAccessoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAccessoryInfo.m; sourceTree = "<group>"; };
+		4826E87C1D9F0C1B009DB564 /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
+		4826E87D1D9F0C1B009DB564 /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
+		4826E87E1D9F0C1B009DB564 /* SSBatteryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBatteryInfo.h; sourceTree = "<group>"; };
+		4826E87F1D9F0C1B009DB564 /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
+		4826E8801D9F0C1B009DB564 /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
+		4826E8811D9F0C1B009DB564 /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
+		4826E8821D9F0C1B009DB564 /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
+		4826E8831D9F0C1B009DB564 /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
+		4826E8841D9F0C1B009DB564 /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
+		4826E8851D9F0C1B009DB564 /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
+		4826E8861D9F0C1B009DB564 /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
+		4826E8871D9F0C1B009DB564 /* SSJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJailbreakCheck.m; sourceTree = "<group>"; };
+		4826E8881D9F0C1B009DB564 /* SSLocalizationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocalizationInfo.h; sourceTree = "<group>"; };
+		4826E8891D9F0C1B009DB564 /* SSLocalizationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocalizationInfo.m; sourceTree = "<group>"; };
+		4826E88A1D9F0C1B009DB564 /* SSMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMemoryInfo.h; sourceTree = "<group>"; };
+		4826E88B1D9F0C1B009DB564 /* SSMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMemoryInfo.m; sourceTree = "<group>"; };
+		4826E88C1D9F0C1B009DB564 /* SSNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkInfo.h; sourceTree = "<group>"; };
+		4826E88D1D9F0C1B009DB564 /* SSNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkInfo.m; sourceTree = "<group>"; };
+		4826E88E1D9F0C1B009DB564 /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
+		4826E88F1D9F0C1B009DB564 /* SSProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessInfo.m; sourceTree = "<group>"; };
+		4826E8901D9F0C1B009DB564 /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
+		4826E8911D9F0C1B009DB564 /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
+		4826E8921D9F0C1B009DB564 /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
+		4826E8931D9F0C1B009DB564 /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4826E8631D9F0986009DB564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4826E85B1D9F0961009DB564 = {
+			isa = PBXGroup;
+			children = (
+				4826E8701D9F09BF009DB564 /* SystemServices */,
+				4826E8681D9F0986009DB564 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4826E8681D9F0986009DB564 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4826E8671D9F0986009DB564 /* iOSSystemServices.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4826E8701D9F09BF009DB564 /* SystemServices */ = {
+			isa = PBXGroup;
+			children = (
+				4826E86A1D9F0986009DB564 /* iOSSystemServices.h */,
+				4826E86B1D9F0986009DB564 /* Info-iOS.plist */,
+				4826E8721D9F0C06009DB564 /* SystemServices.h */,
+				4826E8731D9F0C06009DB564 /* SystemServices.m */,
+				4826E8761D9F0C0C009DB564 /* Utilities */,
+			);
+			name = SystemServices;
+			path = "System Services";
+			sourceTree = "<group>";
+		};
+		4826E8761D9F0C0C009DB564 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4826E8771D9F0C1B009DB564 /* route.h */,
+				4826E8781D9F0C1B009DB564 /* SSAccelerometerInfo.h */,
+				4826E8791D9F0C1B009DB564 /* SSAccelerometerInfo.m */,
+				4826E87A1D9F0C1B009DB564 /* SSAccessoryInfo.h */,
+				4826E87B1D9F0C1B009DB564 /* SSAccessoryInfo.m */,
+				4826E87C1D9F0C1B009DB564 /* SSApplicationInfo.h */,
+				4826E87D1D9F0C1B009DB564 /* SSApplicationInfo.m */,
+				4826E87E1D9F0C1B009DB564 /* SSBatteryInfo.h */,
+				4826E87F1D9F0C1B009DB564 /* SSBatteryInfo.m */,
+				4826E8801D9F0C1B009DB564 /* SSCarrierInfo.h */,
+				4826E8811D9F0C1B009DB564 /* SSCarrierInfo.m */,
+				4826E8821D9F0C1B009DB564 /* SSDiskInfo.h */,
+				4826E8831D9F0C1B009DB564 /* SSDiskInfo.m */,
+				4826E8841D9F0C1B009DB564 /* SSHardwareInfo.h */,
+				4826E8851D9F0C1B009DB564 /* SSHardwareInfo.m */,
+				4826E8861D9F0C1B009DB564 /* SSJailbreakCheck.h */,
+				4826E8871D9F0C1B009DB564 /* SSJailbreakCheck.m */,
+				4826E8881D9F0C1B009DB564 /* SSLocalizationInfo.h */,
+				4826E8891D9F0C1B009DB564 /* SSLocalizationInfo.m */,
+				4826E88A1D9F0C1B009DB564 /* SSMemoryInfo.h */,
+				4826E88B1D9F0C1B009DB564 /* SSMemoryInfo.m */,
+				4826E88C1D9F0C1B009DB564 /* SSNetworkInfo.h */,
+				4826E88D1D9F0C1B009DB564 /* SSNetworkInfo.m */,
+				4826E88E1D9F0C1B009DB564 /* SSProcessInfo.h */,
+				4826E88F1D9F0C1B009DB564 /* SSProcessInfo.m */,
+				4826E8901D9F0C1B009DB564 /* SSProcessorInfo.h */,
+				4826E8911D9F0C1B009DB564 /* SSProcessorInfo.m */,
+				4826E8921D9F0C1B009DB564 /* SSUUID.h */,
+				4826E8931D9F0C1B009DB564 /* SSUUID.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4826E8641D9F0986009DB564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4826E8A11D9F0C1B009DB564 /* SSHardwareInfo.h in Headers */,
+				4826E8A51D9F0C1B009DB564 /* SSLocalizationInfo.h in Headers */,
+				4826E8AF1D9F0C1B009DB564 /* SSUUID.h in Headers */,
+				4826E8AB1D9F0C1B009DB564 /* SSProcessInfo.h in Headers */,
+				4826E8951D9F0C1B009DB564 /* SSAccelerometerInfo.h in Headers */,
+				4826E8971D9F0C1B009DB564 /* SSAccessoryInfo.h in Headers */,
+				4826E89B1D9F0C1B009DB564 /* SSBatteryInfo.h in Headers */,
+				4826E8941D9F0C1B009DB564 /* route.h in Headers */,
+				4826E8A71D9F0C1B009DB564 /* SSMemoryInfo.h in Headers */,
+				4826E8711D9F0B5B009DB564 /* iOSSystemServices.h in Headers */,
+				4826E8AD1D9F0C1B009DB564 /* SSProcessorInfo.h in Headers */,
+				4826E8741D9F0C06009DB564 /* SystemServices.h in Headers */,
+				4826E8A31D9F0C1B009DB564 /* SSJailbreakCheck.h in Headers */,
+				4826E89F1D9F0C1B009DB564 /* SSDiskInfo.h in Headers */,
+				4826E8A91D9F0C1B009DB564 /* SSNetworkInfo.h in Headers */,
+				4826E8991D9F0C1B009DB564 /* SSApplicationInfo.h in Headers */,
+				4826E89D1D9F0C1B009DB564 /* SSCarrierInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4826E8661D9F0986009DB564 /* SystemServices iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4826E86D1D9F0986009DB564 /* Build configuration list for PBXNativeTarget "SystemServices iOS" */;
+			buildPhases = (
+				4826E8621D9F0986009DB564 /* Sources */,
+				4826E8631D9F0986009DB564 /* Frameworks */,
+				4826E8641D9F0986009DB564 /* Headers */,
+				4826E8651D9F0986009DB564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SystemServices iOS";
+			productName = "SystemServices iOS";
+			productReference = 4826E8671D9F0986009DB564 /* iOSSystemServices.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4826E85C1D9F0961009DB564 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					4826E8661D9F0986009DB564 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4826E85F1D9F0961009DB564 /* Build configuration list for PBXProject "iOS-System-Services" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4826E85B1D9F0961009DB564;
+			productRefGroup = 4826E8681D9F0986009DB564 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4826E8661D9F0986009DB564 /* SystemServices iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4826E8651D9F0986009DB564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4826E8621D9F0986009DB564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4826E8A61D9F0C1B009DB564 /* SSLocalizationInfo.m in Sources */,
+				4826E89A1D9F0C1B009DB564 /* SSApplicationInfo.m in Sources */,
+				4826E8981D9F0C1B009DB564 /* SSAccessoryInfo.m in Sources */,
+				4826E8751D9F0C06009DB564 /* SystemServices.m in Sources */,
+				4826E8A21D9F0C1B009DB564 /* SSHardwareInfo.m in Sources */,
+				4826E8A41D9F0C1B009DB564 /* SSJailbreakCheck.m in Sources */,
+				4826E8AE1D9F0C1B009DB564 /* SSProcessorInfo.m in Sources */,
+				4826E8AC1D9F0C1B009DB564 /* SSProcessInfo.m in Sources */,
+				4826E8961D9F0C1B009DB564 /* SSAccelerometerInfo.m in Sources */,
+				4826E89E1D9F0C1B009DB564 /* SSCarrierInfo.m in Sources */,
+				4826E8A01D9F0C1B009DB564 /* SSDiskInfo.m in Sources */,
+				4826E89C1D9F0C1B009DB564 /* SSBatteryInfo.m in Sources */,
+				4826E8AA1D9F0C1B009DB564 /* SSNetworkInfo.m in Sources */,
+				4826E8B01D9F0C1B009DB564 /* SSUUID.m in Sources */,
+				4826E8A81D9F0C1B009DB564 /* SSMemoryInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4826E8601D9F0961009DB564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		4826E8611D9F0961009DB564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		4826E86E1D9F0986009DB564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "System Services/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SystemServices-iOS";
+				PRODUCT_NAME = iOSSystemServices;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4826E86F1D9F0986009DB564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "System Services/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SystemServices-iOS";
+				PRODUCT_NAME = iOSSystemServices;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4826E85F1D9F0961009DB564 /* Build configuration list for PBXProject "iOS-System-Services" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4826E8601D9F0961009DB564 /* Debug */,
+				4826E8611D9F0961009DB564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4826E86D1D9F0986009DB564 /* Build configuration list for PBXNativeTarget "SystemServices iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4826E86E1D9F0986009DB564 /* Debug */,
+				4826E86F1D9F0986009DB564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4826E85C1D9F0961009DB564 /* Project object */;
+}
