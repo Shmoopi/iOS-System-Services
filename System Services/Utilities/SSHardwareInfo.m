@@ -168,6 +168,14 @@
                 NewDeviceType = @"iPhone 6s Plus";
             else if ([DeviceType isEqualToString:@"iPhone8,4"])
                 NewDeviceType = @"iPhone SE";
+            else if ([DeviceType isEqualToString:@"iPhone9,1"])
+                NewDeviceType = @"iPhone 7";
+            else if ([DeviceType isEqualToString:@"iPhone9,3"])
+                NewDeviceType = @"iPhone 7";
+            else if ([DeviceType isEqualToString:@"iPhone9,2"])
+                NewDeviceType = @"iPhone 7 Plus";
+            else if ([DeviceType isEqualToString:@"iPhone9,4"])
+                NewDeviceType = @"iPhone 7 Plus";
             else if ([DeviceType isEqualToString:@"iPod1,1"])
                 NewDeviceType = @"iPod Touch 1G";
             else if ([DeviceType isEqualToString:@"iPod2,1"])
