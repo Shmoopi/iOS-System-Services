@@ -15,9 +15,6 @@
 // Get Current IP Address
 + (nullable NSString *)currentIPAddress;
 
-// Get Current MAC Address
-+ (nullable NSString *)currentMACAddress;
-
 // Get the External IP Address
 + (nullable NSString *)externalIPAddress;
 
@@ -26,9 +23,6 @@
 
 // Get Cell IPv6 Address
 + (nullable NSString *)cellIPv6Address;
-
-// Get Cell MAC Address
-+ (nullable NSString *)cellMACAddress;
 
 // Get Cell Netmask Address
 + (nullable NSString *)cellNetmaskAddress;
@@ -41,9 +35,6 @@
 
 // Get WiFi IPv6 Address
 + (nullable NSString *)wiFiIPv6Address;
-
-// Get WiFi MAC Address
-+ (nullable NSString *)wiFiMACAddress;
 
 // Get WiFi Netmask Address
 + (nullable NSString *)wiFiNetmaskAddress;

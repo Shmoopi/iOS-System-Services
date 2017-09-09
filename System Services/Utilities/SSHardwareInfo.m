@@ -23,39 +23,39 @@
 // System Uptime (dd hh mm)
 + (NSString *)systemUptime {
     // Set up the days/hours/minutes
-    NSNumber *Days, *Hours, *Minutes;
+    NSNumber *days, *hours, *minutes;
     
     // Get the info about a process
-    NSProcessInfo * processInfo = [NSProcessInfo processInfo];
-	// Get the uptime of the system
-    NSTimeInterval UptimeInterval = [processInfo systemUptime];
-	// Get the calendar
-    NSCalendar *Calendar = [NSCalendar currentCalendar];
-	// Create the Dates
-    NSDate *Date = [[NSDate alloc] initWithTimeIntervalSinceNow:(0-UptimeInterval)];
+    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+    // Get the uptime of the system
+    NSTimeInterval uptimeInterval = [processInfo systemUptime];
+    // Get the calendar
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    // Create the Dates
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSinceNow:(0-uptimeInterval)];
     unsigned int unitFlags = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
-    NSDateComponents *Components = [Calendar components:unitFlags fromDate:Date toDate:[NSDate date]  options:0];
-	
+    NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:[NSDate date]  options:0];
+    
     // Get the day, hour and minutes
-    Days = [NSNumber numberWithLong:[Components day]];
-    Hours = [NSNumber numberWithLong:[Components hour]];
-    Minutes = [NSNumber numberWithLong:[Components minute]];
-	
+    days = [NSNumber numberWithLong:[components day]];
+    hours = [NSNumber numberWithLong:[components hour]];
+    minutes = [NSNumber numberWithLong:[components minute]];
+    
     // Format the dates
-	NSString *Uptime = [NSString stringWithFormat:@"%@ %@ %@",
-                               [Days stringValue],
-                               [Hours stringValue],
-                               [Minutes stringValue]];
+    NSString *uptime = [NSString stringWithFormat:@"%@ %@ %@",
+                        [days stringValue],
+                        [hours stringValue],
+                        [minutes stringValue]];
     
     // Error checking
-    if (!Uptime) {
+    if (!uptime) {
         // No uptime found
         // Return nil
         return nil;
     }
     
     // Return the uptime
-    return Uptime;
+    return uptime;
 }
 
 // Model of Device
@@ -117,128 +117,136 @@
 // System Device Type (iPhone1,0) (Formatted = iPhone 1)
 + (NSString *)systemDeviceTypeFormatted:(BOOL)formatted {
     // Set up a Device Type String
-    NSString *DeviceType;
+    NSString *deviceType;
     
     // Check if it should be formatted
     if (formatted) {
         // Formatted
         @try {
             // Set up a new Device Type String
-            NSString *NewDeviceType;
+            NSString *newDeviceType;
             // Set up a struct
             struct utsname DT;
             // Get the system information
             uname(&DT);
             // Set the device type to the machine type
-            DeviceType = [NSString stringWithFormat:@"%s", DT.machine];
+            deviceType = [NSString stringWithFormat:@"%s", DT.machine];
             
-            if ([DeviceType isEqualToString:@"i386"])
-                NewDeviceType = @"iPhone Simulator";
-            else if ([DeviceType isEqualToString:@"x86_64"])
-                NewDeviceType = @"iPhone Simulator";
-            else if ([DeviceType isEqualToString:@"iPhone1,1"])
-                NewDeviceType = @"iPhone";
-            else if ([DeviceType isEqualToString:@"iPhone1,2"])
-                NewDeviceType = @"iPhone 3G";
-            else if ([DeviceType isEqualToString:@"iPhone2,1"])
-                NewDeviceType = @"iPhone 3GS";
-            else if ([DeviceType isEqualToString:@"iPhone3,1"])
-                NewDeviceType = @"iPhone 4";
-            else if ([DeviceType isEqualToString:@"iPhone4,1"])
-                NewDeviceType = @"iPhone 4S";
-            else if ([DeviceType isEqualToString:@"iPhone5,1"])
-                NewDeviceType = @"iPhone 5(GSM)";
-            else if ([DeviceType isEqualToString:@"iPhone5,2"])
-                NewDeviceType = @"iPhone 5(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPhone5,3"])
-                NewDeviceType = @"iPhone 5c(GSM)";
-            else if ([DeviceType isEqualToString:@"iPhone5,4"])
-                NewDeviceType = @"iPhone 5c(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPhone6,1"])
-                NewDeviceType = @"iPhone 5s(GSM)";
-            else if ([DeviceType isEqualToString:@"iPhone6,2"])
-                NewDeviceType = @"iPhone 5s(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPhone7,1"])
-                NewDeviceType = @"iPhone 6 Plus";
-            else if ([DeviceType isEqualToString:@"iPhone7,2"])
-                NewDeviceType = @"iPhone 6";
-            else if ([DeviceType isEqualToString:@"iPhone8,1"])
-                NewDeviceType = @"iPhone 6s";
-            else if ([DeviceType isEqualToString:@"iPhone8,2"])
-                NewDeviceType = @"iPhone 6s Plus";
-            else if ([DeviceType isEqualToString:@"iPhone8,4"])
-                NewDeviceType = @"iPhone SE";
-            else if ([DeviceType isEqualToString:@"iPod1,1"])
-                NewDeviceType = @"iPod Touch 1G";
-            else if ([DeviceType isEqualToString:@"iPod2,1"])
-                NewDeviceType = @"iPod Touch 2G";
-            else if ([DeviceType isEqualToString:@"iPod3,1"])
-                NewDeviceType = @"iPod Touch 3G";
-            else if ([DeviceType isEqualToString:@"iPod4,1"])
-                NewDeviceType = @"iPod Touch 4G";
-            else if ([DeviceType isEqualToString:@"iPod5,1"])
-                NewDeviceType = @"iPod Touch 5G";
-            else if ([DeviceType isEqualToString:@"iPod7,1"])
-                NewDeviceType = @"iPod Touch 6G";
-            else if ([DeviceType isEqualToString:@"iPad1,1"])
-                NewDeviceType = @"iPad";
-            else if ([DeviceType isEqualToString:@"iPad2,1"])
-                NewDeviceType = @"iPad 2(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad2,2"])
-                NewDeviceType = @"iPad 2(GSM)";
-            else if ([DeviceType isEqualToString:@"iPad2,3"])
-                NewDeviceType = @"iPad 2(CDMA)";
-            else if ([DeviceType isEqualToString:@"iPad2,4"])
-                NewDeviceType = @"iPad 2(WiFi + New Chip)";
-            else if ([DeviceType isEqualToString:@"iPad2,5"])
-                NewDeviceType = @"iPad mini(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad2,6"])
-                NewDeviceType = @"iPad mini(GSM)";
-            else if ([DeviceType isEqualToString:@"iPad2,7"])
-                NewDeviceType = @"iPad mini(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPad3,1"])
-                NewDeviceType = @"iPad 3(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad3,2"])
-                NewDeviceType = @"iPad 3(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPad3,3"])
-                NewDeviceType = @"iPad 3(GSM)";
-            else if ([DeviceType isEqualToString:@"iPad3,4"])
-                NewDeviceType = @"iPad 4(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad3,5"])
-                NewDeviceType = @"iPad 4(GSM)";
-            else if ([DeviceType isEqualToString:@"iPad3,6"])
-                NewDeviceType = @"iPad 4(GSM+CDMA)";
-            else if ([DeviceType isEqualToString:@"iPad3,3"])
-                NewDeviceType = @"New iPad";
-            else if ([DeviceType isEqualToString:@"iPad4,1"])
-                NewDeviceType = @"iPad Air(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad4,2"])
-                NewDeviceType = @"iPad Air(Cellular)";
-            else if ([DeviceType isEqualToString:@"iPad4,4"])
-                NewDeviceType = @"iPad mini 2(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad4,5"])
-                NewDeviceType = @"iPad mini 2(Cellular)";
-            else if ([DeviceType isEqualToString:@"iPad5,1"])
-                NewDeviceType = @"iPad mini 4(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad5,2"])
-                NewDeviceType = @"iPad mini 4(Cellular)";
-            else if ([DeviceType isEqualToString:@"iPad5,4"])
-                NewDeviceType = @"iPad Air 2(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad5,5"])
-                NewDeviceType = @"iPad Air 2(Cellular)";
-            else if ([DeviceType isEqualToString:@"iPad6,3"])
-                NewDeviceType = @"9.7-inch iPad Pro(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad6,4"])
-                NewDeviceType = @"9.7-inch iPad Pro(Cellular)";
-	    else if ([DeviceType isEqualToString:@"iPad6,7"])
-                NewDeviceType = @"12.9-inch iPad Pro(WiFi)";
-            else if ([DeviceType isEqualToString:@"iPad6,8"])
-                NewDeviceType = @"12.9-inch iPad Pro(Cellular)";
-            else if ([DeviceType hasPrefix:@"iPad"])
-                NewDeviceType = @"iPad";
+            if ([deviceType isEqualToString:@"i386"])
+                newDeviceType = @"iPhone Simulator";
+            else if ([deviceType isEqualToString:@"x86_64"])
+                newDeviceType = @"iPhone Simulator";
+            else if ([deviceType isEqualToString:@"iPhone1,1"])
+                newDeviceType = @"iPhone";
+            else if ([deviceType isEqualToString:@"iPhone1,2"])
+                newDeviceType = @"iPhone 3G";
+            else if ([deviceType isEqualToString:@"iPhone2,1"])
+                newDeviceType = @"iPhone 3GS";
+            else if ([deviceType isEqualToString:@"iPhone3,1"])
+                newDeviceType = @"iPhone 4";
+            else if ([deviceType isEqualToString:@"iPhone4,1"])
+                newDeviceType = @"iPhone 4S";
+            else if ([deviceType isEqualToString:@"iPhone5,1"])
+                newDeviceType = @"iPhone 5(GSM)";
+            else if ([deviceType isEqualToString:@"iPhone5,2"])
+                newDeviceType = @"iPhone 5(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPhone5,3"])
+                newDeviceType = @"iPhone 5c(GSM)";
+            else if ([deviceType isEqualToString:@"iPhone5,4"])
+                newDeviceType = @"iPhone 5c(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPhone6,1"])
+                newDeviceType = @"iPhone 5s(GSM)";
+            else if ([deviceType isEqualToString:@"iPhone6,2"])
+                newDeviceType = @"iPhone 5s(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPhone7,1"])
+                newDeviceType = @"iPhone 6 Plus";
+            else if ([deviceType isEqualToString:@"iPhone7,2"])
+                newDeviceType = @"iPhone 6";
+            else if ([deviceType isEqualToString:@"iPhone8,1"])
+                newDeviceType = @"iPhone 6s";
+            else if ([deviceType isEqualToString:@"iPhone8,2"])
+                newDeviceType = @"iPhone 6s Plus";
+            else if ([deviceType isEqualToString:@"iPhone8,4"])
+                newDeviceType = @"iPhone SE";
+            else if ([deviceType isEqualToString:@"iPhone9,1"])
+                newDeviceType = @"iPhone 7";
+            else if ([deviceType isEqualToString:@"iPhone9,3"])
+                newDeviceType = @"iPhone 7";
+            else if ([deviceType isEqualToString:@"iPhone9,2"])
+                newDeviceType = @"iPhone 7 Plus";
+            else if ([deviceType isEqualToString:@"iPhone9,4"])
+                newDeviceType = @"iPhone 7 Plus";
+            else if ([deviceType isEqualToString:@"iPod1,1"])
+                newDeviceType = @"iPod Touch 1G";
+            else if ([deviceType isEqualToString:@"iPod2,1"])
+                newDeviceType = @"iPod Touch 2G";
+            else if ([deviceType isEqualToString:@"iPod3,1"])
+                newDeviceType = @"iPod Touch 3G";
+            else if ([deviceType isEqualToString:@"iPod4,1"])
+                newDeviceType = @"iPod Touch 4G";
+            else if ([deviceType isEqualToString:@"iPod5,1"])
+                newDeviceType = @"iPod Touch 5G";
+            else if ([deviceType isEqualToString:@"iPod7,1"])
+                newDeviceType = @"iPod Touch 6G";
+            else if ([deviceType isEqualToString:@"iPad1,1"])
+                newDeviceType = @"iPad";
+            else if ([deviceType isEqualToString:@"iPad2,1"])
+                newDeviceType = @"iPad 2(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad2,2"])
+                newDeviceType = @"iPad 2(GSM)";
+            else if ([deviceType isEqualToString:@"iPad2,3"])
+                newDeviceType = @"iPad 2(CDMA)";
+            else if ([deviceType isEqualToString:@"iPad2,4"])
+                newDeviceType = @"iPad 2(WiFi + New Chip)";
+            else if ([deviceType isEqualToString:@"iPad2,5"])
+                newDeviceType = @"iPad mini(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad2,6"])
+                newDeviceType = @"iPad mini(GSM)";
+            else if ([deviceType isEqualToString:@"iPad2,7"])
+                newDeviceType = @"iPad mini(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPad3,1"])
+                newDeviceType = @"iPad 3(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad3,2"])
+                newDeviceType = @"iPad 3(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPad3,3"])
+                newDeviceType = @"iPad 3(GSM)";
+            else if ([deviceType isEqualToString:@"iPad3,4"])
+                newDeviceType = @"iPad 4(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad3,5"])
+                newDeviceType = @"iPad 4(GSM)";
+            else if ([deviceType isEqualToString:@"iPad3,6"])
+                newDeviceType = @"iPad 4(GSM+CDMA)";
+            else if ([deviceType isEqualToString:@"iPad3,3"])
+                newDeviceType = @"New iPad";
+            else if ([deviceType isEqualToString:@"iPad4,1"])
+                newDeviceType = @"iPad Air(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad4,2"])
+                newDeviceType = @"iPad Air(Cellular)";
+            else if ([deviceType isEqualToString:@"iPad4,4"])
+                newDeviceType = @"iPad mini 2(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad4,5"])
+                newDeviceType = @"iPad mini 2(Cellular)";
+            else if ([deviceType isEqualToString:@"iPad5,1"])
+                newDeviceType = @"iPad mini 4(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad5,2"])
+                newDeviceType = @"iPad mini 4(Cellular)";
+            else if ([deviceType isEqualToString:@"iPad5,4"])
+                newDeviceType = @"iPad Air 2(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad5,5"])
+                newDeviceType = @"iPad Air 2(Cellular)";
+            else if ([deviceType isEqualToString:@"iPad6,3"])
+                newDeviceType = @"9.7-inch iPad Pro(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad6,4"])
+                newDeviceType = @"9.7-inch iPad Pro(Cellular)";
+            else if ([deviceType isEqualToString:@"iPad6,7"])
+                newDeviceType = @"12.9-inch iPad Pro(WiFi)";
+            else if ([deviceType isEqualToString:@"iPad6,8"])
+                newDeviceType = @"12.9-inch iPad Pro(Cellular)";
+            else if ([deviceType hasPrefix:@"iPad"])
+                newDeviceType = @"iPad";
             
             // Return the new device type
-            return NewDeviceType;
+            return newDeviceType;
         }
         @catch (NSException *exception) {
             // Error
@@ -252,10 +260,10 @@
             // Get the system information
             uname(&DT);
             // Set the device type to the machine type
-            DeviceType = [NSString stringWithFormat:@"%s", DT.machine];
+            deviceType = [NSString stringWithFormat:@"%s", DT.machine];
             
             // Return the device type
-            return DeviceType;
+            return deviceType;
         }
         @catch (NSException *exception) {
             // Error
@@ -388,24 +396,28 @@
     // Is the debugger attached?
     @try {
         // Set up the variables
-        size_t size = sizeof(struct kinfo_proc); struct kinfo_proc info;
-        int ret = 0, name[4];
-        memset(&info, 0, sizeof(struct kinfo_proc));
+        int                 ret;
+        int                 mib[4];
+        struct kinfo_proc   info;
+        size_t              size;
+        info.kp_proc.p_flag = 0;
+        mib[0] = CTL_KERN;
+        mib[1] = KERN_PROC;
+        mib[2] = KERN_PROC_PID;
+        mib[3] = getpid();
+        size = sizeof(info);
+        ret = sysctl(mib, sizeof(mib) / sizeof(*mib), &info, &size, NULL, 0);
         
-        // Get the process information
-        name[0] = CTL_KERN;
-        name[1] = KERN_PROC;
-        name[2] = KERN_PROC_PID; name[3] = getpid();
-        
-        // Check to make sure the variables are correct
-        if (ret == (sysctl(name, 4, &info, &size, NULL, 0))) {
+        // Verify ret
+        if (ret) {
             // Sysctl() failed
             // Return the output of sysctl
             return ret;
         }
         
-        // Return whether or not we're being debugged
-        return (info.kp_proc.p_flag & P_TRACED) ? 1 : 0;
+        // Return whether the process is being traced or not
+        return ( (info.kp_proc.p_flag & P_TRACED) != 0 );
+        
     }
     @catch (NSException *exception) {
         // Error

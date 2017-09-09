@@ -21,32 +21,32 @@
     // Find the total amount of memory	
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
-        double AllMemory = [[NSProcessInfo processInfo] physicalMemory];
+        double totalMemory = 0.00;
+        double allMemory = [[NSProcessInfo processInfo] physicalMemory];
 		
 		// Total Memory (formatted)
-	    TotalMemory = (AllMemory / 1024.0) / 1024.0;
+	    totalMemory = (allMemory / 1024.0) / 1024.0;
         
         // Round to the nearest multiple of 256mb - Almost all RAM is a multiple of 256mb (I do believe)
         int toNearest = 256;
-        int remainder = (int)TotalMemory % toNearest;
+        int remainder = (int)totalMemory % toNearest;
         
         if (remainder >= toNearest / 2) {
             // Round the final number up
-            TotalMemory = ((int)TotalMemory - remainder) + 256;
+            totalMemory = ((int)totalMemory - remainder) + 256;
         } else {
             // Round the final number down
-            TotalMemory = (int)TotalMemory - remainder;
+            totalMemory = (int)totalMemory - remainder;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -59,7 +59,7 @@
     // Find the total amount of free memory
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
+        double totalMemory = 0.00;
 		vm_statistics_data_t vmStats;
 		mach_msg_type_number_t infoCount = HOST_VM_INFO_COUNT;
 		kern_return_t kernReturn = host_statistics(mach_host_self(), HOST_VM_INFO, (host_info_t)&vmStats, &infoCount);
@@ -72,24 +72,24 @@
         if (inPercent) {
             // Percent
             // Convert to doubles
-            double FM = [self totalMemory];
-            double AM = ((vm_page_size * vmStats.free_count) / 1024.0) / 1024.0;
+            double fm = [self totalMemory];
+            double am = ((vm_page_size * vmStats.free_count) / 1024.0) / 1024.0;
             // Get the percent
-            TotalMemory = (AM * 100) / FM;
+            totalMemory = (am * 100) / fm;
         } else {
             // Not in percent
             // Total Memory (formatted)
-            TotalMemory = ((vm_page_size * vmStats.free_count) / 1024.0) / 1024.0;
+            totalMemory = ((vm_page_size * vmStats.free_count) / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -102,7 +102,7 @@
     // Find the total amount of used memory
 	@try {
         // Set up the variables
-        double TotalUsedMemory = 0.00;
+        double totalUsedMemory = 0.00;
 		mach_port_t host_port;
 		mach_msg_type_number_t host_size;
 		vm_size_t pagesize;
@@ -121,33 +121,33 @@
 		}
 		
 		// Memory statistics in bytes
-		natural_t UsedMemory = (natural_t)((vm_stat.active_count +
+		natural_t usedMemory = (natural_t)((vm_stat.active_count +
                                 vm_stat.inactive_count +
                                 vm_stat.wire_count) * pagesize);
-		natural_t AllMemory = [self totalMemory];
+		natural_t allMemory = [self totalMemory];
         
         // Check if the user wants it in percent
         if (inPercent) {
             // Percent
             // Convert to doubles
-            double UM = (UsedMemory /1024) / 1024;
-            double AM = AllMemory;
+            double um = (usedMemory /1024) / 1024;
+            double am = allMemory;
             // Get the percent
-            TotalUsedMemory = (UM * 100) / AM;
+            totalUsedMemory = (um * 100) / am;
         } else {
             // Not in percent
             // Total Used Memory (formatted)
-            TotalUsedMemory = (UsedMemory / 1024.0) / 1024.0;
+            totalUsedMemory = (usedMemory / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalUsedMemory <= 0) {
+        if (totalUsedMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalUsedMemory;
+        return totalUsedMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -160,7 +160,7 @@
     // Find the Active memory
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
+        double totalMemory = 0.00;
 		mach_port_t host_port;
 		mach_msg_type_number_t host_size;
 		vm_size_t pagesize;
@@ -185,21 +185,21 @@
             double FM = [self totalMemory];
             double AM = ((vm_stat.active_count * pagesize) / 1024.0) / 1024.0;
             // Get the percent
-            TotalMemory = (AM * 100) / FM;
+            totalMemory = (AM * 100) / FM;
         } else {
             // Not in percent
             // Total Memory (formatted)
-            TotalMemory = ((vm_stat.active_count * pagesize) / 1024.0) / 1024.0;
+            totalMemory = ((vm_stat.active_count * pagesize) / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -212,7 +212,7 @@
     // Find the Inactive memory
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
+        double totalMemory = 0.00;
 		mach_port_t host_port;
 		mach_msg_type_number_t host_size;
 		vm_size_t pagesize;
@@ -237,21 +237,21 @@
             double FM = [self totalMemory];
             double AM = ((vm_stat.inactive_count * pagesize) / 1024.0) / 1024.0;
             // Get the percent
-            TotalMemory = (AM * 100) / FM;
+            totalMemory = (AM * 100) / FM;
         } else {
             // Not in percent
             // Total Memory (formatted)
-            TotalMemory = ((vm_stat.inactive_count * pagesize) / 1024.0) / 1024.0;
+            totalMemory = ((vm_stat.inactive_count * pagesize) / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -264,7 +264,7 @@
     // Find the Wired memory
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
+        double totalMemory = 0.00;
 		mach_port_t host_port;
 		mach_msg_type_number_t host_size;
 		vm_size_t pagesize;
@@ -289,21 +289,21 @@
             double FM = [self totalMemory];
             double AM = ((vm_stat.wire_count * pagesize) / 1024.0) / 1024.0;
             // Get the percent
-            TotalMemory = (AM * 100) / FM;
+            totalMemory = (AM * 100) / FM;
         } else {
             // Not in percent
             // Total Memory (formatted)
-            TotalMemory = ((vm_stat.wire_count * pagesize) / 1024.0) / 1024.0;
+            totalMemory = ((vm_stat.wire_count * pagesize) / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -316,7 +316,7 @@
     // Find the Purgable memory
 	@try {
         // Set up the variables
-        double TotalMemory = 0.00;
+        double totalMemory = 0.00;
 		mach_port_t host_port;
 		mach_msg_type_number_t host_size;
 		vm_size_t pagesize;
@@ -338,24 +338,24 @@
         if (inPercent) {
             // Percent
             // Convert to doubles
-            double FM = [self totalMemory];
-            double AM = ((vm_stat.purgeable_count * pagesize) / 1024.0) / 1024.0;
+            double fm = [self totalMemory];
+            double am = ((vm_stat.purgeable_count * pagesize) / 1024.0) / 1024.0;
             // Get the percent
-            TotalMemory = (AM * 100) / FM;
+            totalMemory = (am * 100) / fm;
         } else {
             // Not in percent
             // Total Memory (formatted)
-            TotalMemory = ((vm_stat.purgeable_count * pagesize) / 1024.0) / 1024.0;
+            totalMemory = ((vm_stat.purgeable_count * pagesize) / 1024.0) / 1024.0;
         }
         
         // Check to make sure it's valid
-        if (TotalMemory <= 0) {
+        if (totalMemory <= 0) {
             // Error, invalid memory value
             return -1;
         }
         
         // Completed Successfully
-        return TotalMemory;
+        return totalMemory;
 	}
 	@catch (NSException *exception) {
         // Error

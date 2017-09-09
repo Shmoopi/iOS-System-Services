@@ -39,14 +39,11 @@
     NSString *CarrierMobileNetworkCode = [NSString stringWithFormat:@"Carrier Mobile Network Code: %@",[SystemSharedServices carrierMobileNetworkCode]];
     NSString *CarrierAllowsVOIP = ([SystemSharedServices carrierAllowsVOIP]) ? @"Carrier Allows VOIP: Yes" : @"Carrier Allows VOIP: No";
     NSString *CurrentIPAddress = [NSString stringWithFormat:@"Current IP Address: %@",[SystemSharedServices currentIPAddress]];
-    NSString *CurrentMACAddress = [NSString stringWithFormat:@"Current MAC Address: %@",[SystemSharedServices currentMACAddress]];
     NSString *ExternalIPAddress = [NSString stringWithFormat:@"External IP Address: %@",[SystemSharedServices externalIPAddress]];
     NSString *CellIPAddress = [NSString stringWithFormat:@"Cell IP Address: %@",[SystemSharedServices cellIPAddress]];
-    NSString *CellMACAddress = [NSString stringWithFormat:@"Cell MAC Address: %@",[SystemSharedServices cellMACAddress]];
     NSString *CellNetmaskAddress = [NSString stringWithFormat:@"Cell Netmask Address: %@",[SystemSharedServices cellNetmaskAddress]];
     NSString *CellBroadcastAddress = [NSString stringWithFormat:@"Cell Broadcast Address: %@",[SystemSharedServices cellBroadcastAddress]];
     NSString *WiFiIPAddress = [NSString stringWithFormat:@"WiFi IP Address: %@",[SystemSharedServices wiFiIPAddress]];
-    NSString *WiFiMACAddress = [NSString stringWithFormat:@"WiFi MAC Address: %@",[SystemSharedServices wiFiMACAddress]];
     NSString *WiFiNetmaskAddress = [NSString stringWithFormat:@"WiFi Netmask Address: %@",[SystemSharedServices wiFiNetmaskAddress]];
     NSString *WiFiBroadcastAddress = [NSString stringWithFormat:@"WiFi Broadcast Address: %@",[SystemSharedServices wiFiBroadcastAddress]];
     NSString *WiFiRouterAddress = [NSString stringWithFormat:@"WiFi Router Address: %@",[SystemSharedServices wiFiRouterAddress]];
@@ -54,7 +51,7 @@
     NSString *ConnectedToCellNetwork = ([SystemSharedServices connectedToCellNetwork]) ? @"Connected to Cell Network: Yes" : @"Connected to Cell Network: No";
     
     // Make an array to hold all the objects
-    NSArray *array = [[NSArray alloc] initWithObjects:CarrierName, CarrierCountry, CarrierMobileCountryCode, CarrierISOCountryCode, CarrierMobileNetworkCode, CarrierAllowsVOIP, CurrentIPAddress, CurrentMACAddress, ExternalIPAddress, CellIPAddress, CellMACAddress, CellNetmaskAddress, CellBroadcastAddress, WiFiIPAddress, WiFiMACAddress, WiFiNetmaskAddress, WiFiBroadcastAddress, WiFiRouterAddress, ConnectedToWiFi, ConnectedToCellNetwork, nil];
+    NSArray *array = [[NSArray alloc] initWithObjects:CarrierName, CarrierCountry, CarrierMobileCountryCode, CarrierISOCountryCode, CarrierMobileNetworkCode, CarrierAllowsVOIP, CurrentIPAddress, ExternalIPAddress, CellIPAddress, CellNetmaskAddress, CellBroadcastAddress, WiFiIPAddress, WiFiNetmaskAddress, WiFiBroadcastAddress, WiFiRouterAddress, ConnectedToWiFi, ConnectedToCellNetwork, nil];
     
     // Run through all the information
     for (NSString *objects in array) {

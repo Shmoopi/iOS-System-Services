@@ -34,16 +34,6 @@ enum {
     KFIFC = 47293,
     // Failed the plist check
     KFPlist = 9412,
-    // Failed the Processes Check with Cydia
-    KFProcessesCydia = 10012,
-    // Failed the Processes Check with other Cydia
-    KFProcessesOtherCydia = 42932,
-    // Failed the Processes Check with other other Cydia
-    KFProcessesOtherOCydia = 10013,
-    // Failed the FSTab Check
-    KFFSTab = 9620,
-    // Failed the System() Check
-    KFSystem = 47475,
     // Failed the Symbolic Link Check
     KFSymbolic = 34859,
     // Failed the File Exists Check
@@ -86,27 +76,6 @@ enum {
         motzart += 2;
     }
     
-    // Check if iOS 8 or lower
-    if (SYSTEM_VERSION_LESS_THAN(@"9.0")) {
-        // Processes Check
-        if ([self processesCheck] != NOTJAIL) {
-            // Jailbroken
-            motzart += 2;
-        }
-        
-        // FSTab Check
-        if ([self fstabCheck] != NOTJAIL) {
-            // Jailbroken
-            motzart += 1;
-        }
-        
-        // Shell Check
-        if ([self systemCheck] != NOTJAIL) {
-            // Jailbroken
-            motzart += 2;
-        }
-    }
-    
     // Symbolic Link Check
     if ([self symbolicLinkCheck] != NOTJAIL) {
         // Jailbroken
@@ -136,14 +105,15 @@ enum {
     @try {
         #if !(defined(__has_feature) && __has_feature(attribute_availability_app_extension))
             // Create a fake url for cydia
-            NSURL *FakeURL = [NSURL URLWithString:CYDIAPACKAGE];
+            NSURL *fakeURL = [NSURL URLWithString:CYDIAPACKAGE];
             // Return whether or not cydia's openurl item exists
-            if ([[UIApplication sharedApplication] canOpenURL:FakeURL])
+            if ([[UIApplication sharedApplication] canOpenURL:fakeURL])
                return KFOpenURL;
         #endif
     }
     @catch (NSException *exception) {
         // Error, return false
+        return NOTJAIL;
     }
     return NOTJAIL;
 }
@@ -193,10 +163,10 @@ enum {
 + (int)plistCheck {
     @try {
         // Define the Executable name
-        NSString *ExeName = EXEPATH;
+        NSString *exeName = EXEPATH;
         NSDictionary *ipl = PLISTPATH;
         // Check if the plist exists
-        if ([FILECHECK ExeName] == FALSE || ipl == nil || ipl.count <= 0) {
+        if ([FILECHECK exeName] == FALSE || ipl == nil || ipl.count <= 0) {
             // Executable file can't be found and the plist can't be found...hmmm
             return KFPlist;
         } else {
@@ -206,74 +176,6 @@ enum {
     }
     @catch (NSException *exception) {
         // Error, return false
-        return NOTJAIL;
-    }
-}
-
-// Running Processes Check
-+ (int)processesCheck {
-    @try {
-        // Make a processes array
-        NSArray *processes = [self runningProcesses];
-        
-        // Check for Cydia in the running processes
-        for (NSDictionary * dict in processes) {
-            // Define the process name
-            NSString *process = [dict objectForKey:@"ProcessName"];
-            // If the process is this executable
-            if ([process isEqualToString:CYDIA]) {
-                // Return Jailbroken
-                return KFProcessesCydia;
-            } else if ([process isEqualToString:OTHERCYDIA]) {
-                // Return Jailbroken
-                return KFProcessesOtherCydia;
-            } else if ([process isEqualToString:OOCYDIA]) {
-                // Return Jailbroken
-                return KFProcessesOtherOCydia;
-            }
-        }
-        
-        // Not Jailbroken
-        return NOTJAIL;
-    }
-    @catch (NSException *exception) {
-        // Error
-        return NOTJAIL;
-    }
-}
-
-// FSTab Size
-+ (int)fstabCheck {
-    @try {
-        struct stat sb;
-        stat("/etc/fstab", &sb);
-        long long size = sb.st_size;
-        if (size == 80) {
-            // Not jailbroken
-            return NOTJAIL;
-        } else
-            // Jailbroken
-            return KFFSTab;
-    }
-    @catch (NSException *exception) {
-        // Not jailbroken
-        return NOTJAIL;
-    }
-}
-
-// System() available
-+ (int)systemCheck {
-    @try {
-        // See if the system call can be used
-        if (system(0)) {
-            // Jailbroken
-            return KFSystem;
-        } else
-            // Not Jailbroken
-            return NOTJAIL;
-    }
-    @catch (NSException *exception) {
-        // Not Jailbroken
         return NOTJAIL;
     }
 }

@@ -23,11 +23,11 @@
     // Check if any accessories are connected
     @try {
         // Set up the accessory manger
-        EAAccessoryManager *AccessoryManager = [EAAccessoryManager sharedAccessoryManager];
+        EAAccessoryManager *accessoryManager = [EAAccessoryManager sharedAccessoryManager];
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
+        int numberOfAccessoriesConnected = (int)[accessoryManager.connectedAccessories count];
         // Check if there are any connected
-        if (NumberOfAccessoriesConnected > 0) {
+        if (numberOfAccessoriesConnected > 0) {
             // There are accessories connected
             return true;
         } else {
@@ -73,11 +73,11 @@
     // Get the number of attached accessories
     @try {
         // Set up the accessory manger
-        EAAccessoryManager *AccessoryManager = [EAAccessoryManager sharedAccessoryManager];
+        EAAccessoryManager *accessoryManager = [EAAccessoryManager sharedAccessoryManager];
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
+        int numberOfAccessoriesConnected = (int)[accessoryManager.connectedAccessories count];
         // Return how many accessories are attached
-        return NumberOfAccessoriesConnected;
+        return numberOfAccessoriesConnected;
     }
     @catch (NSException *exception) {
         // Error, return false
@@ -90,44 +90,44 @@
     // Get the name of the attached accessories
     @try {
         // Set up the accessory manger
-        EAAccessoryManager *AccessoryManager = [EAAccessoryManager sharedAccessoryManager];
+        EAAccessoryManager *accessoryManager = [EAAccessoryManager sharedAccessoryManager];
         // Set up an accessory (for later use)
-        EAAccessory *Accessory;
+        EAAccessory *accessory;
         // Get the number of accessories connected
-        int NumberOfAccessoriesConnected = (int)[AccessoryManager.connectedAccessories count];
+        int numberOfAccessoriesConnected = (int)[accessoryManager.connectedAccessories count];
         
         // Check to make sure there are accessories connected
-        if (NumberOfAccessoriesConnected > 0) {
+        if (numberOfAccessoriesConnected > 0) {
             // Set up a string for all the accessory names
-            NSString *AllAccessoryNames = @"";
+            NSString *allAccessoryNames = @"";
             // Set up a string for the accessory names
-            NSString *AccessoryName;
+            NSString *accessoryName;
             // Get the accessories
-            NSArray *AccessoryArray = AccessoryManager.connectedAccessories;
+            NSArray *accessoryArray = accessoryManager.connectedAccessories;
             // Run through all the accessories
-            for (int x = 0; x < NumberOfAccessoriesConnected; x++) {
+            for (int x = 0; x < numberOfAccessoriesConnected; x++) {
                 // Get the accessory at that index
-                Accessory = [AccessoryArray objectAtIndex:x];
+                accessory = [accessoryArray objectAtIndex:x];
                 // Get the name of it
-                AccessoryName = [Accessory name];
+                accessoryName = [accessory name];
                 // Make sure there is a name
-                if (AccessoryName == nil || AccessoryName.length == 0) {
+                if (accessoryName == nil || accessoryName.length == 0) {
                     // If there isn't, try and get the manufacturer name
-                    AccessoryName = [Accessory manufacturer];
+                    accessoryName = [accessory manufacturer];
                 }
                 // Make sure there is a manufacturer name
-                if (AccessoryName == nil || AccessoryName.length == 0) {
+                if (accessoryName == nil || accessoryName.length == 0) {
                     // If there isn't a manufacturer name still
-                    AccessoryName = @"Unknown";
+                    accessoryName = @"Unknown";
                 }
                 // Format that name
-                AllAccessoryNames = [AllAccessoryNames stringByAppendingFormat:@"%@", AccessoryName];
-                if (x < NumberOfAccessoriesConnected - 1) {
-                    AllAccessoryNames = [AllAccessoryNames stringByAppendingFormat:@", "];
+                allAccessoryNames = [allAccessoryNames stringByAppendingFormat:@"%@", accessoryName];
+                if (x < numberOfAccessoriesConnected - 1) {
+                    allAccessoryNames = [allAccessoryNames stringByAppendingFormat:@", "];
                 }
             }
             // Return the name/s of the connected accessories
-            return AllAccessoryNames;
+            return allAccessoryNames;
         } else {
             // No accessories connected
             return nil;
