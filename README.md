@@ -100,6 +100,15 @@ BOOL debuggerAttached;
 // Plugged In?
 BOOL pluggedIn;
 
+// Step-Counting Available?
+BOOL stepCountingAvailable;
+
+// Distance Available
+BOOL distanceAvailable;
+
+// Floor Counting Available
+BOOL floorCountingAvailable;
+
 /* Jailbreak Check */
 
 // Jailbroken?
