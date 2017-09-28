@@ -75,6 +75,15 @@
 // Plugged In?
 @property (nonatomic, readonly) BOOL pluggedIn;
 
+// Step-Counting Available?
+@property (nonatomic, readonly) BOOL stepCountingAvailable;
+
+// Distance Available
+@property (nonatomic, readonly) BOOL distanceAvailable;
+
+// Floor Counting Available
+@property (nonatomic, readonly) BOOL floorCountingAvailable;
+
 /* Jailbreak Check */
 
 // Jailbroken?

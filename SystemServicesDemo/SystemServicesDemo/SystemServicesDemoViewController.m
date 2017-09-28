@@ -64,6 +64,9 @@
     NSString *ProximitySensorEnabled = ([SystemSharedServices proximitySensorEnabled]) ? @"Proximity Sensor: Yes" : @"Proximity Sensor: No";
     NSString *DebuggerAttached = ([SystemSharedServices debuggerAttached]) ? @"Debugger Attached: Yes" : @"Debugger Attached: No";
     NSString *PluggedIn = ([SystemSharedServices pluggedIn]) ? @"Plugged In: Yes" : @"Plugged In: No";
+    NSString *stepCountingAvailable = ([SystemSharedServices stepCountingAvailable]) ? @"Step Counting Available: Yes" : @"Step Counting Available: No";
+    NSString *distanceAvailable = ([SystemSharedServices distanceAvailable]) ? @"Distance Available: Yes" : @"Distance Available: No";
+    NSString *floorCountingAvailable = ([SystemSharedServices floorCountingAvailable]) ? @"Floor Counting Available: Yes" : @"Floor Counting Available: No";
     NSString *Jailbroken = ([SystemSharedServices jailbroken] != NOTJAIL) ? @"Jailbroken: Yes" : @"Jailbroken: No";
     NSString *NumberProcessors = [NSString stringWithFormat:@"Number of Processors: %ld", (long)[SystemSharedServices numberProcessors]];
     NSString *NumberActiveProcessors = [NSString stringWithFormat:@"Number of Active Processors: %ld", (long)[SystemSharedServices numberActiveProcessors]];
@@ -85,7 +88,7 @@
     NSString *CFUUID = [NSString stringWithFormat:@"CFUUID: %@", [SystemSharedServices cfuuid]];
     
     // Make an array of all the hardware information
-    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
+    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, stepCountingAvailable, distanceAvailable, floorCountingAvailable, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
     
     // Run through all the information
     for (NSString *objects in arrayofHW) {

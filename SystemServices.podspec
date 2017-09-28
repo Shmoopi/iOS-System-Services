@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SystemServices"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "iOS System Services is a class to gather all available information about a device."
   s.description  = <<-DESC
 
@@ -31,8 +31,8 @@ Pod::Spec.new do |s|
   s.author             = { "Shmoopi" => "shmoopillc@gmail.com" }
   s.social_media_url   = "http://twitter.com/shmoopillc"
   s.platform     = :ios
-  s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/Shmoopi/iOS-System-Services.git", :tag => "2.0.0" }
+  s.platform     = :ios, "8.0"
+  s.source       = { :git => "https://github.com/Shmoopi/iOS-System-Services.git", :tag => "2.0.1" }
   s.source_files  = "SystemServices", "System Services/**/*.{h,m}"
   s.frameworks = "AVFoundation", "CoreTelephony", "Security", "CoreMotion", "ExternalAccessory"
   s.requires_arc = true

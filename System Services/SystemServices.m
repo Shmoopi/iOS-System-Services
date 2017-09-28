@@ -17,7 +17,7 @@
 
 @implementation SystemServices
 
-@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorsUsage, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, externalIPAddress, cellIPAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, cfuuid, applicationCPUUsage;
+@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorsUsage, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, externalIPAddress, cellIPAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, cfuuid, applicationCPUUsage, stepCountingAvailable, distanceAvailable, floorCountingAvailable;
 
 // Singleton
 + (nonnull instancetype)sharedServices {
@@ -85,6 +85,18 @@
 
 - (BOOL)pluggedIn {
     return [SSHardwareInfo pluggedIn];
+}
+
+- (BOOL)stepCountingAvailable {
+    return [SSHardwareInfo stepCountingAvailable];
+}
+
+- (BOOL)distanceAvailable {
+    return [SSHardwareInfo distanceAvailable];
+}
+
+- (BOOL)floorCountingAvailable {
+    return [SSHardwareInfo floorCountingAvailable];
 }
 
 - (int)jailbroken {
@@ -346,6 +358,9 @@
     NSString *proximitySensorEnabled = ([self proximitySensorEnabled]) ? @"Yes" : @"No";
     NSString *debuggerAttached = ([self debuggerAttached]) ? @"Yes" : @"No";
     NSString *pluggedIn = ([self pluggedIn]) ? @"Yes" : @"No";
+    NSString *stepCountingAvailable = ([self stepCountingAvailable]) ? @"Yes" : @"No";
+    NSString *distanceAvailable = ([self distanceAvailable]) ? @"Yes" : @"No";
+    NSString *floorCountingAvailable = ([self floorCountingAvailable]) ? @"Yes" : @"No";
     NSString *jailbroken = [NSString stringWithFormat:@"%d", [self jailbroken]];
     NSString *numberProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberProcessors]];
     NSString *numberActiveProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberActiveProcessors]];
@@ -461,6 +476,18 @@
     if (pluggedIn == nil || pluggedIn.length <= 0) {
         // Invalid value
         pluggedIn = @"Unknown";
+    }
+    if (stepCountingAvailable == nil || stepCountingAvailable.length <= 0) {
+        // Invalid value
+        stepCountingAvailable = @"Unknown";
+    }
+    if (distanceAvailable == nil || distanceAvailable.length <= 0) {
+        // Invalid value
+        distanceAvailable = @"Unknown";
+    }
+    if (floorCountingAvailable == nil || floorCountingAvailable.length <= 0) {
+        // Invalid value
+        floorCountingAvailable = @"Unknown";
     }
     if (jailbroken == nil || jailbroken.length <= 0) {
         // Invalid value
@@ -711,6 +738,9 @@
                                                                  proximitySensorEnabled,
                                                                  debuggerAttached,
                                                                  pluggedIn,
+                                                                 stepCountingAvailable,
+                                                                 distanceAvailable,
+                                                                 floorCountingAvailable,
                                                                  jailbroken,
                                                                  numberProcessors,
                                                                  numberActiveProcessors,
@@ -785,6 +815,9 @@
                                                                  @"ProximitySensorEnabled",
                                                                  @"DebuggerAttached",
                                                                  @"PluggedIn",
+                                                                 @"StepCountingAvailable",
+                                                                 @"DistanceAvailable",
+                                                                 @"FloorCountingAvailable",
                                                                  @"Jailbroken",
                                                                  @"NumberProcessors",
                                                                  @"NumberActiveProcessors",

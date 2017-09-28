@@ -150,11 +150,11 @@ enum {
             }
         }
         
-        // Shouldn't get this far, return jailbroken
+        // No inaccessible files found, return NOT Jailbroken
         return NOTJAIL;
     }
     @catch (NSException *exception) {
-        // Error, return false
+        // Error, return NOT Jailbroken
         return NOTJAIL;
     }
 }

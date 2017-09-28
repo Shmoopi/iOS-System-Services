@@ -11,6 +11,9 @@
 // UIKit
 #import <UIKit/UIKit.h>
 
+// Core Motion
+#import <CoreMotion/CoreMotion.h>
+
 // sysctl
 #import <sys/sysctl.h>
 // utsname
@@ -126,16 +129,18 @@
             // Set up a new Device Type String
             NSString *newDeviceType;
             // Set up a struct
-            struct utsname DT;
+            struct utsname dt;
             // Get the system information
-            uname(&DT);
+            uname(&dt);
             // Set the device type to the machine type
-            deviceType = [NSString stringWithFormat:@"%s", DT.machine];
+            deviceType = [NSString stringWithFormat:@"%s", dt.machine];
             
+            // Simulators
             if ([deviceType isEqualToString:@"i386"])
                 newDeviceType = @"iPhone Simulator";
             else if ([deviceType isEqualToString:@"x86_64"])
                 newDeviceType = @"iPhone Simulator";
+            // iPhones
             else if ([deviceType isEqualToString:@"iPhone1,1"])
                 newDeviceType = @"iPhone";
             else if ([deviceType isEqualToString:@"iPhone1,2"])
@@ -147,17 +152,17 @@
             else if ([deviceType isEqualToString:@"iPhone4,1"])
                 newDeviceType = @"iPhone 4S";
             else if ([deviceType isEqualToString:@"iPhone5,1"])
-                newDeviceType = @"iPhone 5(GSM)";
+                newDeviceType = @"iPhone 5 (GSM)";
             else if ([deviceType isEqualToString:@"iPhone5,2"])
-                newDeviceType = @"iPhone 5(GSM+CDMA)";
+                newDeviceType = @"iPhone 5 (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPhone5,3"])
-                newDeviceType = @"iPhone 5c(GSM)";
+                newDeviceType = @"iPhone 5c (GSM)";
             else if ([deviceType isEqualToString:@"iPhone5,4"])
-                newDeviceType = @"iPhone 5c(GSM+CDMA)";
+                newDeviceType = @"iPhone 5c (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPhone6,1"])
-                newDeviceType = @"iPhone 5s(GSM)";
+                newDeviceType = @"iPhone 5s (GSM)";
             else if ([deviceType isEqualToString:@"iPhone6,2"])
-                newDeviceType = @"iPhone 5s(GSM+CDMA)";
+                newDeviceType = @"iPhone 5s (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPhone7,1"])
                 newDeviceType = @"iPhone 6 Plus";
             else if ([deviceType isEqualToString:@"iPhone7,2"])
@@ -169,13 +174,26 @@
             else if ([deviceType isEqualToString:@"iPhone8,4"])
                 newDeviceType = @"iPhone SE";
             else if ([deviceType isEqualToString:@"iPhone9,1"])
-                newDeviceType = @"iPhone 7";
+                newDeviceType = @"iPhone 7 (CDMA+GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone9,3"])
-                newDeviceType = @"iPhone 7";
+                newDeviceType = @"iPhone 7 (GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone9,2"])
-                newDeviceType = @"iPhone 7 Plus";
+                newDeviceType = @"iPhone 7 Plus (CDMA+GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone9,4"])
-                newDeviceType = @"iPhone 7 Plus";
+                newDeviceType = @"iPhone 7 Plus (GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,1"])
+                newDeviceType = @"iPhone 8 (CDMA+GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,4"])
+                newDeviceType = @"iPhone 8 (GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,2"])
+                newDeviceType = @"iPhone 8 Plus (CDMA+GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,5"])
+                newDeviceType = @"iPhone 8 Plus (GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,3"])
+                newDeviceType = @"iPhone X (CDMA+GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,6"])
+                newDeviceType = @"iPhone X (GSM/LTE)";
+            // iPods
             else if ([deviceType isEqualToString:@"iPod1,1"])
                 newDeviceType = @"iPod Touch 1G";
             else if ([deviceType isEqualToString:@"iPod2,1"])
@@ -188,63 +206,84 @@
                 newDeviceType = @"iPod Touch 5G";
             else if ([deviceType isEqualToString:@"iPod7,1"])
                 newDeviceType = @"iPod Touch 6G";
+            // iPads
             else if ([deviceType isEqualToString:@"iPad1,1"])
                 newDeviceType = @"iPad";
             else if ([deviceType isEqualToString:@"iPad2,1"])
-                newDeviceType = @"iPad 2(WiFi)";
+                newDeviceType = @"iPad 2 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad2,2"])
-                newDeviceType = @"iPad 2(GSM)";
+                newDeviceType = @"iPad 2 (GSM)";
             else if ([deviceType isEqualToString:@"iPad2,3"])
-                newDeviceType = @"iPad 2(CDMA)";
+                newDeviceType = @"iPad 2 (CDMA)";
             else if ([deviceType isEqualToString:@"iPad2,4"])
-                newDeviceType = @"iPad 2(WiFi + New Chip)";
+                newDeviceType = @"iPad 2 (WiFi + New Chip)";
             else if ([deviceType isEqualToString:@"iPad2,5"])
-                newDeviceType = @"iPad mini(WiFi)";
+                newDeviceType = @"iPad mini (WiFi)";
             else if ([deviceType isEqualToString:@"iPad2,6"])
-                newDeviceType = @"iPad mini(GSM)";
+                newDeviceType = @"iPad mini (GSM)";
             else if ([deviceType isEqualToString:@"iPad2,7"])
-                newDeviceType = @"iPad mini(GSM+CDMA)";
+                newDeviceType = @"iPad mini (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPad3,1"])
-                newDeviceType = @"iPad 3(WiFi)";
+                newDeviceType = @"iPad 3 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad3,2"])
-                newDeviceType = @"iPad 3(GSM+CDMA)";
+                newDeviceType = @"iPad 3 (GSM)";
             else if ([deviceType isEqualToString:@"iPad3,3"])
-                newDeviceType = @"iPad 3(GSM)";
+                newDeviceType = @"iPad 3 (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPad3,4"])
-                newDeviceType = @"iPad 4(WiFi)";
+                newDeviceType = @"iPad 4 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad3,5"])
-                newDeviceType = @"iPad 4(GSM)";
+                newDeviceType = @"iPad 4 (GSM)";
             else if ([deviceType isEqualToString:@"iPad3,6"])
-                newDeviceType = @"iPad 4(GSM+CDMA)";
-            else if ([deviceType isEqualToString:@"iPad3,3"])
-                newDeviceType = @"New iPad";
+                newDeviceType = @"iPad 4 (GSM+CDMA)";
             else if ([deviceType isEqualToString:@"iPad4,1"])
-                newDeviceType = @"iPad Air(WiFi)";
+                newDeviceType = @"iPad Air (WiFi)";
             else if ([deviceType isEqualToString:@"iPad4,2"])
-                newDeviceType = @"iPad Air(Cellular)";
+                newDeviceType = @"iPad Air (Cellular)";
+            else if ([deviceType isEqualToString:@"iPad4,3"])
+                newDeviceType = @"iPad Air (China)";
             else if ([deviceType isEqualToString:@"iPad4,4"])
-                newDeviceType = @"iPad mini 2(WiFi)";
+                newDeviceType = @"iPad mini 2 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad4,5"])
-                newDeviceType = @"iPad mini 2(Cellular)";
+                newDeviceType = @"iPad mini 2 (Cellular)";
             else if ([deviceType isEqualToString:@"iPad5,1"])
-                newDeviceType = @"iPad mini 4(WiFi)";
+                newDeviceType = @"iPad mini 4 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad5,2"])
-                newDeviceType = @"iPad mini 4(Cellular)";
+                newDeviceType = @"iPad mini 4 (Cellular)";
             else if ([deviceType isEqualToString:@"iPad5,4"])
-                newDeviceType = @"iPad Air 2(WiFi)";
+                newDeviceType = @"iPad Air 2 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad5,5"])
-                newDeviceType = @"iPad Air 2(Cellular)";
+                newDeviceType = @"iPad Air 2 (Cellular)";
             else if ([deviceType isEqualToString:@"iPad6,3"])
-                newDeviceType = @"9.7-inch iPad Pro(WiFi)";
+                newDeviceType = @"9.7-inch iPad Pro (WiFi)";
             else if ([deviceType isEqualToString:@"iPad6,4"])
-                newDeviceType = @"9.7-inch iPad Pro(Cellular)";
+                newDeviceType = @"9.7-inch iPad Pro (Cellular)";
             else if ([deviceType isEqualToString:@"iPad6,7"])
-                newDeviceType = @"12.9-inch iPad Pro(WiFi)";
+                newDeviceType = @"12.9-inch iPad Pro (WiFi)";
             else if ([deviceType isEqualToString:@"iPad6,8"])
-                newDeviceType = @"12.9-inch iPad Pro(Cellular)";
+                newDeviceType = @"12.9-inch iPad Pro (Cellular)";
+            else if ([deviceType isEqualToString:@"iPad6,11"])
+                newDeviceType = @"iPad 5 (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad6,12"])
+                newDeviceType = @"iPad 5 (Cellular)";
+            else if ([deviceType isEqualToString:@"iPad7,1"])
+                newDeviceType = @"iPad Pro 12.9 (2nd Gen - WiFi)";
+            else if ([deviceType isEqualToString:@"iPad7,2"])
+                newDeviceType = @"iPad Pro 12.9 (2nd Gen - Cellular)";
+            else if ([deviceType isEqualToString:@"iPad7,3"])
+                newDeviceType = @"iPad Pro 10.5 (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad7,4"])
+                newDeviceType = @"iPad Pro 10.5 (Cellular)";
+            // Catch All iPad
             else if ([deviceType hasPrefix:@"iPad"])
                 newDeviceType = @"iPad";
-            
+            // Apple TV
+            else if ([deviceType isEqualToString:@"AppleTV2,1"])
+                newDeviceType = @"Apple TV 2";
+            else if ([deviceType isEqualToString:@"AppleTV3,1"])
+                newDeviceType = @"Apple TV 3";
+            else if ([deviceType isEqualToString:@"AppleTV3,2"])
+                newDeviceType = @"Apple TV 3 (2013)";
+
             // Return the new device type
             return newDeviceType;
         }
@@ -256,11 +295,11 @@
         // Unformatted
         @try {
             // Set up a struct
-            struct utsname DT;
+            struct utsname dt;
             // Get the system information
-            uname(&DT);
+            uname(&dt);
             // Set the device type to the machine type
-            deviceType = [NSString stringWithFormat:@"%s", DT.machine];
+            deviceType = [NSString stringWithFormat:@"%s", dt.machine];
             
             // Return the device type
             return deviceType;
@@ -446,6 +485,66 @@
         return PluggedIn;
     } else {
         // Doesn't respond to selector
+        return false;
+    }
+}
+
+// Step-Counting Available?
++ (BOOL)stepCountingAvailable {
+    @try {
+        // Make sure the Pedometer class exists
+        if ([CMPedometer class]) {
+            // Make sure the selector exists
+            if ([CMPedometer respondsToSelector:@selector(isStepCountingAvailable)]) {
+                // Return whether it's available
+                return [CMPedometer isStepCountingAvailable];
+            }
+        }
+        // Not available
+        return false;
+    }
+    @catch (NSException *exception) {
+        // Error
+        return false;
+    }
+}
+
+// Distance Available
++ (BOOL)distanceAvailable {
+    @try {
+        // Make sure the Pedometer class exists
+        if ([CMPedometer class]) {
+            // Make sure the selector exists
+            if ([CMPedometer respondsToSelector:@selector(isDistanceAvailable)]) {
+                // Return whether it's available
+                return [CMPedometer isDistanceAvailable];
+            }
+        }
+        // Not available
+        return false;
+    }
+    @catch (NSException *exception) {
+        // Error
+        return false;
+    }
+}
+
+// Floor Counting Available
++ (BOOL)floorCountingAvailable {
+    @try {
+        // Make sure the Pedometer class exists
+        if ([CMPedometer class]) {
+            // Make sure the selector exists
+            if ([CMPedometer respondsToSelector:@selector(isFloorCountingAvailable)]) {
+                // Return whether it's available
+                return [CMPedometer isFloorCountingAvailable];
+            }
+        }
+        // Not available
+        return false;
+    }
+    @catch (NSException *exception) {
+        // Error
         return false;
     }
 }
