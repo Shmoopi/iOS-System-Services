@@ -24,15 +24,15 @@
     @try {
         
         // Query the plist for the version
-        NSString *Version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         
         // Validate the Version
-        if (Version == nil || Version.length <= 0) {
+        if (version == nil || version.length <= 0) {
             // Invalid Version number
             return nil;
         }
         // Successful
-        return Version;
+        return version;
     }
     @catch (NSException *exception) {
         // Error
@@ -45,16 +45,16 @@
     // Get the string content of the clipboard (copy, paste)
     @try {
         // Get the Pasteboard
-        UIPasteboard *PasteBoard = [UIPasteboard generalPasteboard];
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
         // Get the string value of the pasteboard
-        NSString *ClipboardContent = [PasteBoard string];
+        NSString *clipboardContent = [pasteBoard string];
         // Check for validity
-        if (ClipboardContent == nil || ClipboardContent.length <= 0) {
+        if (clipboardContent == nil || clipboardContent.length <= 0) {
             // Error, invalid pasteboard
             return nil;
         }
         // Successful
-        return ClipboardContent;
+        return clipboardContent;
     }
     @catch (NSException *exception) {
         // Error

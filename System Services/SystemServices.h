@@ -21,15 +21,10 @@
 #import "SSProcessorInfo.h"
 #import "SSUUID.h"
 
-/* New Hardware Stuff, new accelerometer stuff, localization stuff, and application info */
-
 @interface SystemServices : NSObject
 
 // Shared Manager
-+ (_Nonnull id)sharedServices;
-
-// Parent ID for a certain PID
-- (int)parentPIDForProcess:(int)pid;
++ (nonnull instancetype)sharedServices;
 
 // Properties
 
@@ -80,6 +75,15 @@
 // Plugged In?
 @property (nonatomic, readonly) BOOL pluggedIn;
 
+// Step-Counting Available?
+@property (nonatomic, readonly) BOOL stepCountingAvailable;
+
+// Distance Available
+@property (nonatomic, readonly) BOOL distanceAvailable;
+
+// Floor Counting Available
+@property (nonatomic, readonly) BOOL floorCountingAvailable;
+
 /* Jailbreak Check */
 
 // Jailbroken?
@@ -93,11 +97,8 @@
 // Number of Active Processors
 @property (nonatomic, readonly) NSInteger numberActiveProcessors;
 
-// Processor Speed in MHz
-@property (nonatomic, readonly) NSInteger processorSpeed;
-
-// Processor Bus Speed in MHz
-@property (nonatomic, readonly) NSInteger processorBusSpeed;
+// Processor Usage Information
+@property (nonatomic, readonly, nullable) NSArray *processorsUsage;
 
 /* Accessory Information */
 
@@ -149,17 +150,11 @@
 // Get Current IP Address
 @property (nonatomic, readonly, nullable) NSString *currentIPAddress;
 
-// Get Current MAC Address
-@property (nonatomic, readonly, nullable) NSString *currentMACAddress;
-
 // Get External IP Address
 @property (nonatomic, readonly, nullable) NSString *externalIPAddress;
 
 // Get Cell IP Address
 @property (nonatomic, readonly, nullable) NSString *cellIPAddress;
-
-// Get Cell MAC Address
-@property (nonatomic, readonly, nullable) NSString *cellMACAddress;
 
 // Get Cell Netmask Address
 @property (nonatomic, readonly, nullable) NSString *cellNetmaskAddress;
@@ -169,9 +164,6 @@
 
 // Get WiFi IP Address
 @property (nonatomic, readonly, nullable) NSString *wiFiIPAddress;
-
-// Get WiFi MAC Address
-@property (nonatomic, readonly, nullable) NSString *wiFiMACAddress;
 
 // Get WiFi Netmask Address
 @property (nonatomic, readonly, nullable) NSString *wiFiNetmaskAddress;
@@ -192,18 +184,6 @@
 
 // Process ID
 @property (nonatomic, readonly) int processID;
-
-// Process Name
-@property (nonatomic, readonly, nullable) NSString *processName;
-
-// Process Status
-@property (nonatomic, readonly) int processStatus;
-
-// Parent Process ID
-@property (nonatomic, readonly) int parentPID;
-
-// List of process information including PID's, Names, PPID's, and Status'
-@property (nonatomic, readonly, nullable) NSMutableArray *processesInformation;
 
 /* Disk Information */
 
@@ -296,18 +276,12 @@
 // Clipboard Content
 @property (nonatomic, readonly, nullable) NSString *clipboardContent;
 
+// Application CPU Usage
+@property (nonatomic, readonly) float applicationCPUUsage;
+
 /* Universal Unique Identifiers */
-
-// Unique ID
-@property (nonatomic, readonly, nullable) NSString *uniqueID;
-
-// Device Signature
-@property (nonatomic, readonly, nullable) NSString *deviceSignature;
 
 // CFUUID
 @property (nonatomic, readonly, nullable) NSString *cfuuid;
-
-// CPU Usage
-@property (nonatomic, readonly) float cpuUsage;
 
 @end

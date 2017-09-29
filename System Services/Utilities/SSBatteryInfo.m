@@ -20,26 +20,26 @@
     // Find the battery level
     @try {
         // Get the device
-        UIDevice *Device = [UIDevice currentDevice];
+        UIDevice *device = [UIDevice currentDevice];
         // Set battery monitoring on
-        Device.batteryMonitoringEnabled = YES;
+        device.batteryMonitoringEnabled = YES;
         
         // Set up the battery level float
-        float BatteryLevel = 0.0;
+        float batteryLevel = 0.0;
         // Get the battery level
-        float BatteryCharge = [Device batteryLevel];
+        float batteryCharge = [device batteryLevel];
         
         // Check to make sure the battery level is more than zero
-        if (BatteryCharge > 0.0f) {
+        if (batteryCharge > 0.0f) {
             // Make the battery level float equal to the charge * 100
-            BatteryLevel = BatteryCharge * 100;
+            batteryLevel = batteryCharge * 100;
         } else {
             // Unable to find the battery level
             return -1;
         }
         
         // Output the battery level
-        return BatteryLevel;
+        return batteryLevel;
     }
     @catch (NSException *exception) {
         // Error out
@@ -52,12 +52,12 @@
     // Is the battery charging?
     @try {
         // Get the device
-        UIDevice *Device = [UIDevice currentDevice];
+        UIDevice *device = [UIDevice currentDevice];
         // Set battery monitoring on
-        Device.batteryMonitoringEnabled = YES;
+        device.batteryMonitoringEnabled = YES;
         
         // Check the battery state
-        if ([Device batteryState] == UIDeviceBatteryStateCharging || [Device batteryState] == UIDeviceBatteryStateFull) {
+        if ([device batteryState] == UIDeviceBatteryStateCharging || [device batteryState] == UIDeviceBatteryStateFull) {
             // Device is charging
             return true;
         } else {
@@ -76,12 +76,12 @@
     // Is the battery fully charged?
     @try {
         // Get the device
-        UIDevice *Device = [UIDevice currentDevice];
+        UIDevice *device = [UIDevice currentDevice];
         // Set battery monitoring on
-        Device.batteryMonitoringEnabled = YES;
+        device.batteryMonitoringEnabled = YES;
         
         // Check the battery state
-        if ([Device batteryState] == UIDeviceBatteryStateFull) {
+        if ([device batteryState] == UIDeviceBatteryStateFull) {
             // Device is fully charged
             return true;
         } else {

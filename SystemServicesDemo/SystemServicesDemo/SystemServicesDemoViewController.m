@@ -64,11 +64,13 @@
     NSString *ProximitySensorEnabled = ([SystemSharedServices proximitySensorEnabled]) ? @"Proximity Sensor: Yes" : @"Proximity Sensor: No";
     NSString *DebuggerAttached = ([SystemSharedServices debuggerAttached]) ? @"Debugger Attached: Yes" : @"Debugger Attached: No";
     NSString *PluggedIn = ([SystemSharedServices pluggedIn]) ? @"Plugged In: Yes" : @"Plugged In: No";
+    NSString *stepCountingAvailable = ([SystemSharedServices stepCountingAvailable]) ? @"Step Counting Available: Yes" : @"Step Counting Available: No";
+    NSString *distanceAvailable = ([SystemSharedServices distanceAvailable]) ? @"Distance Available: Yes" : @"Distance Available: No";
+    NSString *floorCountingAvailable = ([SystemSharedServices floorCountingAvailable]) ? @"Floor Counting Available: Yes" : @"Floor Counting Available: No";
     NSString *Jailbroken = ([SystemSharedServices jailbroken] != NOTJAIL) ? @"Jailbroken: Yes" : @"Jailbroken: No";
     NSString *NumberProcessors = [NSString stringWithFormat:@"Number of Processors: %ld", (long)[SystemSharedServices numberProcessors]];
     NSString *NumberActiveProcessors = [NSString stringWithFormat:@"Number of Active Processors: %ld", (long)[SystemSharedServices numberActiveProcessors]];
-    NSString *ProcessorSpeed = [NSString stringWithFormat:@"Processor Speed: %ldMhz", (long)[SystemSharedServices processorSpeed]];
-    NSString *ProcessorBusSpeed = [NSString stringWithFormat:@"Processor Bus Speed: %ldMhz", (long)[SystemSharedServices processorBusSpeed]];
+    NSString *ProcessorsUsage = [NSString stringWithFormat:@"Processors Usage: %@", [SystemSharedServices processorsUsage]];
     NSString *AccessoriesAttached = ([SystemSharedServices accessoriesAttached]) ? @"Accessories Attached: Yes" : @"Accessories Attached: No";
     NSString *HeadphonesAttached = ([SystemSharedServices headphonesAttached]) ? @"Headphones Attached: Yes" : @"Headphones Attached: No";
     NSString *NumberAttachedAccessories = [NSString stringWithFormat:@"Number of Attached Accessories: %ld", (long)[SystemSharedServices numberAttachedAccessories]];
@@ -83,12 +85,10 @@
     NSString *Currency = [NSString stringWithFormat:@"Currency: %@", [SystemSharedServices currency]];
     NSString *ApplicationVersion = [NSString stringWithFormat:@"Application Version: %@", [SystemSharedServices applicationVersion]];
     NSString *ClipboardContent = [NSString stringWithFormat:@"ClipBoard Content: \"%@\"", [SystemSharedServices clipboardContent]];
-    NSString *UniqueID = [NSString stringWithFormat:@"Unique ID: %@", [SystemSharedServices uniqueID]];
-    NSString *DeviceSignature = [NSString stringWithFormat:@"Device Signature: %@", [SystemSharedServices deviceSignature]];
     NSString *CFUUID = [NSString stringWithFormat:@"CFUUID: %@", [SystemSharedServices cfuuid]];
     
     // Make an array of all the hardware information
-    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorSpeed, ProcessorBusSpeed, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, UniqueID, DeviceSignature, CFUUID, nil];
+    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, stepCountingAvailable, distanceAvailable, floorCountingAvailable, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
     
     // Run through all the information
     for (NSString *objects in arrayofHW) {

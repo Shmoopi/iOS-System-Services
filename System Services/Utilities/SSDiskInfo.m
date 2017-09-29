@@ -21,25 +21,25 @@
     // Get the total disk space
 	@try {
         // Get the long total disk space
-        long long Space = [self longDiskSpace];
+        long long space = [self longDiskSpace];
 		        
         // Check to make sure it's valid
-        if (Space <= 0) {
+        if (space <= 0) {
             // Error, no disk space found
             return nil;
         }
         
         // Turn that long long into a string
-        NSString *DiskSpace = [self formatMemory:Space];
+        NSString *diskSpace = [self formatMemory:space];
         
         // Check to make sure it's valid
-        if (DiskSpace == nil || DiskSpace.length <= 0) {
+        if (diskSpace == nil || diskSpace.length <= 0) {
             // Error, diskspace not given
             return nil;
         }
         
         // Return successful
-        return DiskSpace;
+        return diskSpace;
 	}
 	@catch (NSException * ex) {
         // Error
@@ -61,7 +61,7 @@
         }
         
         // Set up the string output variable
-        NSString *DiskSpace;
+        NSString *diskSpace;
         
         // If the user wants the output in percentage
         if (inPercent) {
@@ -75,20 +75,20 @@
                 return nil;
             }
             // Convert that float to a string
-            DiskSpace = [NSString stringWithFormat:@"%.f%%", PercentDiskSpace];
+            diskSpace = [NSString stringWithFormat:@"%.f%%", PercentDiskSpace];
         } else {
             // Turn that long long into a string
-            DiskSpace = [self formatMemory:Space];
+            diskSpace = [self formatMemory:Space];
         }
         
         // Check to make sure it's valid
-        if (DiskSpace == nil || DiskSpace.length <= 0) {
+        if (diskSpace == nil || diskSpace.length <= 0) {
             // Error, diskspace not given
             return nil;
         }
         
         // Return successful
-        return DiskSpace;
+        return diskSpace;
 	}
 	@catch (NSException * ex) {
         // Error
@@ -101,54 +101,54 @@
     // Get the total used disk space
     @try {
         // Make a variable to hold the Used Disk Space
-        long long UDS;
+        long long uds;
         // Get the long total disk space
-        long long TDS = [self longDiskSpace];
+        long long tds = [self longDiskSpace];
         // Get the long free disk space
-        long long FDS = [self longFreeDiskSpace];
+        long long fds = [self longFreeDiskSpace];
         
         // Make sure they're valid
-        if (TDS <= 0 || FDS <= 0) {
+        if (tds <= 0 || fds <= 0) {
             // Error, invalid values
             return nil;
         }
         
         // Now subtract the free space from the total space
-        UDS = TDS - FDS;
+        uds = tds - fds;
         
         // Make sure it's valid
-        if (UDS <= 0) {
+        if (uds <= 0) {
             // Error, invalid value
             return nil;
         }
         
         // Set up the string output variable
-        NSString *UsedDiskSpace;
+        NSString *usedDiskSpace;
         
         // If the user wants the output in percentage
         if (inPercent) {
             // Make a float to get the percent of those values
-            float PercentUsedDiskSpace = (UDS * 100) / TDS;
+            float percentUsedDiskSpace = (uds * 100) / tds;
             // Check it to make sure it's okay
-            if (PercentUsedDiskSpace <= 0) {
+            if (percentUsedDiskSpace <= 0) {
                 // Error, invalid percent
                 return nil;
             }
             // Convert that float to a string
-            UsedDiskSpace = [NSString stringWithFormat:@"%.f%%", PercentUsedDiskSpace];
+            usedDiskSpace = [NSString stringWithFormat:@"%.f%%", percentUsedDiskSpace];
         } else {
             // Turn that long long into a string
-            UsedDiskSpace = [self formatMemory:UDS];
+            usedDiskSpace = [self formatMemory:uds];
         }
         
         // Check to make sure it's valid
-        if (UsedDiskSpace == nil || UsedDiskSpace.length <= 0) {
+        if (usedDiskSpace == nil || usedDiskSpace.length <= 0) {
             // Error, diskspace not given
             return nil;
         }
         
         // Return successful
-        return UsedDiskSpace;
+        return usedDiskSpace;
         
         // Now convert that to a string
     }
@@ -165,27 +165,27 @@
     // Get the long long disk space    
 	@try {
         // Set up variables
-        long long DiskSpace = 0L;
-		NSError *Error = nil;
-		NSDictionary *FileAttributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&Error];
+        long long diskSpace = 0L;
+		NSError *error = nil;
+        NSDictionary *fileAttributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
         
         // Get the file attributes of the home directory assuming no errors
-		if (Error == nil) {
+        if (error == nil) {
             // Get the size of the filesystem
-            DiskSpace = [[FileAttributes objectForKey:NSFileSystemSize] longLongValue];
+            diskSpace = [[fileAttributes objectForKey:NSFileSystemSize] longLongValue];
         } else {
             // Error, return nil
             return -1;
         }
         
         // Check to make sure it's a valid size
-        if (DiskSpace <= 0) {
+        if (diskSpace <= 0) {
             // Invalid size
             return -1;
         }
         
         // Successful
-        return DiskSpace;
+        return diskSpace;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -199,12 +199,12 @@
 	@try {
         // Set up the variables
         long long FreeDiskSpace = 0L;
-		NSError *Error = nil;
-		NSDictionary *FileAttributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&Error];
+		NSError *error = nil;
+        NSDictionary *fileAttributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
 		
         // Get the file attributes of the home directory assuming no errors
-		if (Error == nil) {
-			FreeDiskSpace = [[FileAttributes objectForKey:NSFileSystemFreeSize] longLongValue];
+        if (error == nil) {
+            FreeDiskSpace = [[fileAttributes objectForKey:NSFileSystemFreeSize] longLongValue];
         } else {
             // There was an error
             return -1;
@@ -232,31 +232,31 @@
 	// Format the long long disk space
 	@try {
         // Set up the string
-        NSString *FormattedBytes = nil;
+        NSString *formattedBytes = nil;
         
         // Get the bytes, megabytes, and gigabytes
-		double NumberBytes = 1.0 * Space;
-		double TotalGB = NumberBytes / GB;
-		double TotalMB = NumberBytes / MB;
+		double numberBytes = 1.0 * Space;
+		double totalGB = numberBytes / GB;
+		double totalMB = numberBytes / MB;
 		
         // Display them appropriately
-		if (TotalGB >= 1.0) {
-			FormattedBytes = [NSString stringWithFormat:@"%.2f GB", TotalGB];
-	    } else if (TotalMB >= 1)
-			FormattedBytes = [NSString stringWithFormat:@"%.2f MB", TotalMB];
+		if (totalGB >= 1.0) {
+            formattedBytes = [NSString stringWithFormat:@"%.2f GB", totalGB];
+	    } else if (totalMB >= 1)
+            formattedBytes = [NSString stringWithFormat:@"%.2f MB", totalMB];
 		else {
-			FormattedBytes = [self formattedMemory:Space];
-			FormattedBytes = [FormattedBytes stringByAppendingString:@" bytes"];
+            formattedBytes = [self formattedMemory:Space];
+            formattedBytes = [formattedBytes stringByAppendingString:@" bytes"];
 		}
         
         // Check for errors
-        if (FormattedBytes == nil || FormattedBytes.length <= 0) {
+        if (formattedBytes == nil || formattedBytes.length <= 0) {
             // Error, invalid string
             return nil;
         }
         
         // Completed Successfully
-        return FormattedBytes;
+        return formattedBytes;
 	}
 	@catch (NSException *exception) {
         // Error
@@ -269,28 +269,28 @@
     // Format for bytes	
 	@try {
         // Set up the string variable
-        NSString *FormattedBytes = nil;
+        NSString *formattedBytes = nil;
         
         // Set up the format variable
-		NSNumberFormatter *Formatter = [[NSNumberFormatter alloc] init];
+		NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         
         // Format the bytes
-		[Formatter setPositiveFormat:@"###,###,###,###"];
+		[formatter setPositiveFormat:@"###,###,###,###"];
         
         // Get the bytes
-		NSNumber * theNumber = [NSNumber numberWithLongLong:Space];
+		NSNumber *theNumber = [NSNumber numberWithLongLong:Space];
         
         // Format the bytes appropriately
-		FormattedBytes = [Formatter stringFromNumber:theNumber];
+		formattedBytes = [formatter stringFromNumber:theNumber];
         
         // Check for errors
-        if (FormattedBytes == nil || FormattedBytes.length <= 0) {
+        if (formattedBytes == nil || formattedBytes.length <= 0) {
             // Error, invalid value
             return nil;
         }
         
         // Completed Successfully
-        return FormattedBytes;
+        return formattedBytes;
 	}
 	@catch (NSException *exception) {
         // Error

@@ -17,16 +17,16 @@
     // Get the user's country
     @try {
         // Get the locale
-        NSLocale *Locale = [NSLocale currentLocale];
+        NSLocale *locale = [NSLocale currentLocale];
         // Get the country from the locale
-        NSString *Country = [Locale localeIdentifier];
+        NSString *country = [locale localeIdentifier];
         // Check for validity
-        if (Country == nil || Country.length <= 0) {
+        if (country == nil || country.length <= 0) {
             // Error, invalid country
             return nil;
         }
         // Completed Successfully
-        return Country;
+        return country;
     }
     @catch (NSException *exception) {
         // Error
@@ -39,16 +39,16 @@
     // Get the user's language
     @try {
         // Get the list of languages
-        NSArray *LanguageArray = [NSLocale preferredLanguages];
+        NSArray *languageArray = [NSLocale preferredLanguages];
         // Get the user's language
-        NSString *Language = [LanguageArray objectAtIndex:0];
+        NSString *language = [languageArray objectAtIndex:0];
         // Check for validity
-        if (Language == nil || Language.length <= 0) {
+        if (language == nil || language.length <= 0) {
             // Error, invalid language
             return nil;
         }
         // Completed Successfully
-        return Language;
+        return language;
     }
     @catch (NSException *exception) {
         // Error
@@ -61,16 +61,16 @@
     // Get the user's timezone
     @try {
         // Get the system timezone
-        NSTimeZone *LocalTime = [NSTimeZone systemTimeZone];
+        NSTimeZone *localTime = [NSTimeZone systemTimeZone];
         // Convert the time zone to a string
-        NSString *TimeZone = [LocalTime name];
+        NSString *timeZone = [localTime name];
         // Check for validity
-        if (TimeZone == nil || TimeZone.length <= 0) {
+        if (timeZone == nil || timeZone.length <= 0) {
             // Error, invalid TimeZone
             return nil;
         }
         // Completed Successfully
-        return TimeZone;
+        return timeZone;
     }
     @catch (NSException *exception) {
         // Error
@@ -83,14 +83,14 @@
     // Get the user's currency
     @try {
         // Get the system currency
-        NSString *Currency = [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol];
+        NSString *currency = [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol];
         // Check for validity
-        if (Currency == nil || Currency.length <= 0) {
+        if (currency == nil || currency.length <= 0) {
             // Error, invalid Currency
             return nil;
         }
         // Completed Successfully
-        return Currency;
+        return currency;
     }
     @catch (NSException *exception) {
         // Error

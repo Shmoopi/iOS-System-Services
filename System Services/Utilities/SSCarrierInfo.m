@@ -21,20 +21,20 @@
     // Get the carrier name
     @try {
         // Get the Telephony Network Info
-        CTTelephonyNetworkInfo *TelephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
         // Get the carrier
-        CTCarrier *Carrier = [TelephonyInfo subscriberCellularProvider];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
         // Get the carrier name
-        NSString *CarrierName = [Carrier carrierName];
+        NSString *carrierName = [carrier carrierName];
         
         // Check to make sure it's valid
-        if (CarrierName == nil || CarrierName.length <= 0) {
+        if (carrierName == nil || carrierName.length <= 0) {
             // Return unknown
             return nil;
         }
         
         // Return the name
-        return CarrierName;
+        return carrierName;
     }
     @catch (NSException *exception) {
         // Error finding the name
@@ -47,16 +47,16 @@
     // Get the country that the carrier is located in
     @try {
         // Get the locale
-        NSLocale *CurrentCountry = [NSLocale currentLocale];
+        NSLocale *currentCountry = [NSLocale currentLocale];
         // Get the country Code
-        NSString *Country = [CurrentCountry objectForKey:NSLocaleCountryCode];
+        NSString *country = [currentCountry objectForKey:NSLocaleCountryCode];
         // Check if it returned anything
-        if (Country == nil || Country.length <= 0) {
+        if (country == nil || country.length <= 0) {
             // No country found
             return nil;
         }
         // Return the country
-        return Country;
+        return country;
     }
     @catch (NSException *exception) {
         // Failed, return nil
@@ -69,20 +69,20 @@
     // Get the carrier mobile country code
     @try {
         // Get the Telephony Network Info
-        CTTelephonyNetworkInfo *TelephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
         // Get the carrier
-        CTCarrier *Carrier = [TelephonyInfo subscriberCellularProvider];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
         // Get the carrier mobile country code
-        NSString *CarrierCode = [Carrier mobileCountryCode];
+        NSString *carrierCode = [carrier mobileCountryCode];
         
         // Check to make sure it's valid
-        if (CarrierCode == nil || CarrierCode.length <= 0) {
+        if (carrierCode == nil || carrierCode.length <= 0) {
             // Return unknown
             return nil;
         }
         
         // Return the name
-        return CarrierCode;
+        return carrierCode;
     }
     @catch (NSException *exception) {
         // Error finding the name
@@ -95,20 +95,20 @@
     // Get the carrier ISO country code
     @try {
         // Get the Telephony Network Info
-        CTTelephonyNetworkInfo *TelephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
         // Get the carrier
-        CTCarrier *Carrier = [TelephonyInfo subscriberCellularProvider];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
         // Get the carrier ISO country code
-        NSString *CarrierCode = [Carrier isoCountryCode];
+        NSString *carrierCode = [carrier isoCountryCode];
         
         // Check to make sure it's valid
-        if (CarrierCode == nil || CarrierCode.length <= 0) {
+        if (carrierCode == nil || carrierCode.length <= 0) {
             // Return unknown
             return nil;
         }
         
         // Return the name
-        return CarrierCode;
+        return carrierCode;
     }
     @catch (NSException *exception) {
         // Error finding the name
@@ -121,20 +121,20 @@
     // Get the carrier mobile network code
     @try {
         // Get the Telephony Network Info
-        CTTelephonyNetworkInfo *TelephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
         // Get the carrier
-        CTCarrier *Carrier = [TelephonyInfo subscriberCellularProvider];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
         // Get the carrier mobile network code
-        NSString *CarrierCode = [Carrier mobileNetworkCode];
+        NSString *carrierCode = [carrier mobileNetworkCode];
         
         // Check to make sure it's valid
-        if (CarrierCode == nil || CarrierCode.length <= 0) {
+        if (carrierCode == nil || carrierCode.length <= 0) {
             // Return unknown
             return nil;
         }
         
         // Return the name
-        return CarrierCode;
+        return carrierCode;
     }
     @catch (NSException *exception) {
         // Error finding the name
@@ -147,14 +147,14 @@
     // Check if the carrier allows VOIP
     @try {
         // Get the Telephony Network Info
-        CTTelephonyNetworkInfo *TelephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
         // Get the carrier
-        CTCarrier *Carrier = [TelephonyInfo subscriberCellularProvider];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
         // Get the carrier VOIP Status
-        BOOL CarrierVOIP = [Carrier allowsVOIP];
+        BOOL carrierVOIP = [carrier allowsVOIP];
         
         // Return the VOIP Status
-        return CarrierVOIP;
+        return carrierVOIP;
     }
     @catch (NSException *exception) {
         // Error finding the VOIP Status

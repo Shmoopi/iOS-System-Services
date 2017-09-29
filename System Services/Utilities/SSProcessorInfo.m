@@ -1,4 +1,4 @@
-//
+ //
 //  SSProcessorInfo.m
 //  SystemServicesDemo
 //
@@ -10,6 +10,9 @@
 
 // Sysctl
 #import <sys/sysctl.h>
+
+// Mach
+#include <mach/mach.h>
 
 @implementation SSProcessorInfo
 
@@ -43,64 +46,67 @@
     }
 }
 
-// Processor Speed in MHz
-+ (NSInteger)processorSpeed {
-    // Try to get the processor speed
-	@try {
-        // Set the variables
-        int hertz;
-        size_t size = sizeof(int);
-        int mib[2] = {CTL_HW, HW_CPU_FREQ};
+// Get Processor Usage Information (i.e. ["0.2216801", "0.1009614"])
++ (NSArray *)processorsUsage {
+    
+    // Try to get Processor Usage Info
+    @try {
+        // Variables
+        processor_info_array_t _cpuInfo, _prevCPUInfo = nil;
+        mach_msg_type_number_t _numCPUInfo, _numPrevCPUInfo = 0;
+        unsigned _numCPUs;
+        NSLock *_cpuUsageLock;
         
-        // Find the speed
-        sysctl(mib, 2, &hertz, &size, NULL, 0);
+        // Get the number of processors from sysctl
+        int _mib[2U] = { CTL_HW, HW_NCPU };
+        size_t _sizeOfNumCPUs = sizeof(_numCPUs);
+        int _status = sysctl(_mib, 2U, &_numCPUs, &_sizeOfNumCPUs, NULL, 0U);
+        if (_status)
+            _numCPUs = 1;
         
-        // Make sure it's not less than 0
-        if (hertz < 1) {
-            // Invalid value
-            return -1;
+        // Allocate the lock
+        _cpuUsageLock = [[NSLock alloc] init];
+        
+        // Get the processor info
+        natural_t _numCPUsU = 0U;
+        kern_return_t err = host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &_numCPUsU, &_cpuInfo, &_numCPUInfo);
+        if (err == KERN_SUCCESS) {
+            [_cpuUsageLock lock];
+            
+            // Go through info for each processor
+            NSMutableArray *processorInfo = [NSMutableArray new];
+            for (unsigned i = 0U; i < _numCPUs; ++i) {
+                Float32 _inUse, _total;
+                if (_prevCPUInfo) {
+                    _inUse = (
+                              (_cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_USER]   - _prevCPUInfo[(CPU_STATE_MAX * i) + CPU_STATE_USER])
+                              + (_cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_SYSTEM] - _prevCPUInfo[(CPU_STATE_MAX * i) + CPU_STATE_SYSTEM])
+                              + (_cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_NICE]   - _prevCPUInfo[(CPU_STATE_MAX * i) + CPU_STATE_NICE])
+                              );
+                    _total = _inUse + (_cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_IDLE] - _prevCPUInfo[(CPU_STATE_MAX * i) + CPU_STATE_IDLE]);
+                } else {
+                    _inUse = _cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_USER] + _cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_SYSTEM] + _cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_NICE];
+                    _total = _inUse + _cpuInfo[(CPU_STATE_MAX * i) + CPU_STATE_IDLE];
+                }
+                // Add to the processor usage info
+                [processorInfo addObject:@(_inUse / _total)];
+            }
+            
+            [_cpuUsageLock unlock];
+            if (_prevCPUInfo) {
+                size_t prevCpuInfoSize = sizeof(integer_t) * _numPrevCPUInfo;
+                vm_deallocate(mach_task_self(), (vm_address_t)_prevCPUInfo, prevCpuInfoSize);
+            }
+            // Retrieved processor information
+            return processorInfo;
+        } else {
+            // Unable to get processor information
+            return nil;
         }
-        
-        // Divide the final speed by 1 million to get the speed in mhz
-		hertz /= 1000000;
-        
-        // Return the result
-        return hertz;
-	}
-	@catch (NSException * ex) {
-        // Unable to get the speed (return -1)
-        return -1;
-	}
-}
-
-// Processor Bus Speed in MHz
-+ (NSInteger)processorBusSpeed {
-    // Try to get the processor bus speed
-	@try {
-        // Set the variables
-		size_t size;
-		int speed[2];
-		int final;
-		
-        // Find the speeds
-		speed[0] = CTL_HW;
-		speed[1] = HW_BUS_FREQ;
-        size = sizeof(final);
-        
-        // Get the actual speed
-		sysctl(speed, 2, &final, &size, NULL, 0);
-		if (final > 0)
-			final /= 1000000;
-        else
-            return -1;
-		
-        // Return the result
-        return final;
-	}
-	@catch (NSException * ex) {
-        // Unable to get the speed (return -1)
-        return -1;
-	}
+    } @catch (NSException *exception) {
+        // Getting processor information failed
+        return nil;
+    }
 }
 
 @end
