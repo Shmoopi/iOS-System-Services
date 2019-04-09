@@ -9,8 +9,8 @@
 #import "SSDiskInfo.h"
 
 // Memory Info
-#define MB (1024*1024)
-#define GB (MB*1024)
+#define MB (1000*1000)
+#define GB (MB*1000)
 
 @implementation SSDiskInfo
 
