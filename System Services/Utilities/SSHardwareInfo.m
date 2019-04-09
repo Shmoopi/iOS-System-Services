@@ -183,16 +183,24 @@
                 newDeviceType = @"iPhone 7 Plus (GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone10,1"])
                 newDeviceType = @"iPhone 8 (CDMA+GSM/LTE)";
-            else if ([deviceType isEqualToString:@"iPhone10,4"])
-                newDeviceType = @"iPhone 8 (GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone10,2"])
                 newDeviceType = @"iPhone 8 Plus (CDMA+GSM/LTE)";
-            else if ([deviceType isEqualToString:@"iPhone10,5"])
-                newDeviceType = @"iPhone 8 Plus (GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone10,3"])
                 newDeviceType = @"iPhone X (CDMA+GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,4"])
+                newDeviceType = @"iPhone 8 (GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone10,5"])
+                newDeviceType = @"iPhone 8 Plus (GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone10,6"])
                 newDeviceType = @"iPhone X (GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone11,2"])
+                newDeviceType = @"iPhone XS";
+            else if ([deviceType isEqualToString:@"iPhone11,4"])
+                newDeviceType = @"iPhone XS MAX";
+            else if ([deviceType isEqualToString:@"iPhone11,6"])
+                newDeviceType = @"iPhone XS MAX (CDMA+GSM/LTE)";
+            else if ([deviceType isEqualToString:@"iPhone11,8"])
+                newDeviceType = @"iPhone XR";
             // iPods
             else if ([deviceType isEqualToString:@"iPod1,1"])
                 newDeviceType = @"iPod Touch 1G";
@@ -273,6 +281,26 @@
                 newDeviceType = @"iPad Pro 10.5 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad7,4"])
                 newDeviceType = @"iPad Pro 10.5 (Cellular)";
+            else if ([deviceType isEqualToString:@"iPad7,5"])
+                newDeviceType = @"iPad 6 (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad7,6"])
+                newDeviceType = @"iPad 6 (WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad8,1"])
+                newDeviceType = @"iPad Pro 11 (3rd Gen - WiFi)";
+            else if ([deviceType isEqualToString:@"iPad8,2"])
+                newDeviceType = @"iPad Pro 11 (3rd Gen - 1TB, WiFi)";
+            else if ([deviceType isEqualToString:@"iPad8,3"])
+                newDeviceType = @"iPad Pro 11 (3rd Gen - WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad8,4"])
+                newDeviceType = @"iPad Pro 11 (3rd Gen - 1TB, WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad8,5"])
+                newDeviceType = @"iPad Pro 12.9 (3rd Gen - WiFi)";
+            else if ([deviceType isEqualToString:@"iPad8,6"])
+                newDeviceType = @"iPad Pro 12.9 (3rd Gen - 1TB, WiFi)";
+            else if ([deviceType isEqualToString:@"iPad8,7"])
+                newDeviceType = @"iPad Pro 12.9 (3rd Gen - WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad8,8"])
+                newDeviceType = @"iPad Pro 12.9 (3rd Gen - 1TB, WiFi+Cellular)";
             // Catch All iPad
             else if ([deviceType hasPrefix:@"iPad"])
                 newDeviceType = @"iPad";
