@@ -201,6 +201,12 @@
                 newDeviceType = @"iPhone XS MAX (CDMA+GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone11,8"])
                 newDeviceType = @"iPhone XR";
+            else if ([deviceType isEqualToString:@"iPhone12,1"])
+                newDeviceType = @"iPhone 11";
+            else if ([deviceType isEqualToString:@"iPhone12,3"])
+                newDeviceType = @"iPhone 11 Pro";
+            else if ([deviceType isEqualToString:@"iPhone12,5"])
+                newDeviceType = @"iPhone 11 Pro Max";
             // iPods
             else if ([deviceType isEqualToString:@"iPod1,1"])
                 newDeviceType = @"iPod Touch 1G";
@@ -214,6 +220,8 @@
                 newDeviceType = @"iPod Touch 5G";
             else if ([deviceType isEqualToString:@"iPod7,1"])
                 newDeviceType = @"iPod Touch 6G";
+            else if ([deviceType isEqualToString:@"iPod9,1"])
+                newDeviceType = @"iPod Touch 7G";
             // iPads
             else if ([deviceType isEqualToString:@"iPad1,1"])
                 newDeviceType = @"iPad";
@@ -285,6 +293,10 @@
                 newDeviceType = @"iPad 6 (WiFi)";
             else if ([deviceType isEqualToString:@"iPad7,6"])
                 newDeviceType = @"iPad 6 (WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad7,11"])
+                newDeviceType = @"iPad 7th Gen 10.2-inch (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad7,12"])
+                newDeviceType = @"iPad 7th Gen 10.2-inch (WiFi+Cellular)";
             else if ([deviceType isEqualToString:@"iPad8,1"])
                 newDeviceType = @"iPad Pro 11 (3rd Gen - WiFi)";
             else if ([deviceType isEqualToString:@"iPad8,2"])
@@ -301,6 +313,14 @@
                 newDeviceType = @"iPad Pro 12.9 (3rd Gen - WiFi+Cellular)";
             else if ([deviceType isEqualToString:@"iPad8,8"])
                 newDeviceType = @"iPad Pro 12.9 (3rd Gen - 1TB, WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad11,1"])
+                newDeviceType = @"iPad mini 5th Gen (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad11,2"])
+                newDeviceType = @"iPad mini 5th Gen";
+            else if ([deviceType isEqualToString:@"iPad11,3"])
+                newDeviceType = @"iPad Air 3rd Gen (WiFi)";
+            else if ([deviceType isEqualToString:@"iPad11,4"])
+                newDeviceType = @"iPad Air 3rd Gen (WiFi+Cellular)";
             // Catch All iPad
             else if ([deviceType hasPrefix:@"iPad"])
                 newDeviceType = @"iPad";
