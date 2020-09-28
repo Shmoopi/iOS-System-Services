@@ -207,6 +207,8 @@
                 newDeviceType = @"iPhone 11 Pro";
             else if ([deviceType isEqualToString:@"iPhone12,5"])
                 newDeviceType = @"iPhone 11 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone12,8"])
+                newDeviceType = @"iPhone SE 2nd Gen";
             // iPods
             else if ([deviceType isEqualToString:@"iPod1,1"])
                 newDeviceType = @"iPod Touch 1G";
