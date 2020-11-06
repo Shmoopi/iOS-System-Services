@@ -416,7 +416,6 @@
     NSString *timeZone = [self timeZoneSS];
     NSString *currency = [self currency];
     NSString *applicationVersion = [self applicationVersion];
-    NSString *clipboardContent = [self clipboardContent];
     NSString *cFUUID = [self cfuuid];
     NSString *cPUUsage = [NSString stringWithFormat:@"%f", [self applicationCPUUsage]];
     
@@ -709,10 +708,6 @@
         // Invalid value
         applicationVersion = @"Unknown";
     }
-    if (clipboardContent == nil || clipboardContent.length <= 0) {
-        // Invalid value
-        clipboardContent = @"Unknown";
-    }
     if (cFUUID == nil || cFUUID.length <= 0) {
         // Invalid value
         cFUUID = @"Unknown";
@@ -796,7 +791,6 @@
                                                                  timeZone,
                                                                  currency,
                                                                  applicationVersion,
-                                                                 clipboardContent,
                                                                  cFUUID,
                                                                  cPUUsage,
                                                                  nil]
@@ -873,7 +867,6 @@
                                                                  @"TimeZone",
                                                                  @"Currency",
                                                                  @"ApplicationVersion",
-                                                                 @"ClipboardContent",
                                                                  @"CFUUID",
                                                                  @"CPUUsage",
                                                                  nil]];

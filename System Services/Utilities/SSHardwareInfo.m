@@ -19,6 +19,8 @@
 // utsname
 #import <sys/utsname.h>
 
+static BOOL sCachedIsProximityEnabled = false;
+
 @implementation SSHardwareInfo
 
 // System Hardware Information
@@ -27,7 +29,7 @@
 + (NSString *)systemUptime {
     // Set up the days/hours/minutes
     NSNumber *days, *hours, *minutes;
-    
+
     // Get the info about a process
     NSProcessInfo *processInfo = [NSProcessInfo processInfo];
     // Get the uptime of the system
@@ -38,25 +40,25 @@
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSinceNow:(0-uptimeInterval)];
     unsigned int unitFlags = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
     NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:[NSDate date]  options:0];
-    
+
     // Get the day, hour and minutes
     days = [NSNumber numberWithLong:[components day]];
     hours = [NSNumber numberWithLong:[components hour]];
     minutes = [NSNumber numberWithLong:[components minute]];
-    
+
     // Format the dates
     NSString *uptime = [NSString stringWithFormat:@"%@ %@ %@",
                         [days stringValue],
                         [hours stringValue],
                         [minutes stringValue]];
-    
+
     // Error checking
     if (!uptime) {
         // No uptime found
         // Return nil
         return nil;
     }
-    
+
     // Return the uptime
     return uptime;
 }
@@ -121,7 +123,7 @@
 + (NSString *)systemDeviceTypeFormatted:(BOOL)formatted {
     // Set up a Device Type String
     NSString *deviceType;
-    
+
     // Check if it should be formatted
     if (formatted) {
         // Formatted
@@ -134,7 +136,7 @@
             uname(&dt);
             // Set the device type to the machine type
             deviceType = [NSString stringWithFormat:@"%s", dt.machine];
-            
+
             // Simulators
             if ([deviceType isEqualToString:@"i386"])
                 newDeviceType = @"iPhone Simulator";
@@ -328,7 +330,7 @@
             uname(&dt);
             // Set the device type to the machine type
             deviceType = [NSString stringWithFormat:@"%s", dt.machine];
-            
+
             // Return the device type
             return deviceType;
         }
@@ -352,7 +354,7 @@
             // Invalid Width
             return -1;
         }
-        
+
         // Successful
         return Width;
     }
@@ -375,7 +377,7 @@
             // Invalid Height
             return -1;
         }
-        
+
         // Successful
         return Height;
     }
@@ -396,7 +398,7 @@
             // Invalid brightness
             return -1;
         }
-        
+
         // Successful
         return (brightness * 100);
     }
@@ -422,14 +424,18 @@
 
 // Proximity sensor enabled?
 + (BOOL)proximitySensorEnabled {
+    if (![NSThread isMainThread]) {
+        return sCachedIsProximityEnabled;
+    }
+
     // Is the proximity sensor enabled?
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setProximityMonitoringEnabled:)]) {
         // Create a UIDevice variable
         UIDevice *device = [UIDevice currentDevice];
-        
+
         // Make a Bool for the proximity Sensor
         BOOL ProximitySensor;
-        
+
         // Turn the sensor on, if not already on, and see if it works
         if (device.proximityMonitoringEnabled != YES) {
             // Sensor is off
@@ -449,11 +455,13 @@
             // Sensor is already on
             ProximitySensor = true;
         }
-        
+
         // Return on or off
+        sCachedIsProximityEnabled = ProximitySensor;
         return ProximitySensor;
     } else {
         // Doesn't respond to selector
+        sCachedIsProximityEnabled = false;
         return false;
     }
 }
@@ -474,17 +482,17 @@
         mib[3] = getpid();
         size = sizeof(info);
         ret = sysctl(mib, sizeof(mib) / sizeof(*mib), &info, &size, NULL, 0);
-        
+
         // Verify ret
         if (ret) {
             // Sysctl() failed
             // Return the output of sysctl
             return ret;
         }
-        
+
         // Return whether the process is being traced or not
         return ( (info.kp_proc.p_flag & P_TRACED) != 0 );
-        
+
     }
     @catch (NSException *exception) {
         // Error

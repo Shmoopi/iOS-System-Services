@@ -364,7 +364,7 @@
 				ORGANIZATIONNAME = "Shmoopi LLC";
 				TargetAttributes = {
 					01ADF9F216051BFE008B0A6B = {
-						DevelopmentTeam = Q2636DAEP4;
+						DevelopmentTeam = 46H57CBD4Q;
 					};
 				};
 			};
@@ -373,6 +373,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 01ADF9E816051BFE008B0A6B;
@@ -556,7 +557,7 @@
 		01ADFA1216051BFE008B0A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = Q2636DAEP4;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
@@ -574,7 +575,7 @@
 		01ADFA1316051BFE008B0A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = Q2636DAEP4;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";

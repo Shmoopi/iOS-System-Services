@@ -86,7 +86,11 @@
     NSString *ApplicationVersion = [NSString stringWithFormat:@"Application Version: %@", [SystemSharedServices applicationVersion]];
     NSString *ClipboardContent = [NSString stringWithFormat:@"ClipBoard Content: \"%@\"", [SystemSharedServices clipboardContent]];
     NSString *CFUUID = [NSString stringWithFormat:@"CFUUID: %@", [SystemSharedServices cfuuid]];
-    
+
+    NSDictionary *allSystemInformation = [[SystemServices sharedServices] allSystemInformation];
+    NSAssert(![[allSystemInformation allKeys] containsObject:@"ClipboardContent"], @"We should not be including clipboard content in allSystemInformation");
+    NSAssert([[allSystemInformation allKeys] containsObject:@"ApplicationVersion"], @"We should be including application version in allSystemInformation");
+
     // Make an array of all the hardware information
     NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, stepCountingAvailable, distanceAvailable, floorCountingAvailable, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
     
