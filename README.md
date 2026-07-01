@@ -1,325 +1,299 @@
-# iOS-System-Services
+# iOS System Services
 
-<p align="center" >
+[![CocoaPods](https://img.shields.io/cocoapods/v/SystemServices.svg?style=flat)](https://cocoapods.org/pods/SystemServices)
+[![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](https://cocoapods.org/pods/SystemServices)
+[![Language](https://img.shields.io/badge/language-Objective--C-blue.svg?style=flat)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+[![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](LICENSE)
 
-<img src="./Sample Images/Screenshot1.png" alt="System Services Memory Screenshot" title="Memory Information">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./Sample Images/Screenshot2.png" alt="System Services Disk Screenshot" title="Disk Information">
+**One singleton. 70+ read-only properties. Everything you can know about an iOS device.**
 
+`SystemServices` is a lightweight Objective-C library that gathers hardware,
+network, battery, motion, disk, memory, processor, carrier, accessory,
+localization and application information behind a single, well-documented API —
+no boilerplate, no setup.
+
+<p align="center">
+  <img src="./Sample Images/Hardware.png" alt="Hardware information" width="23%">
+  <img src="./Sample Images/Network.png"  alt="Network information"  width="23%">
+  <img src="./Sample Images/Memory.png"   alt="Memory information"   width="23%">
+  <img src="./Sample Images/Disk.png"     alt="Disk information"     width="23%">
 </p>
 
-This is a singleton class to gather all available information about a device.  It gives you over 60 methods to determine everything about a device, including:
+## Contents
 
-* Hardware Information
-* Network Information
-* Battery Usage
-* Accelerometer Data
-* Disk Usage
-* Memory Usage
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quick start](#quick-start)
+- [API reference](#api-reference)
+- [Demo app](#demo-app)
+- [Notes & limitations](#notes--limitations)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [License](#license)
+
+## Features
+
+- **Single facade** — `[SystemServices sharedServices]` exposes everything.
+- **Drop-in** — install with CocoaPods, Swift Package Manager, or by copying
+  the `System Services` folder.
+- **One snapshot** — `allSystemInformation` returns a dictionary of (almost)
+  everything in one call.
+- **Up to date** — device identifiers are mapped through the latest iPhone,
+  iPad, iPod touch and Apple TV models.
+
+## Requirements
+
+| | |
+|---|---|
+| **iOS** | 15.0+ |
+| **Language** | Objective-C (ARC) |
+| **Xcode** | 15+ |
 
 ## Installation
 
-[![Version](https://img.shields.io/cocoapods/v/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
-[![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
-[![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
+### CocoaPods
 
-iOS System Services is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Add to your `Podfile`:
 
 ```ruby
-pod 'SystemServices', '~> 2.0.1'
+pod 'SystemServices', '~> 3.0'
 ```
 
-## Usage
+then run `pod install`.
+
+### Swift Package Manager
+
+In Xcode: **File → Add Package Dependencies…** and enter
+
+```
+https://github.com/Shmoopi/iOS-System-Services.git
+```
+
+or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/Shmoopi/iOS-System-Services.git", from: "3.0.0")
+]
+```
+
+### Manual
+
+Drag the `System Services` folder into your project. The library uses
+`AVFoundation`, `CoreTelephony`, `CoreMotion`, `ExternalAccessory`, `Security`,
+`UIKit` and `Foundation` — all part of the iOS SDK.
+
+## Quick start
 
 ```objective-c
 // Import System Services
 #import "SystemServices.h"
 
-// Log all System Information
-NSLog(@"All System Information: %@", [SystemServices sharedServices].allSystemInformation);	
+// Read a single value
+NSLog(@"Device model: %@", [SystemServices sharedServices].deviceModel);
+
+// Or grab everything at once
+NSLog(@"All system information: %@", [SystemServices sharedServices].allSystemInformation);
 ```
 
-## Changes
-
-1. Removed Older/Unavailable Methods
-2. Updated Demo Project
-3. Added CocoaPods Support
-4. Fixed Bugs and Addressed Naming Issues
-5. Deprecated Older/Unavailable Methods
-
-## Available Device Information
-
-```objective-c
-// System Information
-
-// Properties
-
-/* All System Information in Dictionary Format */
-NSDictionary *allSystemInformation;
-
-/* Hardware Information */
-
-// System Uptime (dd hh mm)
-NSString *systemsUptime;
-
-// Model of Device
-NSString *deviceModel;
-
-// Device Name
-NSString *deviceName;
-
-// System Name
-NSString *systemName;
-
-// System Version
-NSString *systemsVersion;
-
-// System Device Type (Not Formatted = iPhone1,0)
-NSString *systemDeviceTypeNotFormatted;
-
-// System Device Type (Formatted = iPhone 1)
-NSString *systemDeviceTypeFormatted;
-
-// Get the Screen Width (X)
-NSInteger screenWidth;
-
-// Get the Screen Height (Y)
-NSInteger screenHeight;
-
-// Get the Screen Brightness
-float screenBrightness;
-
-// Multitasking enabled?
-BOOL multitaskingEnabled;
-
-// Proximity sensor enabled?
-BOOL proximitySensorEnabled;
-
-// Debugger Attached?
-BOOL debuggerAttached;
-
-// Plugged In?
-BOOL pluggedIn;
-
-// Step-Counting Available?
-BOOL stepCountingAvailable;
-
-// Distance Available
-BOOL distanceAvailable;
-
-// Floor Counting Available
-BOOL floorCountingAvailable;
-
-/* Jailbreak Check */
-
-// Jailbroken?
-int jailbroken;
-
-/* Processor Information */
-
-// Number of processors
-NSInteger numberProcessors;
-
-// Number of Active Processors
-NSInteger numberActiveProcessors;
-
-// Processor Usage Information
-NSArray *processorsUsage;
-
-/* Accessory Information */
-
-// Are any accessories attached?
-BOOL accessoriesAttached;
-
-// Are headphone attached?
-BOOL headphonesAttached;
-
-// Number of attached accessories
-NSInteger numberAttachedAccessories;
-
-// Name of attached accessory/accessories (seperated by , comma's)
-NSString *nameAttachedAccessories;
-
-/* Carrier Information */
-
-// Carrier Name
-NSString *carrierName;
-
-// Carrier Country
-NSString *carrierCountry;
-
-// Carrier Mobile Country Code
-NSString *carrierMobileCountryCode;
-
-// Carrier ISO Country Code
-NSString *carrierISOCountryCode;
-
-// Carrier Mobile Network Code
-NSString *carrierMobileNetworkCode;
-
-// Carrier Allows VOIP
-BOOL carrierAllowsVOIP;
-
-/* Battery Information */
-
-// Battery Level
-float batteryLevel;
-
-// Charging?
-BOOL charging;
-
-// Fully Charged?
-BOOL fullyCharged;
-
-/* Network Information */
-
-// Get Current IP Address
-NSString *currentIPAddress;
-
-// Get External IP Address
-NSString *externalIPAddress;
-
-// Get Cell IP Address
-NSString *cellIPAddress;
-
-// Get Cell Netmask Address
-NSString *cellNetmaskAddress;
-
-// Get Cell Broadcast Address
-NSString *cellBroadcastAddress;
-
-// Get WiFi IP Address
-NSString *wiFiIPAddress;
-
-// Get WiFi Netmask Address
-NSString *wiFiNetmaskAddress;
-
-// Get WiFi Broadcast Address
-NSString *wiFiBroadcastAddress;
-
-// Get WiFi Router Address
-NSString *wiFiRouterAddress;
-
-// Connected to WiFi?
-BOOL connectedToWiFi;
-
-// Connected to Cellular Network?
-BOOL connectedToCellNetwork;
-
-/* Process Information */
-
-// Process ID
-int processID;
-
-/* Disk Information */
-
-// Total Disk Space
-NSString *diskSpace;
-
-// Total Free Disk Space (Raw)
-NSString *freeDiskSpaceinRaw;
-
-// Total Free Disk Space (Percentage)
-NSString *freeDiskSpaceinPercent;
-
-// Total Used Disk Space (Raw)
-NSString *usedDiskSpaceinRaw;
-
-// Total Used Disk Space (Percentage)
-NSString *usedDiskSpaceinPercent;
-
-// Get the total disk space in long format
-long long longDiskSpace;
-
-// Get the total free disk space in long format
-long long longFreeDiskSpace;
-
-/* Memory Information */
-
-// Total Memory
-double totalMemory;
-
-// Free Memory (Raw)
-double freeMemoryinRaw;
-
-// Free Memory (Percent)
-double freeMemoryinPercent;
-
-// Used Memory (Raw)
-double usedMemoryinRaw;
-
-// Used Memory (Percent)
-double usedMemoryinPercent;
-
-// Active Memory (Raw)
-double activeMemoryinRaw;
-
-// Active Memory (Percent)
-double activeMemoryinPercent;
-
-// Inactive Memory (Raw)
-double inactiveMemoryinRaw;
-
-// Inactive Memory (Percent)
-double inactiveMemoryinPercent;
-
-// Wired Memory (Raw)
-double wiredMemoryinRaw;
-
-// Wired Memory (Percent)
-double wiredMemoryinPercent;
-
-// Purgable Memory (Raw)
-double purgableMemoryinRaw;
-
-// Purgable Memory (Percent)
-double purgableMemoryinPercent;
-
-/* Accelerometer Information */
-
-// Device Orientation
-UIInterfaceOrientation deviceOrientation;
-
-/* Localization Information */
-
-// Country
-NSString *country;
-
-// Language
-NSString *language;
-
-// TimeZone
-NSString *timeZoneSS;
-
-// Currency Symbol
-NSString *currency;
-
-/* Application Information */
-
-// Application Version
-NSString *applicationVersion;
-
-// Clipboard Content
-NSString *clipboardContent;
-
-// Application CPU Usage
-float applicationCPUUsage;
-
-/* Universal Unique Identifiers */
-
-// CFUUID
-NSString *cfuuid;
+> Using it from a Swift target? Add `#import "SystemServices.h"` to your bridging
+> header (CocoaPods / manual) or `import SystemServices` (Swift Package Manager),
+> then call `SystemServices.shared()`.
+
+## API reference
+
+All properties are `readonly` on `[SystemServices sharedServices]`.
+
+### Hardware
+
+| Property | Type | Description |
+|---|---|---|
+| `systemsUptime` | `NSString *` | Uptime formatted as `dd hh mm` |
+| `deviceModel` | `NSString *` | e.g. `iPhone` |
+| `deviceName` | `NSString *` | User-assigned device name |
+| `systemName` | `NSString *` | e.g. `iOS` |
+| `systemsVersion` | `NSString *` | e.g. `18.0` |
+| `systemDeviceTypeNotFormatted` | `NSString *` | Raw identifier, e.g. `iPhone17,1` |
+| `systemDeviceTypeFormatted` | `NSString *` | Friendly name, e.g. `iPhone 16 Pro` |
+| `screenWidth` / `screenHeight` | `NSInteger` | Screen size in points |
+| `screenBrightness` | `float` | 0–100 |
+| `multitaskingEnabled` | `BOOL` | |
+| `proximitySensorEnabled` | `BOOL` | |
+| `debuggerAttached` | `BOOL` | |
+| `pluggedIn` | `BOOL` | |
+| `stepCountingAvailable` | `BOOL` | |
+| `distanceAvailable` | `BOOL` | |
+| `floorCountingAvailable` | `BOOL` | |
+
+### Jailbreak
+
+| Property | Type | Description |
+|---|---|---|
+| `jailbroken` | `int` | Non-`NOTJAIL` when the device appears jailbroken |
+
+### Processor
+
+| Property | Type | Description |
+|---|---|---|
+| `numberProcessors` | `NSInteger` | |
+| `numberActiveProcessors` | `NSInteger` | |
+| `processorsUsage` | `NSArray *` | Per-core usage (0.0–1.0) |
+
+### Accessories
+
+| Property | Type | Description |
+|---|---|---|
+| `accessoriesAttached` | `BOOL` | |
+| `headphonesAttached` | `BOOL` | |
+| `numberAttachedAccessories` | `NSInteger` | |
+| `nameAttachedAccessories` | `NSString *` | Comma-separated |
+
+### Carrier
+
+| Property | Type | Description |
+|---|---|---|
+| `carrierName` | `NSString *` | |
+| `carrierCountry` | `NSString *` | |
+| `carrierMobileCountryCode` | `NSString *` | |
+| `carrierISOCountryCode` | `NSString *` | |
+| `carrierMobileNetworkCode` | `NSString *` | |
+| `carrierAllowsVOIP` | `BOOL` | |
+
+> ⚠️ Apple deprecated `CTCarrier` and stopped returning real carrier data to
+> third-party apps in iOS 16; these properties now degrade to `nil` /
+> placeholder values on modern systems. See [Notes & limitations](#notes--limitations).
+
+### Battery
+
+| Property | Type | Description |
+|---|---|---|
+| `batteryLevel` | `float` | 0–100 (`-1` if unavailable, e.g. on Simulator) |
+| `charging` | `BOOL` | |
+| `fullyCharged` | `BOOL` | |
+
+### Network
+
+| Property | Type | Description |
+|---|---|---|
+| `currentIPAddress` | `NSString *` | Active interface IP |
+| `externalIPAddress` | `NSString *` | Public IP (synchronous network call) |
+| `cellIPAddress` / `cellNetmaskAddress` / `cellBroadcastAddress` | `NSString *` | Cellular interface |
+| `wiFiIPAddress` / `wiFiNetmaskAddress` / `wiFiBroadcastAddress` / `wiFiRouterAddress` | `NSString *` | Wi-Fi interface |
+| `connectedToWiFi` | `BOOL` | |
+| `connectedToCellNetwork` | `BOOL` | |
+
+### Process
+
+| Property | Type | Description |
+|---|---|---|
+| `processID` | `int` | |
+
+### Disk
+
+| Property | Type | Description |
+|---|---|---|
+| `diskSpace` | `NSString *` | Total, human-readable |
+| `freeDiskSpaceinRaw` / `freeDiskSpaceinPercent` | `NSString *` | Free space |
+| `usedDiskSpaceinRaw` / `usedDiskSpaceinPercent` | `NSString *` | Used space |
+| `longDiskSpace` / `longFreeDiskSpace` | `long long` | Raw byte counts |
+
+### Memory
+
+| Property | Type | Description |
+|---|---|---|
+| `totalMemory` | `double` | Physical RAM (MB) |
+| `freeMemoryinRaw` / `freeMemoryinPercent` | `double` | |
+| `usedMemoryinRaw` / `usedMemoryinPercent` | `double` | |
+| `activeMemoryinRaw` / `activeMemoryinPercent` | `double` | |
+| `inactiveMemoryinRaw` / `inactiveMemoryinPercent` | `double` | |
+| `wiredMemoryinRaw` / `wiredMemoryinPercent` | `double` | |
+| `purgableMemoryinRaw` / `purgableMemoryinPercent` | `double` | |
+
+### Accelerometer / Motion
+
+| Property | Type | Description |
+|---|---|---|
+| `deviceOrientation` | `UIInterfaceOrientation` | From the active window scene |
+
+`SSAccelerometerInfo` also offers instance methods (`startLoggingMotionData` /
+`stopLoggingMotionData`) for raw accelerometer, gyroscope and device-motion
+streams.
+
+### Localization
+
+| Property | Type | Description |
+|---|---|---|
+| `country` | `NSString *` | Locale identifier |
+| `language` | `NSString *` | Preferred language |
+| `timeZoneSS` | `NSString *` | System time zone name |
+| `currency` | `NSString *` | Currency symbol |
+
+### Application
+
+| Property | Type | Description |
+|---|---|---|
+| `applicationVersion` | `NSString *` | `CFBundleShortVersionString` |
+| `clipboardContent` | `NSString *` | General pasteboard text (see privacy note) |
+| `applicationCPUUsage` | `float` | This app's CPU usage |
+
+### Identifiers
+
+| Property | Type | Description |
+|---|---|---|
+| `cfuuid` | `NSString *` | A freshly generated `CFUUID` (random each call) |
+
+### Everything at once
+
+| Property | Type | Description |
+|---|---|---|
+| `allSystemInformation` | `NSDictionary *` | Snapshot of (almost) every value as strings |
+
+## Demo app
+
+Open `SystemServicesDemo/SystemServicesDemo.xcodeproj` and run. The app shows
+the library output across four tabs — Hardware, Network, Memory and Disk — with
+a live pie chart and gauge.
+
+```bash
+cd SystemServicesDemo
+xcodebuild -project SystemServicesDemo.xcodeproj \
+  -scheme SystemServicesDemo \
+  -sdk iphonesimulator \
+  -destination 'platform=iOS Simulator,name=iPhone 16' \
+  build CODE_SIGNING_ALLOWED=NO
 ```
 
-## Third-Party Plugins
+## Notes & limitations
 
-A big thank you to the makers of:
+- **Carrier data** — `CTCarrier` and `-subscriberCellularProvider` were
+  deprecated by Apple in iOS 12 and return placeholder values for third-party
+  apps from iOS 16 onward. There is no replacement API; these properties return
+  `nil` where data is unavailable.
+- **Clipboard privacy** — `clipboardContent` reads the general pasteboard
+  (which triggers the system paste notification on modern iOS). It is
+  deliberately **excluded** from `allSystemInformation` so a bulk snapshot can't
+  silently capture pasteboard contents.
+- **Simulator** — battery and some sensor APIs are unavailable on the Simulator
+  and return sentinel values. Device-model detection uses
+  `SIMULATOR_MODEL_IDENTIFIER` so the simulated model name is still reported
+  correctly.
+- **External IP** — `externalIPAddress` performs a synchronous HTTPS request;
+  call it from a background queue in production.
 
-* Annotated Gauge iOS Class here: <https://github.com/sabymike/MSSimpleGauge>
-* Pie Chart iOS Class here: <https://github.com/honcheng/iOSPlot>
-* NSObject+PerformBlockAfterDelay iOS Class here: <http://www.mikeash.com/pyblog/friday-qa-2009-08-14-practical-blocks.html>
+## Contributing
+
+Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Credits
+
+A big thank you to the makers of the components used by the **demo app**:
+
+- Annotated Gauge — [MSSimpleGauge](https://github.com/sabymike/MSSimpleGauge)
+- Pie Chart — [iOSPlot](https://github.com/honcheng/iOSPlot)
 
 ## License
 
-Copyright © 2012 Shmoopi LLC <shmoopillc@gmail.com> <http://www.shmoopi.net/>
-
-If you like what you see here, or on our website, please feel free to drop us a line or purchase one of our applications!
+Released under the MIT License. Copyright © 2012–2026 Shmoopi LLC
+&lt;shmoopillc@gmail.com&gt;. See [LICENSE](LICENSE) for details.

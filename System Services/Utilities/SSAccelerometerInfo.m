@@ -43,21 +43,34 @@
 
 // Device Orientation
 + (UIInterfaceOrientation)deviceOrientation {
-    // Get the device's current orientation
+    // Get the interface orientation from the active window scene (the modern,
+    // multi-window-safe replacement for the deprecated -statusBarOrientation).
     @try {
         #if !(defined(__has_feature) && __has_feature(attribute_availability_app_extension))
-            // Device orientation
-            UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        
-            // Successful
-            return orientation;
+            UIWindowScene *windowScene = nil;
+
+            // Prefer the foreground-active scene, falling back to any window scene.
+            for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+                if (![scene isKindOfClass:[UIWindowScene class]]) {
+                    continue;
+                }
+                windowScene = (UIWindowScene *)scene;
+                if (scene.activationState == UISceneActivationStateForegroundActive) {
+                    break;
+                }
+            }
+
+            if (windowScene != nil) {
+                return windowScene.interfaceOrientation;
+            }
         #endif
+
+        // Unable to determine the orientation
+        return UIInterfaceOrientationUnknown;
     }
     @catch (NSException *exception) {
-        return -1;
+        return UIInterfaceOrientationUnknown;
     }
-    // Error
-    return -1;
 }
 
 // Start logging motion data

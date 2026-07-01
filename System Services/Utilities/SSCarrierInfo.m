@@ -12,6 +12,14 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
+// Apple deprecated CTCarrier and -subscriberCellularProvider and provides no
+// replacement: starting with iOS 16 these APIs return placeholder values
+// ("--" / "65535") for third-party apps. There is no modern alternative, so we
+// keep the calls for the benefit of older systems and silence the deprecation
+// warnings here. The accessors below already degrade gracefully to nil.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 @implementation SSCarrierInfo
 
 // Carrier Information
@@ -163,3 +171,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop

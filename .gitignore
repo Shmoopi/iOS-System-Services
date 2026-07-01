@@ -28,3 +28,19 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Fastlane / misc
+fastlane/report.xml
+fastlane/Preview.html
+*.xcresult

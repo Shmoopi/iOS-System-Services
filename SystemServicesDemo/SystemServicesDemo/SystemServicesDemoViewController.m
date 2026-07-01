@@ -87,7 +87,9 @@
     NSString *ClipboardContent = [NSString stringWithFormat:@"ClipBoard Content: \"%@\"", [SystemSharedServices clipboardContent]];
     NSString *CFUUID = [NSString stringWithFormat:@"CFUUID: %@", [SystemSharedServices cfuuid]];
 
-    NSDictionary *allSystemInformation = [[SystemServices sharedServices] allSystemInformation];
+    // Used by the assertions below; marked __unused so Release builds (where
+    // NSAssert is compiled out) don't warn about an unused variable.
+    NSDictionary __unused *allSystemInformation = [[SystemServices sharedServices] allSystemInformation];
     NSAssert(![[allSystemInformation allKeys] containsObject:@"ClipboardContent"], @"We should not be including clipboard content in allSystemInformation");
     NSAssert([[allSystemInformation allKeys] containsObject:@"ApplicationVersion"], @"We should be including application version in allSystemInformation");
 

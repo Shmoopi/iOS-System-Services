@@ -11,8 +11,26 @@
 @implementation SystemServicesDemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
-    // Override point for customization after application launch.    
+{
+    // Override point for customization after application launch.
+
+    // Optionally deep-link to a specific tab. This is used by the screenshot
+    // automation (and is handy for demos): launch with the "SSDemoTab"
+    // environment variable set to a tab index, e.g.
+    //   SIMCTL_CHILD_SSDemoTab=2 xcrun simctl launch booted <bundle-id>
+    NSString *requestedTab = [[NSProcessInfo processInfo] environment][@"SSDemoTab"];
+    if (requestedTab.length > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self.window.rootViewController isKindOfClass:[UITabBarController class]]) {
+                UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+                NSInteger index = requestedTab.integerValue;
+                if (index >= 0 && index < (NSInteger)tabBarController.viewControllers.count) {
+                    tabBarController.selectedIndex = index;
+                }
+            }
+        });
+    }
+
     return YES;
 }
 							

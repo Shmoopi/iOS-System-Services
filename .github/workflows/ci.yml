@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build-demo:
+    name: Build demo app
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: xcodebuild -version
+
+      - name: Build SystemServicesDemo (iOS Simulator)
+        run: |
+          xcodebuild \
+            -project "SystemServicesDemo/SystemServicesDemo.xcodeproj" \
+            -scheme SystemServicesDemo \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            clean build \
+            CODE_SIGNING_ALLOWED=NO
+
+  build-spm:
+    name: Build Swift Package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate manifest
+        run: swift package dump-package > /dev/null
+
+      - name: Build SystemServices (Swift Package, iOS)
+        run: |
+          xcodebuild \
+            -scheme SystemServices \
+            -destination 'generic/platform=iOS' \
+            build

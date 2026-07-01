@@ -26,32 +26,27 @@
     @try {
         // Create a new instance of CFUUID using CFUUIDCreate using the default allocator
         CFUUIDRef theUUID = CFUUIDCreate(kCFAllocatorDefault);
-        
+
         // Check to make sure it exists
         if (theUUID)
         {
-            // Make the new UUID String
-            NSString *tempUniqueID = (__bridge NSString *)CFUUIDCreateString(kCFAllocatorDefault, theUUID);
-            
+            // Make the new UUID String. Use __bridge_transfer so ARC takes
+            // ownership of the +1 retained CFString and releases it for us.
+            NSString *tempUniqueID = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, theUUID);
+
+            // Release the UUID Reference
+            CFRelease(theUUID);
+
             // Check to make sure it created it
             if (tempUniqueID == nil || tempUniqueID.length <= 0) {
                 // Error, Unable to create
-                // Release the UUID Reference
-                CFRelease(theUUID);
-                // Return nil
                 return nil;
             }
-            
-            // Release the UUID Reference
-            CFRelease(theUUID);
-            
+
             // Successful
             return tempUniqueID;
         } else {
-            // Error
-            // Release the UUID Reference
-            CFRelease(theUUID);
-            // Return nil
+            // Error, the UUID could not be created (nothing to release)
             return nil;
         }
     }

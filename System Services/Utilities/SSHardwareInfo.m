@@ -130,17 +130,27 @@ static BOOL sCachedIsProximityEnabled = false;
         @try {
             // Set up a new Device Type String
             NSString *newDeviceType;
-            // Set up a struct
-            struct utsname dt;
-            // Get the system information
-            uname(&dt);
-            // Set the device type to the machine type
-            deviceType = [NSString stringWithFormat:@"%s", dt.machine];
+            // Resolve the hardware identifier. On the simulator utsname.machine is
+            // the host architecture (x86_64 / arm64), so prefer the simulated
+            // device identifier exposed via the environment when it is present.
+            NSString *simulatorModel = [[NSProcessInfo processInfo] environment][@"SIMULATOR_MODEL_IDENTIFIER"];
+            if (simulatorModel.length > 0) {
+                deviceType = simulatorModel;
+            } else {
+                // Set up a struct
+                struct utsname dt;
+                // Get the system information
+                uname(&dt);
+                // Set the device type to the machine type
+                deviceType = [NSString stringWithFormat:@"%s", dt.machine];
+            }
 
-            // Simulators
+            // Simulators (when no simulated identifier is available)
             if ([deviceType isEqualToString:@"i386"])
                 newDeviceType = @"iPhone Simulator";
             else if ([deviceType isEqualToString:@"x86_64"])
+                newDeviceType = @"iPhone Simulator";
+            else if ([deviceType isEqualToString:@"arm64"])
                 newDeviceType = @"iPhone Simulator";
             // iPhones
             else if ([deviceType isEqualToString:@"iPhone1,1"])
@@ -203,6 +213,58 @@ static BOOL sCachedIsProximityEnabled = false;
                 newDeviceType = @"iPhone XS MAX (CDMA+GSM/LTE)";
             else if ([deviceType isEqualToString:@"iPhone11,8"])
                 newDeviceType = @"iPhone XR";
+            else if ([deviceType isEqualToString:@"iPhone12,1"])
+                newDeviceType = @"iPhone 11";
+            else if ([deviceType isEqualToString:@"iPhone12,3"])
+                newDeviceType = @"iPhone 11 Pro";
+            else if ([deviceType isEqualToString:@"iPhone12,5"])
+                newDeviceType = @"iPhone 11 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone12,8"])
+                newDeviceType = @"iPhone SE (2nd generation)";
+            else if ([deviceType isEqualToString:@"iPhone13,1"])
+                newDeviceType = @"iPhone 12 mini";
+            else if ([deviceType isEqualToString:@"iPhone13,2"])
+                newDeviceType = @"iPhone 12";
+            else if ([deviceType isEqualToString:@"iPhone13,3"])
+                newDeviceType = @"iPhone 12 Pro";
+            else if ([deviceType isEqualToString:@"iPhone13,4"])
+                newDeviceType = @"iPhone 12 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone14,4"])
+                newDeviceType = @"iPhone 13 mini";
+            else if ([deviceType isEqualToString:@"iPhone14,5"])
+                newDeviceType = @"iPhone 13";
+            else if ([deviceType isEqualToString:@"iPhone14,2"])
+                newDeviceType = @"iPhone 13 Pro";
+            else if ([deviceType isEqualToString:@"iPhone14,3"])
+                newDeviceType = @"iPhone 13 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone14,6"])
+                newDeviceType = @"iPhone SE (3rd generation)";
+            else if ([deviceType isEqualToString:@"iPhone14,7"])
+                newDeviceType = @"iPhone 14";
+            else if ([deviceType isEqualToString:@"iPhone14,8"])
+                newDeviceType = @"iPhone 14 Plus";
+            else if ([deviceType isEqualToString:@"iPhone15,2"])
+                newDeviceType = @"iPhone 14 Pro";
+            else if ([deviceType isEqualToString:@"iPhone15,3"])
+                newDeviceType = @"iPhone 14 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone15,4"])
+                newDeviceType = @"iPhone 15";
+            else if ([deviceType isEqualToString:@"iPhone15,5"])
+                newDeviceType = @"iPhone 15 Plus";
+            else if ([deviceType isEqualToString:@"iPhone16,1"])
+                newDeviceType = @"iPhone 15 Pro";
+            else if ([deviceType isEqualToString:@"iPhone16,2"])
+                newDeviceType = @"iPhone 15 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone17,3"])
+                newDeviceType = @"iPhone 16";
+            else if ([deviceType isEqualToString:@"iPhone17,4"])
+                newDeviceType = @"iPhone 16 Plus";
+            else if ([deviceType isEqualToString:@"iPhone17,1"])
+                newDeviceType = @"iPhone 16 Pro";
+            else if ([deviceType isEqualToString:@"iPhone17,2"])
+                newDeviceType = @"iPhone 16 Pro Max";
+            else if ([deviceType isEqualToString:@"iPhone17,5"])
+                newDeviceType = @"iPhone 16e";
             // iPods
             else if ([deviceType isEqualToString:@"iPod1,1"])
                 newDeviceType = @"iPod Touch 1G";
@@ -216,6 +278,8 @@ static BOOL sCachedIsProximityEnabled = false;
                 newDeviceType = @"iPod Touch 5G";
             else if ([deviceType isEqualToString:@"iPod7,1"])
                 newDeviceType = @"iPod Touch 6G";
+            else if ([deviceType isEqualToString:@"iPod9,1"])
+                newDeviceType = @"iPod touch (7th generation)";
             // iPads
             else if ([deviceType isEqualToString:@"iPad1,1"])
                 newDeviceType = @"iPad";
@@ -303,6 +367,50 @@ static BOOL sCachedIsProximityEnabled = false;
                 newDeviceType = @"iPad Pro 12.9 (3rd Gen - WiFi+Cellular)";
             else if ([deviceType isEqualToString:@"iPad8,8"])
                 newDeviceType = @"iPad Pro 12.9 (3rd Gen - 1TB, WiFi+Cellular)";
+            else if ([deviceType isEqualToString:@"iPad8,9"] || [deviceType isEqualToString:@"iPad8,10"])
+                newDeviceType = @"iPad Pro 11 (2nd Gen)";
+            else if ([deviceType isEqualToString:@"iPad8,11"] || [deviceType isEqualToString:@"iPad8,12"])
+                newDeviceType = @"iPad Pro 12.9 (4th Gen)";
+            else if ([deviceType isEqualToString:@"iPad11,1"] || [deviceType isEqualToString:@"iPad11,2"])
+                newDeviceType = @"iPad mini (5th generation)";
+            else if ([deviceType isEqualToString:@"iPad11,3"] || [deviceType isEqualToString:@"iPad11,4"])
+                newDeviceType = @"iPad Air (3rd generation)";
+            else if ([deviceType isEqualToString:@"iPad11,6"] || [deviceType isEqualToString:@"iPad11,7"])
+                newDeviceType = @"iPad (8th generation)";
+            else if ([deviceType isEqualToString:@"iPad12,1"] || [deviceType isEqualToString:@"iPad12,2"])
+                newDeviceType = @"iPad (9th generation)";
+            else if ([deviceType isEqualToString:@"iPad13,1"] || [deviceType isEqualToString:@"iPad13,2"])
+                newDeviceType = @"iPad Air (4th generation)";
+            else if ([deviceType isEqualToString:@"iPad13,4"] || [deviceType isEqualToString:@"iPad13,5"] || [deviceType isEqualToString:@"iPad13,6"] || [deviceType isEqualToString:@"iPad13,7"])
+                newDeviceType = @"iPad Pro 11 (3rd Gen)";
+            else if ([deviceType isEqualToString:@"iPad13,8"] || [deviceType isEqualToString:@"iPad13,9"] || [deviceType isEqualToString:@"iPad13,10"] || [deviceType isEqualToString:@"iPad13,11"])
+                newDeviceType = @"iPad Pro 12.9 (5th Gen)";
+            else if ([deviceType isEqualToString:@"iPad13,16"] || [deviceType isEqualToString:@"iPad13,17"])
+                newDeviceType = @"iPad Air (5th generation)";
+            else if ([deviceType isEqualToString:@"iPad13,18"] || [deviceType isEqualToString:@"iPad13,19"])
+                newDeviceType = @"iPad (10th generation)";
+            else if ([deviceType isEqualToString:@"iPad14,1"] || [deviceType isEqualToString:@"iPad14,2"])
+                newDeviceType = @"iPad mini (6th generation)";
+            else if ([deviceType isEqualToString:@"iPad14,3"] || [deviceType isEqualToString:@"iPad14,4"])
+                newDeviceType = @"iPad Pro 11 (4th Gen)";
+            else if ([deviceType isEqualToString:@"iPad14,5"] || [deviceType isEqualToString:@"iPad14,6"])
+                newDeviceType = @"iPad Pro 12.9 (6th Gen)";
+            else if ([deviceType isEqualToString:@"iPad14,8"] || [deviceType isEqualToString:@"iPad14,9"])
+                newDeviceType = @"iPad Air 11 (M2)";
+            else if ([deviceType isEqualToString:@"iPad14,10"] || [deviceType isEqualToString:@"iPad14,11"])
+                newDeviceType = @"iPad Air 13 (M2)";
+            else if ([deviceType isEqualToString:@"iPad15,3"] || [deviceType isEqualToString:@"iPad15,4"])
+                newDeviceType = @"iPad Air 11 (M3)";
+            else if ([deviceType isEqualToString:@"iPad15,5"] || [deviceType isEqualToString:@"iPad15,6"])
+                newDeviceType = @"iPad Air 13 (M3)";
+            else if ([deviceType isEqualToString:@"iPad15,7"] || [deviceType isEqualToString:@"iPad15,8"])
+                newDeviceType = @"iPad (A16)";
+            else if ([deviceType isEqualToString:@"iPad16,1"] || [deviceType isEqualToString:@"iPad16,2"])
+                newDeviceType = @"iPad mini (A17 Pro)";
+            else if ([deviceType isEqualToString:@"iPad16,3"] || [deviceType isEqualToString:@"iPad16,4"])
+                newDeviceType = @"iPad Pro 11 (M4)";
+            else if ([deviceType isEqualToString:@"iPad16,5"] || [deviceType isEqualToString:@"iPad16,6"])
+                newDeviceType = @"iPad Pro 13 (M4)";
             // Catch All iPad
             else if ([deviceType hasPrefix:@"iPad"])
                 newDeviceType = @"iPad";
@@ -313,6 +421,24 @@ static BOOL sCachedIsProximityEnabled = false;
                 newDeviceType = @"Apple TV 3";
             else if ([deviceType isEqualToString:@"AppleTV3,2"])
                 newDeviceType = @"Apple TV 3 (2013)";
+            else if ([deviceType isEqualToString:@"AppleTV5,3"])
+                newDeviceType = @"Apple TV HD";
+            else if ([deviceType isEqualToString:@"AppleTV6,2"])
+                newDeviceType = @"Apple TV 4K";
+            else if ([deviceType isEqualToString:@"AppleTV11,1"])
+                newDeviceType = @"Apple TV 4K (2nd generation)";
+            else if ([deviceType isEqualToString:@"AppleTV14,1"])
+                newDeviceType = @"Apple TV 4K (3rd generation)";
+            // Catch-all family names for unrecognised / future identifiers
+            else if ([deviceType hasPrefix:@"iPhone"])
+                newDeviceType = @"iPhone";
+            else if ([deviceType hasPrefix:@"iPod"])
+                newDeviceType = @"iPod touch";
+            else if ([deviceType hasPrefix:@"AppleTV"])
+                newDeviceType = @"Apple TV";
+            else
+                // Unknown device: fall back to the raw identifier
+                newDeviceType = deviceType;
 
             // Return the new device type
             return newDeviceType;
@@ -324,12 +450,19 @@ static BOOL sCachedIsProximityEnabled = false;
     } else {
         // Unformatted
         @try {
-            // Set up a struct
-            struct utsname dt;
-            // Get the system information
-            uname(&dt);
-            // Set the device type to the machine type
-            deviceType = [NSString stringWithFormat:@"%s", dt.machine];
+            // On the simulator utsname.machine is the host architecture, so prefer
+            // the simulated device identifier when it is available.
+            NSString *simulatorModel = [[NSProcessInfo processInfo] environment][@"SIMULATOR_MODEL_IDENTIFIER"];
+            if (simulatorModel.length > 0) {
+                deviceType = simulatorModel;
+            } else {
+                // Set up a struct
+                struct utsname dt;
+                // Get the system information
+                uname(&dt);
+                // Set the device type to the machine type
+                deviceType = [NSString stringWithFormat:@"%s", dt.machine];
+            }
 
             // Return the device type
             return deviceType;
